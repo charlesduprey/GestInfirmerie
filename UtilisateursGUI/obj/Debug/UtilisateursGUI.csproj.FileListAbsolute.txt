@@ -1,0 +1,16 @@
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.csprojResolveAssemblyReference.cache
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.FrmModuleLecture.resources
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.Menu.resources
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.Properties.Resources.resources
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.csproj.GenerateResource.Cache
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.exe
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\obj\Debug\UtilisateursGUI.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb

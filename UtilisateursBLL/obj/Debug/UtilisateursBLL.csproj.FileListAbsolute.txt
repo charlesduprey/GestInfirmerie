@@ -1,0 +1,9 @@
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+d:\users\guillaume\documents\visual studio 2015\Projects\GestionInfirmerieV3\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
