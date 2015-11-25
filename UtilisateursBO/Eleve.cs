@@ -16,7 +16,7 @@ namespace UtilisateursBO
         private int year;
         private int tel_eleve;
         private int tel_parent;
-        private bool tier_temps;
+        private string tier_temps;
         private string commentaire_sante;
         private int id_classe;
 
@@ -137,7 +137,7 @@ namespace UtilisateursBO
             }
         }
 
-        public bool Tier_temps
+        public string Tier_temps
         {
             get
             {
@@ -176,8 +176,11 @@ namespace UtilisateursBO
             }
         }
 
+        public Eleve()
+        { }
+
         public Eleve(string nom, string prenom, int day, int month, int year, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe)
+            string tier_temps, string commentaire_sante, int id_classe)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -192,7 +195,7 @@ namespace UtilisateursBO
             this.id_classe = id_classe;
         }
         public Eleve(int id_eleves, string nom, string prenom, int day, int month, int year, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe)
+            string tier_temps, string commentaire_sante, int id_classe)
         {
             this.id_eleves = id_eleves;
             this.nom = nom;
@@ -208,7 +211,7 @@ namespace UtilisateursBO
             this.id_classe = id_classe;
         }
         public Eleve(int id_eleves, string nom, string prenom, DateTime date_naissance, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe)
+            string tier_temps, string commentaire_sante, int id_classe)
         {
             this.id_eleves = id_eleves;
             this.nom = nom;
@@ -220,6 +223,5 @@ namespace UtilisateursBO
             this.commentaire_sante = commentaire_sante;
             this.id_classe = id_classe;
         }
-        
     }
 }

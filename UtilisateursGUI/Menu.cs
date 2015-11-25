@@ -11,11 +11,14 @@ namespace UtilisateursGUI
 {
     public partial class Menu : Form
     {
+        #region Initialisation du menu
         public Menu()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Bouton pour appeler le datagridview
         private void appelMdlLectue_Click(object sender, EventArgs e)
         {
             FrmModuleLecture FrmModLect;
@@ -23,10 +26,13 @@ namespace UtilisateursGUI
             FrmModLect.ShowDialog(); // ouverture du formulaire
             FrmModLect.Close(); // fermeture du formulaire
         }
+        #endregion
 
+        #region Bouton Fermer
         private void fmrButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }

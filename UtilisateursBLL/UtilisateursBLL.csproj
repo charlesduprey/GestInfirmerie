@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{481661DD-7FD1-4660-AEA7-10314BDAE4D0}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FFD21BB-185B-4ED7-9AE0-A4391B677575}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UtilisateursBLL</RootNamespace>
@@ -45,11 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UtilisateursBO\UtilisateursBO.csproj">
-      <Project>{4d724a34-7297-4324-a1d6-346ba6455cf8}</Project>
+      <Project>{C380A4D8-9D94-46C3-BC8E-DA2D160E0FAE}</Project>
       <Name>UtilisateursBO</Name>
     </ProjectReference>
     <ProjectReference Include="..\UtilisateursDAL\UtilisateursDAL.csproj">
-      <Project>{718b2c5e-5e0b-4d74-a9a8-d37c383ed372}</Project>
+      <Project>{2587F858-641C-447C-A7AA-9CA62B78DA77}</Project>
       <Name>UtilisateursDAL</Name>
     </ProjectReference>
   </ItemGroup>

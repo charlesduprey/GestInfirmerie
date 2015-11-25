@@ -14,6 +14,7 @@ namespace UtilisateursGUI
 {
     public partial class FrmModuleLecture : Form
     {
+        #region Initialisation du formulaire
         public FrmModuleLecture()
         {
             InitializeComponent();
@@ -94,10 +95,50 @@ namespace UtilisateursGUI
             // Rattachement de la List à la source de données du datagridview
             StudentsView.DataSource = liste;
         }
+#endregion
 
+        #region Bouton Modifier
+        private void modifBtn_Click(object sender, EventArgs e)
+        {
+            FrmModifElv FrmModLect;
+            FrmModLect = new FrmModifElv();
+            FrmModLect.ShowDialog(); // ouverture du formulaire
+            FrmModLect.Close(); // fermeture du formulaire
+        }
+        #endregion
+
+        #region Bouton Actualiser
+        private void actualiserBtn_Click(object sender, EventArgs e)
+        {
+            // Création d'un objet List d'Utilisateur à afficher dans le datagridview
+            List<Eleve> liste = new List<Eleve>();
+            liste = GestionEleve.GetEleves();
+
+            // Rattachement de la List à la source de données du datagridview
+            StudentsView.DataSource = liste;
+
+            #region CODE ALTERNATIF DE REMPLISSAGE DU DATAGRIDVIEW MAIS MOINS "PROPRE"
+            //// Effacement de toutes les lignes
+            //dgv.Rows.Clear();
+
+            //// On définit le nombre de lignes nécessaires en comptant le nombre d'éléments dans la liste
+            //dgv.Rows.Add(GestionUtilisateurs.GetUtilisateurs().Count);
+
+            //// remplissage des lignes du datagridview
+            //for (int i = 0; i < GestionUtilisateurs.GetUtilisateurs().Count; i++)
+            //{
+            //    dgv[0, i].Value = GestionUtilisateurs.GetUtilisateurs()[i].Id;
+            //    dgv[1, i].Value = GestionUtilisateurs.GetUtilisateurs()[i].Nom;
+            //}
+            #endregion
+        }
+        #endregion
+
+        #region Bouton Fermer
         private void fmrButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }
