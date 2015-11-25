@@ -20,6 +20,162 @@ namespace UtilisateursBO
         private string commentaire_sante;
         private int id_classe;
 
+        public int Id_eleves
+        {
+            get
+            {
+                return id_eleves;
+            }
+
+            set
+            {
+                id_eleves = value;
+            }
+        }
+
+        public string Nom
+        {
+            get
+            {
+                return nom;
+            }
+
+            set
+            {
+                nom = value;
+            }
+        }
+
+        public string Prenom
+        {
+            get
+            {
+                return prenom;
+            }
+
+            set
+            {
+                prenom = value;
+            }
+        }
+
+        public DateTime Date_naissance
+        {
+            get
+            {
+                return date_naissance;
+            }
+
+            set
+            {
+                date_naissance = value;
+            }
+        }
+
+        public int Day
+        {
+            get
+            {
+                return day;
+            }
+
+            set
+            {
+                day = value;
+            }
+        }
+
+        public int Month
+        {
+            get
+            {
+                return month;
+            }
+
+            set
+            {
+                month = value;
+            }
+        }
+
+        public int Year
+        {
+            get
+            {
+                return year;
+            }
+
+            set
+            {
+                year = value;
+            }
+        }
+
+        public int Tel_eleve
+        {
+            get
+            {
+                return tel_eleve;
+            }
+
+            set
+            {
+                tel_eleve = value;
+            }
+        }
+
+        public int Tel_parent
+        {
+            get
+            {
+                return tel_parent;
+            }
+
+            set
+            {
+                tel_parent = value;
+            }
+        }
+
+        public bool Tier_temps
+        {
+            get
+            {
+                return tier_temps;
+            }
+
+            set
+            {
+                tier_temps = value;
+            }
+        }
+
+        public string Commentaire_sante
+        {
+            get
+            {
+                return commentaire_sante;
+            }
+
+            set
+            {
+                commentaire_sante = value;
+            }
+        }
+
+        public int Id_classe
+        {
+            get
+            {
+                return id_classe;
+            }
+
+            set
+            {
+                id_classe = value;
+            }
+        }
+
         public Eleve(string nom, string prenom, int day, int month, int year, int tel_eleve, int tel_parent,
             bool tier_temps, string commentaire_sante, int id_classe)
         {
@@ -64,65 +220,6 @@ namespace UtilisateursBO
             this.commentaire_sante = commentaire_sante;
             this.id_classe = id_classe;
         }
-        public int id
-        {
-            get { return id_eleves; }
-            set { id_eleves = value; }
-        }
-        public string nom_eleve
-        {
-            get { return nom; }
-            set { nom = value; }
-        }
-        public string prenom_eleve
-        {
-            get { return prenom; }
-            set { prenom = value; }
-        }
-        public DateTime date
-        {
-            get { return date_naissance; }
-            set { date_naissance = value; }
-        }
-        public int day_naissance
-        {
-            get { return day_naissance; }
-            set { day_naissance = value; }
-        }
-        public int month_naissance
-        {
-            get { return month_naissance; }
-            set { month_naissance = value; }
-        }
-        public int year_naissance
-        {
-            get { return year_naissance; }
-            set { year_naissance = value; }
-        }
-        public int tel_e
-        {
-            get { return tel_eleve; }
-            set { tel_eleve = value; }
-        }
-        public int tel_p
-        {
-            get { return tel_p; }
-            set { tel_p = value; }
-        }
-        public bool tiersTemps
-        {
-            get { return tier_temps; }
-            set { tier_temps = value; }
-        }
-        public string commentaireSante
-        {
-            get { return commentaire_sante; }
-            set { commentaire_sante = value; }
-        }
-        public int idClasse
-        {
-            get { return id_classe; }
-            set { id_classe = value; }
-        }
+        
     }
 }
