@@ -28,32 +28,59 @@ namespace UtilisateursGUI.GestionElv
             //GestionEleve unEleve = new GestionEleve();
             //uneGestionEleve = unEleve.GetEleve();
 
-            // Création d'un objet List d'Eleve à afficher dans la liste
-            List<Eleve> liste = new List<Eleve>();
-            liste = GestionEleve.GetEleves();
+            // Création d'un objet List d'Eleves à afficher dans la liste
+            listeEleves = GestionEleve.GetEleves();
+            
+            nomElv_cmbx.DataSource = listeEleves;
+            nomElv_cmbx.DisplayMember = "Nom";
+            nomElv_cmbx.ValueMember = "Id_eleves";
 
-            nomElv_list.DataSource = liste;
-            nomElv_list.DisplayMember = "Nom";
-            nomElv_list.ValueMember = "Id_eleves";
-
-            numSelectionne = (int)nomElv_list.SelectedIndex;
+            numSelectionne = (int)nomElv_cmbx.SelectedIndex;
 
             #region Remplissage des cases
-            prenomEleve_txt.Text = liste[numSelectionne].Prenom;
-            dateTimePicker1.Text = liste[numSelectionne].Date_naissance.ToString();
-            telEleve_txt.Text = liste[numSelectionne].Tel_eleve.ToString();
-            telParent_txt.Text = liste[numSelectionne].Tel_parent.ToString();
-            tierTemps_txt.Text = liste[numSelectionne].Tier_temps;
-            commentSante_text.Text = liste[numSelectionne].Commentaire_sante;
-            idClasse_txt.Text = GestionEleve.GetLeNomDeClasse(liste[numSelectionne].Id_classe);
+            prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
+            dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
+            telEleve_txt.Text = listeEleves[numSelectionne].Tel_eleve.ToString();
+            telParent_txt.Text = listeEleves[numSelectionne].Tel_parent.ToString();
+            tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps;
+            commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
+
+            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
+            lblClasse_cmbx.DisplayMember = "LibelleClasse";
+            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+
+            #region Brouillon
+            /*
+            nbClasse = listeEleves[numSelectionne].Id_classe;
+            listeNomClasses = new List<string>();
+            nbClasse = GestionClasse.GetClasses().Count;
+            listeNomClasses.Add(GestionEleve.GetLeNomDeClasse(numSelectionne));
             
+            while (ind <= nbClasse)
+            {
+                listeNomClasses.Add(GestionEleve.GetLeNomDeClasse(ind));
+                ind++;
+            }
+
+            lblClasse_cmbx.DataSource = listeNomClasses; //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
+            lblClasse_cmbx.DisplayMember = "LibelleClasse";
+
+            while (ind <= GestionClasse.GetClasses().Count)
+            {
+                lblClasse_cmbx.Value[ind] = GestionEleve.GetLeNomDeClasse(ind);
+                ind++;
+            }*/
+            #endregion
             #endregion
         }
         #endregion
 
         #region Attributs de l'application
         private int numSelectionne;
-        List<Eleve> liste; // initialisation de la liste
+        //  private int nbClasse;
+        //  private int ind = 0;
+        private List<Eleve> listeEleves; // initialisation de la liste
+        // private List<string> listeNomClasses;
         #endregion
 
         #region Bouton Fermer
@@ -67,19 +94,24 @@ namespace UtilisateursGUI.GestionElv
         #region Actions concernant la liste déroulante des noms des élèves
         private void nomElv_list_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int numSelectionne = (int)nomElv_list.SelectedIndex;
-
-            // Création de la liste pour récupérer les élèves
-            liste = GestionEleve.GetEleves();
+            int numSelectionne = (int)nomElv_cmbx.SelectedIndex;
 
             #region Remplissage des cases
-            prenomEleve_txt.Text = liste[numSelectionne].Prenom;
-            dateTimePicker1.Text = liste[numSelectionne].Date_naissance.ToString();
-            telEleve_txt.Text = liste[numSelectionne].Tel_eleve.ToString();
-            telParent_txt.Text = liste[numSelectionne].Tel_parent.ToString();
-            tierTemps_txt.Text = liste[numSelectionne].Tier_temps;
-            commentSante_text.Text = liste[numSelectionne].Commentaire_sante;
-            idClasse_txt.Text = GestionEleve.GetLeNomDeClasse(liste[numSelectionne].Id_classe);
+            prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
+            dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
+            telEleve_txt.Text = listeEleves[numSelectionne].Tel_eleve.ToString();
+            telParent_txt.Text = listeEleves[numSelectionne].Tel_parent.ToString();
+            tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps;
+            commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
+
+            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
+            lblClasse_cmbx.DisplayMember = "NiveauClasse" + "LibelleClasse";
+            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+
+            // lblClasse_cmbx.DataSource = GestionEleve.GetLeNomDeClasse(nbClasse); //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
+            // lblClasse_cmbx.DisplayMember = "LibelleClasse";
+
+
             #endregion
         }
         #endregion
@@ -93,7 +125,7 @@ namespace UtilisateursGUI.GestionElv
             liste = GestionEleve.GetEleves();
             #endregion
 
-            string nom = liste[numSelectionne].Nom;
+            int idElv = nomElv_cmbx.SelectedIndex + 1;
 
             string dateNaissance = dateTimePicker1.Text;
             DateTime laDateNaissance = DateTime.Parse(dateNaissance);
@@ -104,12 +136,13 @@ namespace UtilisateursGUI.GestionElv
             string telParent = telParent_txt.Text;
             int leTelParent = int.Parse(telParent);
 
-            string idClasse = idClasse_txt.Text;
-            int lIdClasse = int.Parse(idClasse);
+            int id_classe = lblClasse_cmbx.SelectedIndex + 1;
 
-            Eleve unEleve = new Eleve(numSelectionne, nom, prenomEleve_txt.Text, laDateNaissance, leTelEleve, leTelParent, tierTemps_txt.Text, commentSante_text.Text, lIdClasse);
+            Eleve unEleve = new Eleve(idElv, nomElv_cmbx.Text, prenomEleve_txt.Text, laDateNaissance, leTelEleve, leTelParent, tierTemps_txt.Text, commentSante_text.Text, id_classe);
 
             GestionEleve.ModifierEleve(unEleve);
+
+            MessageBox.Show("idElv = " + idElv.ToString() + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " +laDateNaissance + ", tel eleve =" + leTelEleve +", tel Parent " + leTelParent +", Tiers temps = "+ tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
         }
         #endregion
 

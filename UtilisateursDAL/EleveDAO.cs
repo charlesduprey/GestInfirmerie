@@ -8,16 +8,16 @@ using UtilisateursBO; // Référence la couche BO
 
 namespace UtilisateursDAL
 {
-    class EleveDAO
+    public class EleveDAO
     {
-        private static UtilisateurDAO unEleveDAO; // Objet DAL
+        private static EleveDAO unEleveDAO; // Objet DAL
 
         #region Accesseur en lecture, renvoi une instance
-        public static UtilisateurDAO GetunUtilisateurDAO()
+        public static EleveDAO GetunUtilisateurDAO()
         {
             if (unEleveDAO == null)
             {
-                unEleveDAO = new UtilisateurDAO();
+                unEleveDAO = new EleveDAO();
             }
             return unEleveDAO;
         }
@@ -239,7 +239,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour supprimer un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_Eleve = '" + unEleve.Tel_eleve + "', tel_Parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "' WHERE id_eleves = " + unEleve.Id_classe;
+            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "' WHERE id_eleves = " + unEleve.Id_eleves;
             #endregion
 
             // Récupération du résultat dans une variable

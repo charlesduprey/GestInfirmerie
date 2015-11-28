@@ -34,14 +34,14 @@ namespace UtilisateursBLL
         #region Méthode GetUnEleve renvoyant un objet Eleve en faisant appel à la méthode GetEleve de la DAL
         public static Eleve GetUnEleve(int id)
         {
-            return UtilisateurDAO.GetLEleve(id);
+            return EleveDAO.GetLEleve(id);
         }
         #endregion
 
         #region Méthode GetEleves renvoyant une liste d'objets Eleve à partir de la méthode GetEleve de la DAL
         public static List<Eleve> GetEleves()
         {
-            return UtilisateurDAO.GetEleves();
+            return EleveDAO.GetEleves();
         }
         #endregion
 
@@ -49,35 +49,35 @@ namespace UtilisateursBLL
         // à la BD avec la méthode AjoutEleve de la DAL
         public static int AjoutEleve(Eleve elv)
         {
-            return UtilisateurDAO.AjoutEleve(elv);
+            return EleveDAO.AjoutEleve(elv);
         }
         #endregion
 
         #region Méthode ModifierEleve modifiant un Eleve avec la méthode UpdateEleve de la DAL
         public static int ModifierEleve(Eleve elv)
         {
-            return UtilisateurDAO.UpdateEleve(elv);
+            return EleveDAO.UpdateEleve(elv);
         }
         #endregion
 
         #region Méthode SupprimerEleve supprimant un Eleve avec la méthode DeleteEleve de la DAL
         public static int SupprimerEleve(int id)
         {
-            return UtilisateurDAO.DeleteEleve(id);
+            return EleveDAO.DeleteEleve(id);
         }
         #endregion
 
         #region Méthode ArchiveEleve archivant un Eleve avec la méthode ArchiverEleve de la DAL
         public static int ArchiveEleve(int id)
         {
-            return UtilisateurDAO.ArchiverEleve(id);
+            return EleveDAO.ArchiverEleve(id);
         }
         #endregion
 
         #region Méthode GetLeNomDeClasse renvoyant le nom et la section de la classe avec la méthode GetNomClasse de la DAL
         public static string GetLeNomDeClasse(int idClasse)
         {
-            return UtilisateurDAO.GetNomClasse(idClasse);
+            return EleveDAO.GetNomClasse(idClasse);
         }
         #endregion
     }

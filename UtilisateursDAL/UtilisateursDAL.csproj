@@ -47,7 +47,6 @@
     <Compile Include="EleveDAO.cs" />
     <Compile Include="MedicamentDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UtilisateursDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UtilisateursBO\UtilisateursBO.csproj">

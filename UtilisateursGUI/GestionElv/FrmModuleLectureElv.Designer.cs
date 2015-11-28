@@ -37,7 +37,7 @@
             // 
             // modifBtn
             // 
-            this.modifBtn.Location = new System.Drawing.Point(728, 449);
+            this.modifBtn.Location = new System.Drawing.Point(671, 388);
             this.modifBtn.Name = "modifBtn";
             this.modifBtn.Size = new System.Drawing.Size(75, 23);
             this.modifBtn.TabIndex = 11;
@@ -47,7 +47,7 @@
             // 
             // fmrButton
             // 
-            this.fmrButton.Location = new System.Drawing.Point(918, 449);
+            this.fmrButton.Location = new System.Drawing.Point(861, 388);
             this.fmrButton.Name = "fmrButton";
             this.fmrButton.Size = new System.Drawing.Size(75, 23);
             this.fmrButton.TabIndex = 10;
@@ -57,7 +57,7 @@
             // 
             // actualiserBtn
             // 
-            this.actualiserBtn.Location = new System.Drawing.Point(822, 449);
+            this.actualiserBtn.Location = new System.Drawing.Point(765, 388);
             this.actualiserBtn.Name = "actualiserBtn";
             this.actualiserBtn.Size = new System.Drawing.Size(75, 23);
             this.actualiserBtn.TabIndex = 9;
@@ -73,14 +73,14 @@
             this.StudentsView.Location = new System.Drawing.Point(12, 12);
             this.StudentsView.Name = "StudentsView";
             this.StudentsView.ReadOnly = true;
-            this.StudentsView.Size = new System.Drawing.Size(1087, 404);
+            this.StudentsView.Size = new System.Drawing.Size(960, 346);
             this.StudentsView.TabIndex = 8;
             // 
             // FrmModuleLectureElv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 497);
+            this.ClientSize = new System.Drawing.Size(989, 425);
             this.Controls.Add(this.modifBtn);
             this.Controls.Add(this.fmrButton);
             this.Controls.Add(this.actualiserBtn);

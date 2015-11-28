@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmModuleLecture.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmModuleLecture.Designer.cs">
-      <DependentUpon>FrmModuleLecture.cs</DependentUpon>
-    </Compile>
     <Compile Include="GestionElv\FrmAjoutElv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +96,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmModuleLecture.resx">
-      <DependentUpon>FrmModuleLecture.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GestionElv\FrmAjoutElv.resx">
       <DependentUpon>FrmAjoutElv.cs</DependentUpon>
     </EmbeddedResource>

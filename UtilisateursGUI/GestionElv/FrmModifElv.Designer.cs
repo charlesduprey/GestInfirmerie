@@ -33,8 +33,7 @@
             this.tierTemps_txt = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.idClasse_txt = new System.Windows.Forms.TextBox();
-            this.idClasse = new System.Windows.Forms.Label();
+            this.lblClasse = new System.Windows.Forms.Label();
             this.commentSante_text = new System.Windows.Forms.TextBox();
             this.commentSante = new System.Windows.Forms.Label();
             this.tierTemps = new System.Windows.Forms.Label();
@@ -47,8 +46,9 @@
             this.prenomEleve_txt = new System.Windows.Forms.TextBox();
             this.prenomEleve = new System.Windows.Forms.Label();
             this.nomEleve = new System.Windows.Forms.Label();
-            this.nomElv_list = new System.Windows.Forms.ComboBox();
+            this.nomElv_cmbx = new System.Windows.Forms.ComboBox();
             this.closeBtn = new System.Windows.Forms.Button();
+            this.lblClasse_cmbx = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // suprBtn
@@ -95,21 +95,14 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // idClasse_txt
+            // lblClasse
             // 
-            this.idClasse_txt.Location = new System.Drawing.Point(152, 247);
-            this.idClasse_txt.Name = "idClasse_txt";
-            this.idClasse_txt.Size = new System.Drawing.Size(191, 20);
-            this.idClasse_txt.TabIndex = 82;
-            // 
-            // idClasse
-            // 
-            this.idClasse.AutoSize = true;
-            this.idClasse.Location = new System.Drawing.Point(17, 250);
-            this.idClasse.Name = "idClasse";
-            this.idClasse.Size = new System.Drawing.Size(118, 13);
-            this.idClasse.TabIndex = 81;
-            this.idClasse.Text = "Identifiant de la classe :";
+            this.lblClasse.AutoSize = true;
+            this.lblClasse.Location = new System.Drawing.Point(17, 250);
+            this.lblClasse.Name = "lblClasse";
+            this.lblClasse.Size = new System.Drawing.Size(102, 13);
+            this.lblClasse.TabIndex = 81;
+            this.lblClasse.Text = "Libelle de la classe :";
             // 
             // commentSante_text
             // 
@@ -212,14 +205,14 @@
             this.nomEleve.TabIndex = 69;
             this.nomEleve.Text = "Nom :";
             // 
-            // nomElv_list
+            // nomElv_cmbx
             // 
-            this.nomElv_list.FormattingEnabled = true;
-            this.nomElv_list.Location = new System.Drawing.Point(152, 65);
-            this.nomElv_list.Name = "nomElv_list";
-            this.nomElv_list.Size = new System.Drawing.Size(191, 21);
-            this.nomElv_list.TabIndex = 68;
-            this.nomElv_list.SelectionChangeCommitted += new System.EventHandler(this.nomElv_list_SelectionChangeCommitted);
+            this.nomElv_cmbx.FormattingEnabled = true;
+            this.nomElv_cmbx.Location = new System.Drawing.Point(152, 65);
+            this.nomElv_cmbx.Name = "nomElv_cmbx";
+            this.nomElv_cmbx.Size = new System.Drawing.Size(191, 21);
+            this.nomElv_cmbx.TabIndex = 68;
+            this.nomElv_cmbx.SelectionChangeCommitted += new System.EventHandler(this.nomElv_list_SelectionChangeCommitted);
             // 
             // closeBtn
             // 
@@ -231,18 +224,26 @@
             this.closeBtn.UseVisualStyleBackColor = true;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
+            // lblClasse_cmbx
+            // 
+            this.lblClasse_cmbx.FormattingEnabled = true;
+            this.lblClasse_cmbx.Location = new System.Drawing.Point(152, 247);
+            this.lblClasse_cmbx.Name = "lblClasse_cmbx";
+            this.lblClasse_cmbx.Size = new System.Drawing.Size(191, 21);
+            this.lblClasse_cmbx.TabIndex = 88;
+            // 
             // FrmModifElv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 392);
+            this.ClientSize = new System.Drawing.Size(388, 392);
+            this.Controls.Add(this.lblClasse_cmbx);
             this.Controls.Add(this.suprBtn);
             this.Controls.Add(this.archBtn);
             this.Controls.Add(this.tierTemps_txt);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.idClasse_txt);
-            this.Controls.Add(this.idClasse);
+            this.Controls.Add(this.lblClasse);
             this.Controls.Add(this.commentSante_text);
             this.Controls.Add(this.commentSante);
             this.Controls.Add(this.tierTemps);
@@ -255,7 +256,7 @@
             this.Controls.Add(this.prenomEleve_txt);
             this.Controls.Add(this.prenomEleve);
             this.Controls.Add(this.nomEleve);
-            this.Controls.Add(this.nomElv_list);
+            this.Controls.Add(this.nomElv_cmbx);
             this.Controls.Add(this.closeBtn);
             this.Name = "FrmModifElv";
             this.Text = "FrmModifElv";
@@ -271,8 +272,7 @@
         private System.Windows.Forms.TextBox tierTemps_txt;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TextBox idClasse_txt;
-        private System.Windows.Forms.Label idClasse;
+        private System.Windows.Forms.Label lblClasse;
         private System.Windows.Forms.TextBox commentSante_text;
         private System.Windows.Forms.Label commentSante;
         private System.Windows.Forms.Label tierTemps;
@@ -285,7 +285,8 @@
         private System.Windows.Forms.TextBox prenomEleve_txt;
         private System.Windows.Forms.Label prenomEleve;
         private System.Windows.Forms.Label nomEleve;
-        private System.Windows.Forms.ComboBox nomElv_list;
+        private System.Windows.Forms.ComboBox nomElv_cmbx;
         private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.ComboBox lblClasse_cmbx;
     }
 }

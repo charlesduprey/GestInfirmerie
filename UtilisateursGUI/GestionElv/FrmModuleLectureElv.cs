@@ -26,6 +26,7 @@ namespace UtilisateursGUI.GestionElv
             // Blocage de la génération automatique des colonnes
             StudentsView.AutoGenerateColumns = false;
 
+            #region Création des colonnes
             // Création d'une en-tête de colonne pour la colonne 1
             DataGridViewTextBoxColumn IdColumn = new DataGridViewTextBoxColumn();
             IdColumn.DataPropertyName = "id_eleves";
@@ -70,8 +71,9 @@ namespace UtilisateursGUI.GestionElv
             DataGridViewTextBoxColumn idClasseColumn = new DataGridViewTextBoxColumn();
             idClasseColumn.DataPropertyName = "Commentaire_sante";
             idClasseColumn.HeaderText = "Identifiant de la classe";
+            #endregion
 
-            // Ajout des 2 en-têtes de colonne au datagridview
+            #region Ajout des 9 en-têtes de colonne au datagridview
             StudentsView.Columns.Add(IdColumn);
             StudentsView.Columns.Add(NomColumn);
             StudentsView.Columns.Add(PrenomColumn);
@@ -81,13 +83,15 @@ namespace UtilisateursGUI.GestionElv
             StudentsView.Columns.Add(TierTempsColumn);
             StudentsView.Columns.Add(CommentSanteColumn);
             StudentsView.Columns.Add(idClasseColumn);
+            #endregion
 
-            // Définition du style apporté au datagridview
+            #region Définition du style apporté au datagridview
             StudentsView.ColumnHeadersVisible = true;
             DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
             columnHeaderStyle.BackColor = Color.Beige;
             columnHeaderStyle.Font = new Font("Verdana", 10, FontStyle.Bold);
             StudentsView.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            #endregion
 
             // Création d'un objet List d'Utilisateur à afficher dans le datagridview
             List<Eleve> liste = new List<Eleve>();
@@ -97,7 +101,7 @@ namespace UtilisateursGUI.GestionElv
              *  StudentsView.DataSource = liste;
              */
 
-            #region CODE ALTERNATIF DE REMPLISSAGE DU DATAGRIDVIEW MAIS MOINS "PROPRE"
+            #region Code alternatif de remplissage du datagridview utilisé plus pratique mais moins "propre" que celui du dessus
             // Effacement de toutes les lignes
             StudentsView.Rows.Clear();
 
