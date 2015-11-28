@@ -61,7 +61,7 @@ namespace UtilisateursGUI
         #region Bouton pour appeler l'étudient d'Hagrid View
         private void appelMdlLectureGestElv_Click(object sender, EventArgs e)
         {
-            FrmModuleLecture FrmModLect = new FrmModuleLecture();
+            FrmModuleLectureElv FrmModLect = new FrmModuleLectureElv();
             FrmModLect.ShowDialog(); // ouverture du formulaire
             FrmModLect.Close(); // fermeture du formulaire
         }
