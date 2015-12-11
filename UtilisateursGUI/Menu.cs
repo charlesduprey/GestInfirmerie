@@ -54,7 +54,10 @@ namespace UtilisateursGUI
         #region Bouton pour appeller la suppression d'un élève
         private void suprElvBtn_Click(object sender, EventArgs e)
         {
-
+            FrmModifElv FrmModLect;
+            FrmModLect = new FrmModifElv();
+            FrmModLect.ShowDialog(); // ouverture du formulaire
+            FrmModLect.Close(); // fermeture du formulaire
         }
         #endregion
 

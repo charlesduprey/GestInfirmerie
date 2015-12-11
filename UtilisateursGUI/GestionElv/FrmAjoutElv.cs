@@ -44,7 +44,7 @@ namespace UtilisateursGUI.GestionElv
             string idClasse = listeClasse.Text;
             int lIdClasse = int.Parse(idClasse);
 
-            Eleve unEleve = new Eleve(nomEleve.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tierTemps_txt.Text, commentSante_text.Text, lIdClasse);
+            Eleve unEleve = new Eleve(nomEleve.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, bool.Parse(tierTemps_txt.Text), commentSante_text.Text, lIdClasse, false);
 
             GestionEleve.AjoutEleve(unEleve);
         }

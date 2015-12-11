@@ -45,6 +45,20 @@ namespace UtilisateursBLL
         }
         #endregion
 
+        #region Méthode GetElevesArchives renvoyant une liste d'objets Eleve archivés à partir de la méthode GetEleveArchives de la DAL
+        public static List<Eleve> GetElevesArchives()
+        {
+            return EleveDAO.GetElevesArchives();
+        }
+        #endregion
+
+        #region Méthode GetElevesNonArchives renvoyant une liste d'objets Eleve non archivés à partir de la méthode GetElevesNonArchives de la DAL
+        public static List<Eleve> GetElevesNonArchives()
+        {
+            return EleveDAO.GetElevesNonArchives();
+        }
+        #endregion
+
         #region Méthode AjoutEleve créant un nouvel objet Eleve à partir de son id et de son nom et qui le renvoi en l'ajoutant
         // à la BD avec la méthode AjoutEleve de la DAL
         public static int AjoutEleve(Eleve elv)

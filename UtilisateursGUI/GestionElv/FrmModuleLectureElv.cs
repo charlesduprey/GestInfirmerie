@@ -117,6 +117,7 @@ namespace UtilisateursGUI.GestionElv
                 StudentsView[3, i].Value = liste[i].Date_naissance;
                 StudentsView[4, i].Value = liste[i].Tel_eleve;
                 StudentsView[5, i].Value = liste[i].Tel_parent;
+
                 StudentsView[6, i].Value = liste[i].Tier_temps;
                 StudentsView[7, i].Value = liste[i].Commentaire_sante;
                 StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(liste[i].Id_classe);
@@ -126,27 +127,95 @@ namespace UtilisateursGUI.GestionElv
         #endregion
 
         #region Boutons du module
-        #region Bouton Modifier
-        private void modifBtn_Click(object sender, EventArgs e)
+        #region Bouton afficher les élèves archivés
+        private void elvArchBtn_Click(object sender, EventArgs e)
         {
-            FrmModifElv FrmModLect;
-            FrmModLect = new FrmModifElv();
-            FrmModLect.ShowDialog(); // ouverture du formulaire
-            FrmModLect.Close(); // fermeture du formulaire
+            elementsAffiches.Text = "Tableau des élèves archivés";
+
+            // Création d'un objet List d'Utilisateur à afficher dans le datagridview
+            List<Eleve> liste = new List<Eleve>();
+            liste = GestionEleve.GetElevesArchives();
+
+            /*  // Rattachement de la List à la source de données du datagridview
+             *  StudentsView.DataSource = liste;
+             */
+
+            #region Code alternatif de remplissage du datagridview utilisé plus pratique mais moins "propre" que celui du dessus
+            // Effacement de toutes les lignes
+            StudentsView.Rows.Clear();
+
+            // On définit le nombre de lignes nécessaires en comptant le nombre d'éléments dans la liste
+            StudentsView.Rows.Add(GestionEleve.GetElevesArchives().Count);
+
+            // Remplissage des lignes du datagridview
+            for (int i = 0; i < GestionEleve.GetElevesArchives().Count; i++)
+            {
+                StudentsView[0, i].Value = liste[i].Id_eleves;
+                StudentsView[1, i].Value = liste[i].Nom;
+                StudentsView[2, i].Value = liste[i].Prenom;
+                StudentsView[3, i].Value = liste[i].Date_naissance;
+                StudentsView[4, i].Value = liste[i].Tel_eleve;
+                StudentsView[5, i].Value = liste[i].Tel_parent;
+
+                StudentsView[6, i].Value = liste[i].Tier_temps;
+                StudentsView[7, i].Value = liste[i].Commentaire_sante;
+                StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(liste[i].Id_classe);
+            }
+            #endregion
         }
         #endregion
 
-        #region Bouton Actualiser
+        #region Bouton afficher les élèves non archivés
+        private void elvNonArchBtn_Click(object sender, EventArgs e)
+        {
+            elementsAffiches.Text = "Tableau des élèves non archivés";
+
+            // Création d'un objet List d'Utilisateur à afficher dans le datagridview
+            List<Eleve> liste = new List<Eleve>();
+            liste = GestionEleve.GetElevesNonArchives();
+
+            /*  // Rattachement de la List à la source de données du datagridview
+             *  StudentsView.DataSource = liste;
+             */
+
+            #region Code alternatif de remplissage du datagridview utilisé plus pratique mais moins "propre" que celui du dessus
+            // Effacement de toutes les lignes
+            StudentsView.Rows.Clear();
+
+            // On définit le nombre de lignes nécessaires en comptant le nombre d'éléments dans la liste
+            StudentsView.Rows.Add(GestionEleve.GetElevesNonArchives().Count);
+
+            // Remplissage des lignes du datagridview
+            for (int i = 0; i < GestionEleve.GetElevesNonArchives().Count; i++)
+            {
+                StudentsView[0, i].Value = liste[i].Id_eleves;
+                StudentsView[1, i].Value = liste[i].Nom;
+                StudentsView[2, i].Value = liste[i].Prenom;
+                StudentsView[3, i].Value = liste[i].Date_naissance;
+                StudentsView[4, i].Value = liste[i].Tel_eleve;
+                StudentsView[5, i].Value = liste[i].Tel_parent;
+
+                StudentsView[6, i].Value = liste[i].Tier_temps;
+                StudentsView[7, i].Value = liste[i].Commentaire_sante;
+                StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(liste[i].Id_classe);
+            }
+            #endregion
+        }
+        #endregion
+
+        #region Bouton Voir tous les élèves
         private void actualiserBtn_Click(object sender, EventArgs e)
         {
+            elementsAffiches.Text = "Tableau de tous les élèves";
+
             // Création d'un objet List d'Utilisateur à afficher dans le datagridview
             List<Eleve> liste = new List<Eleve>();
             liste = GestionEleve.GetEleves();
-            
+
             /*  // Rattachement de la List à la source de données du datagridview
              *  StudentsView.DataSource = liste;
-             */  
-            
+             */
+
             #region CODE ALTERNATIF DE REMPLISSAGE DU DATAGRIDVIEW MAIS MOINS "PROPRE"
             // Effacement de toutes les lignes
             StudentsView.Rows.Clear();
@@ -168,6 +237,23 @@ namespace UtilisateursGUI.GestionElv
                 StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(GestionEleve.GetEleves()[i].Id_classe);
             }
             #endregion
+        }
+        #endregion
+
+        #region Bouton Ajout
+        private void ajoutBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Bouton Modifier/Supprimer
+        private void modifBtn_Click(object sender, EventArgs e)
+        {
+            FrmModifElv FrmModLect;
+            FrmModLect = new FrmModifElv();
+            FrmModLect.ShowDialog(); // ouverture du formulaire
+            FrmModLect.Close(); // fermeture du formulaire
         }
         #endregion
 

@@ -131,9 +131,9 @@
             // 
             // modifElvBtn
             // 
-            this.modifElvBtn.Location = new System.Drawing.Point(72, 106);
+            this.modifElvBtn.Location = new System.Drawing.Point(72, 104);
             this.modifElvBtn.Name = "modifElvBtn";
-            this.modifElvBtn.Size = new System.Drawing.Size(108, 27);
+            this.modifElvBtn.Size = new System.Drawing.Size(108, 29);
             this.modifElvBtn.TabIndex = 13;
             this.modifElvBtn.Text = "Modifier";
             this.modifElvBtn.UseVisualStyleBackColor = true;
@@ -143,7 +143,7 @@
             // 
             this.suprElvBtn.Location = new System.Drawing.Point(72, 139);
             this.suprElvBtn.Name = "suprElvBtn";
-            this.suprElvBtn.Size = new System.Drawing.Size(108, 27);
+            this.suprElvBtn.Size = new System.Drawing.Size(108, 29);
             this.suprElvBtn.TabIndex = 14;
             this.suprElvBtn.Text = "Supprimer";
             this.suprElvBtn.UseVisualStyleBackColor = true;
