@@ -192,7 +192,7 @@ namespace UtilisateursDAL
 
                 id_classe = int.Parse(monReader["id_classe"].ToString());
 
-                archive_elv = bool.Parse(monReader["archive_elv"].ToString());
+                archive_elv = bool.Parse(monReader["archiver"].ToString());
 
                 unEleve = new Eleve(id_eleve, nom, prenom, date_naissance, tel_eleve, tel_parent, bool.Parse(tier_temps), commentaire_sante, id_classe, archive_elv);
                 lesEleves.Add(unEleve);
@@ -207,7 +207,7 @@ namespace UtilisateursDAL
         }
         #endregion
 
-        #region Méthode GetEleves retournant une List d'objets Eleves contenus dans la table ELEVES
+        #region Méthode GetElevesAchives retournant une List d'objets Eleves contenus dans la table ELEVES
         public static List<Eleve> GetElevesArchives()
         {
             #region Liste des attributs nécessaires pour récupérer et retourner le résultat attendu
@@ -327,7 +327,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour supprimer un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM ELEVES WHERE archive_elv = '0'";
+            cmd.CommandText = "SELECT * FROM ELEVES WHERE archiver = '0'";
             #endregion
 
             // Récupération du résultat dans une variable
@@ -380,7 +380,7 @@ namespace UtilisateursDAL
 
                 id_classe = int.Parse(monReader["id_classe"].ToString());
 
-                archive_elv = bool.Parse(monReader["archive_elv"].ToString());
+                archive_elv = bool.Parse(monReader["archiver"].ToString());
 
                 unEleve = new Eleve(id_eleve, nom, prenom, date_naissance, tel_eleve, tel_parent, bool.Parse(tier_temps), commentaire_sante, id_classe, archive_elv);
                 lesEleves.Add(unEleve);
@@ -433,7 +433,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour supprimer un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "', archive_elv = '" + unEleve.Archive_elv + "' WHERE id_eleves = " + unEleve.Id_eleves;
+            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "', archive_elv = '" + unEleve.ArchiveEleve + "' WHERE id_eleves = " + unEleve.Id_eleves;
             #endregion
 
             // Récupération du résultat dans une variable
@@ -459,7 +459,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour supprimer un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "DELETE FROM ELEVES WHERE id_eleves = " + id;
+            cmd.CommandText = "DELETE FROM ELEVES WHERE id_eleves = '" + id + "';";
             #endregion
 
             nbEnr = cmd.ExecuteNonQuery();

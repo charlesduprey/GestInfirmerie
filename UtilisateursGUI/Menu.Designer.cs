@@ -39,15 +39,20 @@
             this.suprMdcBtn = new System.Windows.Forms.Button();
             this.modifElvBtn = new System.Windows.Forms.Button();
             this.suprElvBtn = new System.Windows.Forms.Button();
+            this.suprVstBtn = new System.Windows.Forms.Button();
+            this.modifVstBtn = new System.Windows.Forms.Button();
+            this.ajoutVstBtn = new System.Windows.Forms.Button();
+            this.appelMdlLectureGestVst = new System.Windows.Forms.Button();
+            this.gestVst = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // fmrButton
             // 
-            this.fmrButton.Location = new System.Drawing.Point(162, 247);
+            this.fmrButton.Location = new System.Drawing.Point(380, 254);
             this.fmrButton.Name = "fmrButton";
-            this.fmrButton.Size = new System.Drawing.Size(90, 23);
+            this.fmrButton.Size = new System.Drawing.Size(108, 23);
             this.fmrButton.TabIndex = 5;
-            this.fmrButton.Text = "Fermer";
+            this.fmrButton.Text = "Fermer l\'application";
             this.fmrButton.UseVisualStyleBackColor = true;
             this.fmrButton.Click += new System.EventHandler(this.fmrButton_Click);
             // 
@@ -149,11 +154,65 @@
             this.suprElvBtn.UseVisualStyleBackColor = true;
             this.suprElvBtn.Click += new System.EventHandler(this.suprElvBtn_Click);
             // 
+            // suprVstBtn
+            // 
+            this.suprVstBtn.Location = new System.Drawing.Point(409, 139);
+            this.suprVstBtn.Name = "suprVstBtn";
+            this.suprVstBtn.Size = new System.Drawing.Size(108, 29);
+            this.suprVstBtn.TabIndex = 19;
+            this.suprVstBtn.Text = "Supprimer";
+            this.suprVstBtn.UseVisualStyleBackColor = true;
+            this.suprVstBtn.Click += new System.EventHandler(this.suprVstBtn_Click);
+            // 
+            // modifVstBtn
+            // 
+            this.modifVstBtn.Location = new System.Drawing.Point(409, 104);
+            this.modifVstBtn.Name = "modifVstBtn";
+            this.modifVstBtn.Size = new System.Drawing.Size(108, 29);
+            this.modifVstBtn.TabIndex = 18;
+            this.modifVstBtn.Text = "Modifier";
+            this.modifVstBtn.UseVisualStyleBackColor = true;
+            this.modifVstBtn.Click += new System.EventHandler(this.modifVstBtn_Click);
+            // 
+            // ajoutVstBtn
+            // 
+            this.ajoutVstBtn.Location = new System.Drawing.Point(409, 71);
+            this.ajoutVstBtn.Name = "ajoutVstBtn";
+            this.ajoutVstBtn.Size = new System.Drawing.Size(108, 27);
+            this.ajoutVstBtn.TabIndex = 17;
+            this.ajoutVstBtn.Text = "Ajouter";
+            this.ajoutVstBtn.UseVisualStyleBackColor = true;
+            this.ajoutVstBtn.Click += new System.EventHandler(this.ajoutVstBtn_Click);
+            // 
+            // appelMdlLectureGestVst
+            // 
+            this.appelMdlLectureGestVst.Location = new System.Drawing.Point(409, 174);
+            this.appelMdlLectureGestVst.Name = "appelMdlLectureGestVst";
+            this.appelMdlLectureGestVst.Size = new System.Drawing.Size(108, 27);
+            this.appelMdlLectureGestVst.TabIndex = 16;
+            this.appelMdlLectureGestVst.Text = "Module Lecture";
+            this.appelMdlLectureGestVst.UseVisualStyleBackColor = true;
+            this.appelMdlLectureGestVst.Click += new System.EventHandler(this.appelMdlLectureGestVst_Click);
+            // 
+            // gestVst
+            // 
+            this.gestVst.AutoSize = true;
+            this.gestVst.Location = new System.Drawing.Point(413, 41);
+            this.gestVst.Name = "gestVst";
+            this.gestVst.Size = new System.Drawing.Size(95, 13);
+            this.gestVst.TabIndex = 15;
+            this.gestVst.Text = "Gestion des visites";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 298);
+            this.ClientSize = new System.Drawing.Size(585, 298);
+            this.Controls.Add(this.suprVstBtn);
+            this.Controls.Add(this.modifVstBtn);
+            this.Controls.Add(this.ajoutVstBtn);
+            this.Controls.Add(this.appelMdlLectureGestVst);
+            this.Controls.Add(this.gestVst);
             this.Controls.Add(this.suprElvBtn);
             this.Controls.Add(this.modifElvBtn);
             this.Controls.Add(this.suprMdcBtn);
@@ -185,6 +244,11 @@
         private System.Windows.Forms.Button suprMdcBtn;
         private System.Windows.Forms.Button modifElvBtn;
         private System.Windows.Forms.Button suprElvBtn;
+        private System.Windows.Forms.Button suprVstBtn;
+        private System.Windows.Forms.Button modifVstBtn;
+        private System.Windows.Forms.Button ajoutVstBtn;
+        private System.Windows.Forms.Button appelMdlLectureGestVst;
+        private System.Windows.Forms.Label gestVst;
     }
 }
 

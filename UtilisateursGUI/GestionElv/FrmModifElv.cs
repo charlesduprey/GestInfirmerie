@@ -38,7 +38,7 @@ namespace UtilisateursGUI.GestionElv
             numSelectionne = (int)nomElv_cmbx.SelectedIndex;
 
             #region Remplissage des cases
-            if (listeEleves[numSelectionne].Archive_elv == false)
+            if (listeEleves[numSelectionne].ArchiveEleve == false)
             {
                 prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
                 dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
@@ -86,39 +86,6 @@ namespace UtilisateursGUI.GestionElv
         // private List<string> listeNomClasses;
         #endregion
 
-        #region Bouton Fermer
-        private void closeBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-        #endregion
-
-        #region Actions concernant la liste déroulante des noms des élèves
-        private void nomElv_list_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            int numSelectionne = (int)nomElv_cmbx.SelectedIndex;
-
-            #region Remplissage des cases
-            prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
-            dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
-            telEleve_txt.Text = listeEleves[numSelectionne].Tel_eleve.ToString();
-            telParent_txt.Text = listeEleves[numSelectionne].Tel_parent.ToString();
-            tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps.ToString();
-            commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
-
-            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
-            lblClasse_cmbx.DisplayMember = "NiveauClasse" + "LibelleClasse";
-            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
-
-            // lblClasse_cmbx.DataSource = GestionEleve.GetLeNomDeClasse(nbClasse); //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
-            // lblClasse_cmbx.DisplayMember = "LibelleClasse";
-
-
-            #endregion
-        }
-        #endregion
-
         #region Boutons du formulaire
         #region Bouton Enregistrer
         private void saveBtn_Click(object sender, EventArgs e)
@@ -145,23 +112,60 @@ namespace UtilisateursGUI.GestionElv
 
             GestionEleve.ModifierEleve(unEleve);
 
-            MessageBox.Show("idElv = " + idElv.ToString() + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " +laDateNaissance + ", tel eleve =" + leTelEleve +", tel Parent " + leTelParent +", Tiers temps = "+ tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
+            MessageBox.Show("idElv = " + idElv.ToString() + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
         }
         #endregion
 
         #region Bouton Archiver
         private void archBtn_Click(object sender, EventArgs e)
         {
-            GestionEleve.ArchiveEleve(numSelectionne + 1);
+            // int num = listeEleves[numSelectionne].Id_eleves;
+
+            int num = int.Parse(nomElv_cmbx.SelectedValue.ToString());
+
+            MessageBox.Show("Voulez-vous archiver l'élève ? " + num, "Archivage", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            GestionEleve.ArchiveEleve(num);
         }
         #endregion
 
         #region Bouton Supprimer
         private void suprBtn_Click(object sender, EventArgs e)
         {
-            GestionEleve.SupprimerEleve(numSelectionne + 1);
+            GestionEleve.SupprimerEleve(int.Parse(nomElv_cmbx.SelectedValue.ToString()));
         }
         #endregion
+
+        #region Bouton Fermer
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+        #endregion
+        #endregion
+
+        #region Actions concernant la liste déroulante des noms des élèves
+        private void nomElv_list_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int numSelectionne = (int)nomElv_cmbx.SelectedIndex;
+
+            #region Remplissage des cases
+            prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
+            dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
+            telEleve_txt.Text = listeEleves[numSelectionne].Tel_eleve.ToString();
+            telParent_txt.Text = listeEleves[numSelectionne].Tel_parent.ToString();
+            tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps.ToString();
+            commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
+
+            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
+            lblClasse_cmbx.DisplayMember = "NiveauClasse" + "LibelleClasse";
+            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+
+            // lblClasse_cmbx.DataSource = GestionEleve.GetLeNomDeClasse(nbClasse); //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
+            // lblClasse_cmbx.DisplayMember = "LibelleClasse";
+            #endregion
+        }
         #endregion
     }
 }

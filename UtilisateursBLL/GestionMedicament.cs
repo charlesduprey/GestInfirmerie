@@ -53,7 +53,7 @@ namespace UtilisateursBLL
         }
         #endregion
 
-        #region Méthode qui modifie un nouveau Medicament avec la méthode UpdateEleve de la DAL
+        #region Méthode qui modifie un nouveau Medicament avec la méthode UpdateMedicament de la DAL
         public static int ModifierMedicament(Medicament mdc)
         {
             return MedicamentDAO.UpdateMedicament(mdc);

@@ -22,12 +22,7 @@ namespace UtilisateursGUI.GestionMdc
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             UtilisateursBLL.GestionEleve.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
 
-            //uneGestionEleve = new List<GestionEleve>();
-
-            //GestionEleve unEleve = new GestionEleve();
-            //uneGestionEleve = unEleve.GetEleve();
-
-            // Création d'un objet List d'Eleve à afficher dans la liste
+            // Création d'un objet List de médicaments à afficher dans la liste
             liste = GestionMedicament.GetMedicaments();
 
             lblMdc_list.DataSource = liste;

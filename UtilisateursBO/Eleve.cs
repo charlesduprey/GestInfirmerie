@@ -20,7 +20,7 @@ namespace UtilisateursBO
         private bool tier_temps;
         private string commentaire_sante;
         private int id_classe;
-        private bool archive_elv;
+        private bool archiveEleve;
         #endregion
 
         #region Encapsulation des attributs
@@ -96,10 +96,10 @@ namespace UtilisateursBO
             set { id_classe = value; }
         }
 
-        public bool Archive_elv
+        public bool ArchiveEleve
         {
-            get { return archive_elv; }
-            set { archive_elv = value; }
+            get { return archiveEleve; }
+            set { archiveEleve = value; }
         }
         #endregion
 
@@ -108,7 +108,7 @@ namespace UtilisateursBO
         { }
 
         public Eleve(string nom, string prenom, int day, int month, int year, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe, bool archive_elv)
+            bool tier_temps, string commentaire_sante, int id_classe)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -121,10 +121,9 @@ namespace UtilisateursBO
             this.tier_temps = tier_temps;
             this.commentaire_sante = commentaire_sante;
             this.id_classe = id_classe;
-            this.archive_elv = archive_elv;
         }
         public Eleve(int id_eleves, string nom, string prenom, int day, int month, int year, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe, bool archive_elv)
+            bool tier_temps, string commentaire_sante, int id_classe)
         {
             this.id_eleves = id_eleves;
             this.nom = nom;
@@ -138,11 +137,10 @@ namespace UtilisateursBO
             this.tier_temps = tier_temps;
             this.commentaire_sante = commentaire_sante;
             this.id_classe = id_classe;
-            this.archive_elv = archive_elv;
         }
 
         public Eleve(string nom, string prenom, DateTime date_naissance, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe, bool archive_elv)
+            bool tier_temps, string commentaire_sante, bool archiveEleve, int id_classe)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -151,12 +149,12 @@ namespace UtilisateursBO
             this.tel_parent = tel_parent;
             this.tier_temps = tier_temps;
             this.commentaire_sante = commentaire_sante;
+            this.archiveEleve = archiveEleve;
             this.id_classe = id_classe;
-            this.archive_elv = archive_elv;
         }
 
         public Eleve(int id_eleves, string nom, string prenom, DateTime date_naissance, int tel_eleve, int tel_parent,
-            bool tier_temps, string commentaire_sante, int id_classe, bool archive_elv)
+            bool tier_temps, string commentaire_sante, int id_classe)
         {
             this.id_eleves = id_eleves;
             this.nom = nom;
@@ -167,7 +165,21 @@ namespace UtilisateursBO
             this.tier_temps = tier_temps;
             this.commentaire_sante = commentaire_sante;
             this.id_classe = id_classe;
-            this.archive_elv = archive_elv;
+        }
+
+        public Eleve(int id_eleves, string nom, string prenom, DateTime date_naissance, int tel_eleve, int tel_parent,
+            bool tier_temps, string commentaire_sante, int id_classe, bool archiveEleve)
+        {
+            this.id_eleves = id_eleves;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.date_naissance = date_naissance;
+            this.tel_eleve = tel_eleve;
+            this.tel_parent = tel_parent;
+            this.tier_temps = tier_temps;
+            this.commentaire_sante = commentaire_sante;
+            this.id_classe = id_classe;
+            this.archiveEleve = archiveEleve;
         }
         #endregion
     }

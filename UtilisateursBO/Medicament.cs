@@ -8,9 +8,9 @@ namespace UtilisateursBO
     public class Medicament
     {
         #region Attributs de la classe Medicament
-        int idMdc;
-        string lblMdc;
-        bool archivageMdc;
+        private int idMdc;
+        private string lblMdc;
+        private bool archivageMdc;
         #endregion
 
         #region Encapsulation des attributs de la classe Medicament

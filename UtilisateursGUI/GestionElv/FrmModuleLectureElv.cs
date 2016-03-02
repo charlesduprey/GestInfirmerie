@@ -144,22 +144,40 @@ namespace UtilisateursGUI.GestionElv
             // Effacement de toutes les lignes
             StudentsView.Rows.Clear();
 
-            // On définit le nombre de lignes nécessaires en comptant le nombre d'éléments dans la liste
-            StudentsView.Rows.Add(GestionEleve.GetElevesArchives().Count);
-
-            // Remplissage des lignes du datagridview
-            for (int i = 0; i < GestionEleve.GetElevesArchives().Count; i++)
+            if (GestionEleve.GetElevesArchives().Count == 0)
             {
-                StudentsView[0, i].Value = liste[i].Id_eleves;
-                StudentsView[1, i].Value = liste[i].Nom;
-                StudentsView[2, i].Value = liste[i].Prenom;
-                StudentsView[3, i].Value = liste[i].Date_naissance;
-                StudentsView[4, i].Value = liste[i].Tel_eleve;
-                StudentsView[5, i].Value = liste[i].Tel_parent;
+                // Ajout d'une ligne dans le DataGridView
+                StudentsView.Rows.Add(1);
+                
+                // Remplissage d'une ligne vide vue qu'il y a rien
+                StudentsView[0, 0].Value = "";
+                StudentsView[1, 0].Value = "";
+                StudentsView[2, 0].Value = "";
+                StudentsView[3, 0].Value = "";
+                StudentsView[4, 0].Value = "";
+                StudentsView[5, 0].Value = "";
+                StudentsView[6, 0].Value = "";
+                StudentsView[7, 0].Value = "";
+                StudentsView[8, 0].Value = "";
+            }
+            else
+            {
+                // On définit le nombre de lignes nécessaires en comptant le nombre d'éléments dans la liste
+                StudentsView.Rows.Add(GestionEleve.GetElevesArchives().Count);
 
-                StudentsView[6, i].Value = liste[i].Tier_temps;
-                StudentsView[7, i].Value = liste[i].Commentaire_sante;
-                StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(liste[i].Id_classe);
+                // Remplissage des lignes du datagridview
+                for (int i = 0; i < GestionEleve.GetElevesArchives().Count; i++)
+                {
+                    StudentsView[0, i].Value = liste[i].Id_eleves;
+                    StudentsView[1, i].Value = liste[i].Nom;
+                    StudentsView[2, i].Value = liste[i].Prenom;
+                    StudentsView[3, i].Value = liste[i].Date_naissance;
+                    StudentsView[4, i].Value = liste[i].Tel_eleve;
+                    StudentsView[5, i].Value = liste[i].Tel_parent;
+                    StudentsView[6, i].Value = liste[i].Tier_temps;
+                    StudentsView[7, i].Value = liste[i].Commentaire_sante;
+                    StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(liste[i].Id_classe);
+                }
             }
             #endregion
         }

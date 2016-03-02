@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using UtilisateursGUI;
 using UtilisateursGUI.GestionMdc;
 using UtilisateursGUI.GestionElv;
+using UtilisateursGUI.GestionVst;
 
 namespace UtilisateursGUI
 {
@@ -103,6 +104,38 @@ namespace UtilisateursGUI
             FrmModuleLectureMdc FrmModLect = new FrmModuleLectureMdc();
             FrmModLect.ShowDialog(); // ouverture du formulaire
             FrmModLect.Close(); // fermeture du formulaire
+        }
+        #endregion
+        #endregion
+
+        #region Module Gestion des visites
+        #region Bouton pour appeller l'ajout des visites
+        private void ajoutVstBtn_Click(object sender, EventArgs e)
+        {
+            FrmAjoutVst frmAjout = new FrmAjoutVst();
+            frmAjout.ShowDialog(); // ouverture du formulaire
+            frmAjout.Close(); // fermeture du formulaire
+        }
+        #endregion
+
+        #region Bouton pour appeller la modification des visites
+        private void modifVstBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Bouton pour appeller la suppression des visites
+        private void suprVstBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Bouton pour appeler la vue sur les visites
+        private void appelMdlLectureGestVst_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
         #endregion
