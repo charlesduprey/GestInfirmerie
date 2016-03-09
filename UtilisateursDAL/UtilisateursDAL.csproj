@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,9 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasseDAO.cs" />
     <Compile Include="ConnexionBD.cs" />
+    <Compile Include="EleveDAO.cs" />
+    <Compile Include="MedicamentDAO.cs" />
+    <Compile Include="Prescription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UtilisateursDAO.cs" />
+    <Compile Include="VisiteDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UtilisateursBO\UtilisateursBO.csproj">
