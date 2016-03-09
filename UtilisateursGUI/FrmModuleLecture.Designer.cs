@@ -28,11 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StudentsView = new System.Windows.Forms.DataGridView();
-            this.actualiserBtn = new System.Windows.Forms.Button();
+            this.modifBtn = new System.Windows.Forms.Button();
             this.fmrButton = new System.Windows.Forms.Button();
+            this.actualiserBtn = new System.Windows.Forms.Button();
+            this.StudentsView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // modifBtn
+            // 
+            this.modifBtn.Location = new System.Drawing.Point(728, 449);
+            this.modifBtn.Name = "modifBtn";
+            this.modifBtn.Size = new System.Drawing.Size(75, 23);
+            this.modifBtn.TabIndex = 7;
+            this.modifBtn.Text = "Modifier";
+            this.modifBtn.UseVisualStyleBackColor = true;
+            this.modifBtn.Click += new System.EventHandler(this.modifBtn_Click);
+            // 
+            // fmrButton
+            // 
+            this.fmrButton.Location = new System.Drawing.Point(918, 449);
+            this.fmrButton.Name = "fmrButton";
+            this.fmrButton.Size = new System.Drawing.Size(75, 23);
+            this.fmrButton.TabIndex = 6;
+            this.fmrButton.Text = "Fermer";
+            this.fmrButton.UseVisualStyleBackColor = true;
+            this.fmrButton.Click += new System.EventHandler(this.fmrButton_Click);
+            // 
+            // actualiserBtn
+            // 
+            this.actualiserBtn.Location = new System.Drawing.Point(822, 449);
+            this.actualiserBtn.Name = "actualiserBtn";
+            this.actualiserBtn.Size = new System.Drawing.Size(75, 23);
+            this.actualiserBtn.TabIndex = 5;
+            this.actualiserBtn.Text = "Actualiser";
+            this.actualiserBtn.UseVisualStyleBackColor = true;
+            this.actualiserBtn.Click += new System.EventHandler(this.actualiserBtn_Click);
             // 
             // StudentsView
             // 
@@ -40,32 +71,14 @@
             this.StudentsView.Location = new System.Drawing.Point(12, 12);
             this.StudentsView.Name = "StudentsView";
             this.StudentsView.Size = new System.Drawing.Size(1087, 404);
-            this.StudentsView.TabIndex = 0;
-            // 
-            // actualiserBtn
-            // 
-            this.actualiserBtn.Location = new System.Drawing.Point(822, 449);
-            this.actualiserBtn.Name = "actualiserBtn";
-            this.actualiserBtn.Size = new System.Drawing.Size(75, 23);
-            this.actualiserBtn.TabIndex = 1;
-            this.actualiserBtn.Text = "Acttualiser";
-            this.actualiserBtn.UseVisualStyleBackColor = true;
-            // 
-            // fmrButton
-            // 
-            this.fmrButton.Location = new System.Drawing.Point(918, 449);
-            this.fmrButton.Name = "fmrButton";
-            this.fmrButton.Size = new System.Drawing.Size(75, 23);
-            this.fmrButton.TabIndex = 2;
-            this.fmrButton.Text = "Fermer";
-            this.fmrButton.UseVisualStyleBackColor = true;
-            this.fmrButton.Click += new System.EventHandler(this.fmrButton_Click);
+            this.StudentsView.TabIndex = 4;
             // 
             // FrmModuleLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 508);
+            this.ClientSize = new System.Drawing.Size(1115, 499);
+            this.Controls.Add(this.modifBtn);
             this.Controls.Add(this.fmrButton);
             this.Controls.Add(this.actualiserBtn);
             this.Controls.Add(this.StudentsView);
@@ -78,8 +91,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView StudentsView;
-        private System.Windows.Forms.Button actualiserBtn;
+        private System.Windows.Forms.Button modifBtn;
         private System.Windows.Forms.Button fmrButton;
+        private System.Windows.Forms.Button actualiserBtn;
+        private System.Windows.Forms.DataGridView StudentsView;
     }
 }

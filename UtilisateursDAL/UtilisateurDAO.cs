@@ -107,7 +107,7 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVES values('" + unEleve.nom_eleve + ", " + unEleve.prenom_eleve + ", " + unEleve.date + ", " + unEleve.tel_e + ", " + unEleve.tel_p + ", " + unEleve.tiersTemps + ", " + unEleve.commentaireSante + ", " + unEleve.idClasse + "')";
+            cmd.CommandText = "INSERT INTO ELEVES values('" + unEleve.Nom + ", " + unEleve.Prenom + ", " + unEleve.Date_naissance + ", " + unEleve.Tel_eleve + ", " + unEleve.Tel_parent + ", " + unEleve.Tier_temps + ", " + unEleve.Commentaire_sante + ", " + unEleve.Id_classe + "')";
 
             nbEnr = cmd.ExecuteNonQuery();
 
@@ -127,7 +127,7 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.nom_eleve + "' AND prenom = '" + unEleve.prenom_eleve + "' AND date_naissance = '" + unEleve.date + "' AND tel_Eleve = '" + unEleve.tel_e + "' AND tel_Parent = '" + unEleve.tel_p + "' AND tier_temps = '" + unEleve.tiersTemps + "' AND commentaire_sante = '" + unEleve.commentaireSante + "' AND id_classe = '" + unEleve.idClasse + "' WHERE Id_utilisateur = " + unEleve.id;
+            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "' AND prenom = '" + unEleve.Prenom + "' AND date_naissance = '" + unEleve.Date_naissance + "' AND tel_Eleve = '" + unEleve.Tel_eleve + "' AND tel_Parent = '" + unEleve.Tel_parent + "' AND tier_temps = '" + unEleve.Tier_temps + "' AND commentaire_sante = '" + unEleve.Commentaire_sante + "' AND id_classe = '" + unEleve.Id_classe + "' WHERE Id_utilisateur = " + unEleve.Id_classe;
 
             nbEnr = cmd.ExecuteNonQuery();
 
