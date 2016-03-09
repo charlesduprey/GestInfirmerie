@@ -47,17 +47,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmModifElv.cs">
+    <Compile Include="GestionElv\FrmAjoutElv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModifElv.Designer.cs">
+    <Compile Include="GestionElv\FrmAjoutElv.Designer.cs">
+      <DependentUpon>FrmAjoutElv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionElv\FrmModifElv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionElv\FrmModifElv.Designer.cs">
       <DependentUpon>FrmModifElv.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModuleLecture.cs">
+    <Compile Include="GestionElv\FrmModuleLectureElv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModuleLecture.Designer.cs">
-      <DependentUpon>FrmModuleLecture.cs</DependentUpon>
+    <Compile Include="GestionElv\FrmModuleLectureElv.Designer.cs">
+      <DependentUpon>FrmModuleLectureElv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMdc\FrmModuleLectureMdc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMdc\FrmModuleLectureMdc.Designer.cs">
+      <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMdc\FrmSuprMdc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMdc\FrmSuprMdc.Designer.cs">
+      <DependentUpon>FrmSuprMdc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMdc\FrmAjoutMdc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMdc\FrmAjoutMdc.Designer.cs">
+      <DependentUpon>FrmAjoutMdc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionVst\FrmAjoutVst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionVst\FrmAjoutVst.Designer.cs">
+      <DependentUpon>FrmAjoutVst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionVst\FrmModifVst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionVst\FrmModifVst.Designer.cs">
+      <DependentUpon>FrmModifVst.cs</DependentUpon>
     </Compile>
     <Compile Include="GEST_INFIRMERIEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -72,11 +108,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmModifElv.resx">
+    <EmbeddedResource Include="GestionElv\FrmAjoutElv.resx">
+      <DependentUpon>FrmAjoutElv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionElv\FrmModifElv.resx">
       <DependentUpon>FrmModifElv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModuleLecture.resx">
-      <DependentUpon>FrmModuleLecture.cs</DependentUpon>
+    <EmbeddedResource Include="GestionElv\FrmModuleLectureElv.resx">
+      <DependentUpon>FrmModuleLectureElv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionMdc\FrmModuleLectureMdc.resx">
+      <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionMdc\FrmSuprMdc.resx">
+      <DependentUpon>FrmSuprMdc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionMdc\FrmAjoutMdc.resx">
+      <DependentUpon>FrmAjoutMdc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionVst\FrmAjoutVst.resx">
+      <DependentUpon>FrmAjoutVst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionVst\FrmModifVst.resx">
+      <DependentUpon>FrmModifVst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -114,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UtilisateursBLL\UtilisateursBLL.csproj">
-      <Project>{3FFD21BB-185B-4ED7-9AE0-A4391B677575}</Project>
+      <Project>{0F001A08-4750-4813-8C14-36EB14FC3429}</Project>
       <Name>UtilisateursBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\UtilisateursBO\UtilisateursBO.csproj">
@@ -122,6 +176,7 @@
       <Name>UtilisateursBO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
