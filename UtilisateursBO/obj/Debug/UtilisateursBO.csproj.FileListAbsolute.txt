@@ -2,3 +2,12 @@ D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\Utili
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBO\bin\Debug\UtilisateursBO.pdb
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBO\obj\Debug\UtilisateursBO.dll
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBO\obj\Debug\UtilisateursBO.pdb
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBO\bin\Debug\UtilisateursBO.dll
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBO\bin\Debug\UtilisateursBO.pdb
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.dll
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.pdb
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\bin\Debug\UtilisateursBO.dll
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\bin\Debug\UtilisateursBO.pdb
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\ResolveAssemblyReference.cache
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.dll
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.pdb
