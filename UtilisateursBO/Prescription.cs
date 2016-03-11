@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UtilisateursDAL
+namespace UtilisateursBO
 {
     public class Prescription
     {
-        #region Attributs de la classe Visite
-        private int idVst;
+        #region Attributs de la classe Prescription
+        private int idVisite;
         private int idMedic;
         private int nbPrescri;
         #endregion
 
         #region Encapsulation des attributs
-        public int IdVst
+        public int IdVisite
         {
-            get { return idVst; }
-            set { idVst = value; }
+            get { return idVisite; }
+            set { idVisite = value; }
         }
         public int IdMedic
         {
@@ -31,16 +31,28 @@ namespace UtilisateursDAL
         }
         #endregion
 
-        #region Constructeur de la classe Prescription
+        #region Constructeurs de la classe Prescription
+        #region Constructeur 1
         public Prescription(
-            int idVst,
+            int idVisite,
             int idMedic,
             int nbPrescri)
         {
-            this.idVst = idVst;
+            this.idVisite = idVisite;
             this.idMedic = idMedic;
             this.nbPrescri = nbPrescri;
         }
+        #endregion
+
+        #region Constructeur 2
+        public Prescription(
+            int idMedic,
+            int nbPrescri)
+        {
+            this.idMedic = idMedic;
+            this.nbPrescri = nbPrescri;
+        }
+        #endregion
         #endregion
     }
 }

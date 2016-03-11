@@ -129,10 +129,22 @@ namespace UtilisateursGUI.GestionVst
                 DateTime.Parse(dateVstPicker.Text),
                 DateTime.Parse(dateTimeArv.Text),
                 DateTime.Parse(dateTimeDep.Text),
-                nomElv_cmbx.SelectedIndex + 1
-                );
-
+                //nomElv_cmbx.SelectedIndex + 1
+                (int)nomElv_cmbx.SelectedValue
+            );
             GestionVisite.CreerVisite(uneVisite);
+            #endregion
+
+            int idVisite = GestionVisite.GetIdVstMax();
+
+            #region Insertion d'une prescription
+            Prescription unePrescription = new Prescription(
+                idVisite,
+                lblMdc_list.SelectedIndex + 1,
+                int.Parse(qteNumUpDown.Text)
+            );
+
+            GestionPrescription.CreerPrescription(unePrescription);
             #endregion
         }
         #endregion

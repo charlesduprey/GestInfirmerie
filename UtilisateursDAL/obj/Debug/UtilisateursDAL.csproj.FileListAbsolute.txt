@@ -19,3 +19,10 @@ F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\
 F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
 F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
 F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\ResolveAssemblyReference.cache
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb

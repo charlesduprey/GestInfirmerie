@@ -65,6 +65,12 @@
     <Compile Include="GestionElv\FrmModuleLectureElv.Designer.cs">
       <DependentUpon>FrmModuleLectureElv.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionMdc\FrmModifMdc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMdc\FrmModifMdc.Designer.cs">
+      <DependentUpon>FrmModifMdc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionMdc\FrmModuleLectureMdc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionElv\FrmModuleLectureElv.resx">
       <DependentUpon>FrmModuleLectureElv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionMdc\FrmModifMdc.resx">
+      <DependentUpon>FrmModifMdc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionMdc\FrmModuleLectureMdc.resx">
       <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>

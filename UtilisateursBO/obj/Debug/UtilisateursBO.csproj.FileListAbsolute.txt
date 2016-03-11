@@ -11,3 +11,8 @@ F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\b
 F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\ResolveAssemblyReference.cache
 F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.dll
 F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\bin\Debug\UtilisateursBO.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\bin\Debug\UtilisateursBO.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\ResolveAssemblyReference.cache
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBO\obj\Debug\UtilisateursBO.pdb
