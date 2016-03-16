@@ -113,7 +113,7 @@ namespace UtilisateursGUI.GestionElv
 
             GestionEleve.ModifierEleve(unEleve);
 
-            MessageBox.Show("idElv = " + (int)nomElv_cmbx.SelectedValue + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
+            MessageBox.Show("idElv = " + id_eleve + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
         }
         #endregion
 
