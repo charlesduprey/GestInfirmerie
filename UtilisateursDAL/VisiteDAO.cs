@@ -33,7 +33,7 @@ namespace UtilisateursDAL
             #region Création d'un objet cmd de type SqlCommand permettant d'utiliser la connexion à la BD et de transmettre une requête
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO VISITE values('" + uneVisite.MotifVst + "', '" + uneVisite.CommentVst + "', '" + uneVisite.Pouls + "', '" + uneVisite.TellParents + "', '" + uneVisite.BackHome + "', '" + uneVisite.GoHospital + "', '" + uneVisite.DateVisite + "', '" + uneVisite.HeureDebVst + "', '" + uneVisite.HeureFinVst + "', '" + uneVisite.IdElv + "')";
+            cmd.CommandText = "INSERT INTO VISITE (motif_visite,commentaire_visite,pouls_eleve,parents_prevenus,retour_domicile,hopital,date_visite,heure_deb,heure_fin,id_eleves)values('" + uneVisite.MotifVst + "', '" + uneVisite.CommentVst + "', '" + uneVisite.Pouls + "', '" + uneVisite.TellParents + "', '" + uneVisite.BackHome + "', '" + uneVisite.GoHospital + "', '" + uneVisite.DateVisite + "', '" + uneVisite.HeureDebVst + "', '" + uneVisite.HeureFinVst + "', '" + uneVisite.IdElv + "')";
             #endregion
 
             // Création de monReader afin de récupérer les données reçues de la BD
@@ -46,37 +46,24 @@ namespace UtilisateursDAL
             return nbEnr;
         }
         #endregion
-
-        #region Méthode SelectLastVisite qui sélectionne l'id de la dernière visite
-        public static int SelectLastVisite()
+        public static int UpdateVisite(Visite uneVisite)
         {
-            #region Liste des attributs
-            // Attributs permettant de créer un objet
-            int idVst;
-            #endregion
+            int nbEnr;
 
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'un objet cmd de type SqlCommand permettant d'utiliser la connexion à la BD et de transmettre une requête
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT id_visite FROM VISITE WHERE id_visite = MAX(id_visite)";
-            #endregion
+            cmd.CommandText = "UPDATE VISITE SET id_visite = '" + uneVisite.IdVst + "', Date_Visite = '";
 
-            // Création de monReader afin de récupérer les données reçues de la BD
-            SqlDataReader monReader = cmd.ExecuteReader();
-
-            #region Remplissage de la liste
-            idVst = int.Parse(monReader["id_medic"].ToString());      
-            #endregion
+            nbEnr = cmd.ExecuteNonQuery();
 
             // Fermeture de la connexion
             maConnexion.Close();
 
-            // Fonction retournant la liste créée contenant les médicaments
-            return idVst;
+            return nbEnr;
         }
-        #endregion
+    
     }
 }

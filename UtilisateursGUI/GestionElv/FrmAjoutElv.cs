@@ -47,32 +47,27 @@ namespace UtilisateursGUI.GestionElv
 
         #region Boutons du formulaire
         #region Bouton Enregistrer
-        private void saveBtn_Click(object sender, EventArgs e)
+        private void saveBtnEleve_Click(object sender, EventArgs e)
         {
-            string dateNaissance = dateTimePicker1.Text;
-            DateTime laDatedeNaissance = DateTime.Parse(dateNaissance);
 
-            string telEleve = telEleve_txt.Text;
-            int leTelEleve = int.Parse(telEleve);
-
-            string telParent = telParent_txt.Text;
-            int leTelParent = int.Parse(telParent);
-
-            bool tier_temp = false;
-            if (tiertemp.Checked == true)
-            {
-                tier_temp = true;
-            }
-            else if (tiertemp1.Checked == true)
-            {
-                tier_temp = false;
-            }
-
-            int id_classe = lblClasse_cmbx.SelectedIndex + 1;
-
-            Eleve unEleve = new Eleve(nomEleve.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tier_temp, commentSante_text.Text, false, id_classe);
+            //GestionEleve.AjoutEleve(unEleve);
+            bool archiveEleve = false;
+            #region Création d'un eleve
+            Eleve unEleve = new Eleve(
+                nomEleve_txt.Text,
+                prenomEleve_txt.Text,
+                DateTime.Parse(dateTimePicker1.Text),
+                int.Parse(telEleve_txt.Text),
+                int.Parse(telParent_txt.Text),
+                tiertemp.Checked,               
+                commentSante_text.Text,
+                archiveEleve,
+                lblClasse_cmbx.SelectedIndex + 1
+                
+            );
 
             GestionEleve.AjoutEleve(unEleve);
+            #endregion
         }
         #endregion
 

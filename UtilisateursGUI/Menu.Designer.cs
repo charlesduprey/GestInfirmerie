@@ -38,7 +38,6 @@
             this.modifMdcBtn = new System.Windows.Forms.Button();
             this.suprMdcBtn = new System.Windows.Forms.Button();
             this.modifElvBtn = new System.Windows.Forms.Button();
-            this.suprElvBtn = new System.Windows.Forms.Button();
             this.suprVstBtn = new System.Windows.Forms.Button();
             this.modifVstBtn = new System.Windows.Forms.Button();
             this.ajoutVstBtn = new System.Windows.Forms.Button();
@@ -48,9 +47,10 @@
             // 
             // fmrButton
             // 
-            this.fmrButton.Location = new System.Drawing.Point(380, 254);
+            this.fmrButton.Location = new System.Drawing.Point(507, 313);
+            this.fmrButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fmrButton.Name = "fmrButton";
-            this.fmrButton.Size = new System.Drawing.Size(108, 23);
+            this.fmrButton.Size = new System.Drawing.Size(144, 28);
             this.fmrButton.TabIndex = 5;
             this.fmrButton.Text = "Fermer l\'application";
             this.fmrButton.UseVisualStyleBackColor = true;
@@ -58,9 +58,10 @@
             // 
             // appelMdlLectureGestElv
             // 
-            this.appelMdlLectureGestElv.Location = new System.Drawing.Point(72, 174);
+            this.appelMdlLectureGestElv.Location = new System.Drawing.Point(96, 214);
+            this.appelMdlLectureGestElv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appelMdlLectureGestElv.Name = "appelMdlLectureGestElv";
-            this.appelMdlLectureGestElv.Size = new System.Drawing.Size(108, 27);
+            this.appelMdlLectureGestElv.Size = new System.Drawing.Size(144, 33);
             this.appelMdlLectureGestElv.TabIndex = 4;
             this.appelMdlLectureGestElv.Text = "Module Lecture";
             this.appelMdlLectureGestElv.UseVisualStyleBackColor = true;
@@ -69,26 +70,29 @@
             // gestElv
             // 
             this.gestElv.AutoSize = true;
-            this.gestElv.Location = new System.Drawing.Point(69, 41);
+            this.gestElv.Location = new System.Drawing.Point(92, 50);
+            this.gestElv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gestElv.Name = "gestElv";
-            this.gestElv.Size = new System.Drawing.Size(97, 13);
+            this.gestElv.Size = new System.Drawing.Size(129, 17);
             this.gestElv.TabIndex = 6;
             this.gestElv.Text = "Gestion des élèves";
             // 
             // gestMdc
             // 
             this.gestMdc.AutoSize = true;
-            this.gestMdc.Location = new System.Drawing.Point(233, 41);
+            this.gestMdc.Location = new System.Drawing.Point(311, 50);
+            this.gestMdc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gestMdc.Name = "gestMdc";
-            this.gestMdc.Size = new System.Drawing.Size(128, 13);
+            this.gestMdc.Size = new System.Drawing.Size(171, 17);
             this.gestMdc.TabIndex = 7;
             this.gestMdc.Text = "Gestion des médicaments";
             // 
             // appelMdlLectureGestMdc
             // 
-            this.appelMdlLectureGestMdc.Location = new System.Drawing.Point(242, 174);
+            this.appelMdlLectureGestMdc.Location = new System.Drawing.Point(323, 214);
+            this.appelMdlLectureGestMdc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appelMdlLectureGestMdc.Name = "appelMdlLectureGestMdc";
-            this.appelMdlLectureGestMdc.Size = new System.Drawing.Size(108, 27);
+            this.appelMdlLectureGestMdc.Size = new System.Drawing.Size(144, 33);
             this.appelMdlLectureGestMdc.TabIndex = 8;
             this.appelMdlLectureGestMdc.Text = "Module Lecture";
             this.appelMdlLectureGestMdc.UseVisualStyleBackColor = true;
@@ -96,9 +100,10 @@
             // 
             // ajoutElvBtn
             // 
-            this.ajoutElvBtn.Location = new System.Drawing.Point(72, 71);
+            this.ajoutElvBtn.Location = new System.Drawing.Point(96, 87);
+            this.ajoutElvBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ajoutElvBtn.Name = "ajoutElvBtn";
-            this.ajoutElvBtn.Size = new System.Drawing.Size(108, 27);
+            this.ajoutElvBtn.Size = new System.Drawing.Size(144, 33);
             this.ajoutElvBtn.TabIndex = 9;
             this.ajoutElvBtn.Text = "Ajouter";
             this.ajoutElvBtn.UseVisualStyleBackColor = true;
@@ -106,9 +111,10 @@
             // 
             // ajoutMdcBtn
             // 
-            this.ajoutMdcBtn.Location = new System.Drawing.Point(242, 71);
+            this.ajoutMdcBtn.Location = new System.Drawing.Point(323, 87);
+            this.ajoutMdcBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ajoutMdcBtn.Name = "ajoutMdcBtn";
-            this.ajoutMdcBtn.Size = new System.Drawing.Size(108, 27);
+            this.ajoutMdcBtn.Size = new System.Drawing.Size(144, 33);
             this.ajoutMdcBtn.TabIndex = 10;
             this.ajoutMdcBtn.Text = "Ajouter";
             this.ajoutMdcBtn.UseVisualStyleBackColor = true;
@@ -116,9 +122,10 @@
             // 
             // modifMdcBtn
             // 
-            this.modifMdcBtn.Location = new System.Drawing.Point(242, 104);
+            this.modifMdcBtn.Location = new System.Drawing.Point(323, 128);
+            this.modifMdcBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.modifMdcBtn.Name = "modifMdcBtn";
-            this.modifMdcBtn.Size = new System.Drawing.Size(108, 29);
+            this.modifMdcBtn.Size = new System.Drawing.Size(144, 36);
             this.modifMdcBtn.TabIndex = 11;
             this.modifMdcBtn.Text = "Modifier";
             this.modifMdcBtn.UseVisualStyleBackColor = true;
@@ -126,9 +133,10 @@
             // 
             // suprMdcBtn
             // 
-            this.suprMdcBtn.Location = new System.Drawing.Point(242, 139);
+            this.suprMdcBtn.Location = new System.Drawing.Point(323, 171);
+            this.suprMdcBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.suprMdcBtn.Name = "suprMdcBtn";
-            this.suprMdcBtn.Size = new System.Drawing.Size(108, 29);
+            this.suprMdcBtn.Size = new System.Drawing.Size(144, 36);
             this.suprMdcBtn.TabIndex = 12;
             this.suprMdcBtn.Text = "Supprimer";
             this.suprMdcBtn.UseVisualStyleBackColor = true;
@@ -136,29 +144,21 @@
             // 
             // modifElvBtn
             // 
-            this.modifElvBtn.Location = new System.Drawing.Point(72, 104);
+            this.modifElvBtn.Location = new System.Drawing.Point(96, 128);
+            this.modifElvBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.modifElvBtn.Name = "modifElvBtn";
-            this.modifElvBtn.Size = new System.Drawing.Size(108, 29);
+            this.modifElvBtn.Size = new System.Drawing.Size(144, 36);
             this.modifElvBtn.TabIndex = 13;
             this.modifElvBtn.Text = "Modifier";
             this.modifElvBtn.UseVisualStyleBackColor = true;
             this.modifElvBtn.Click += new System.EventHandler(this.modifElvBtn_Click);
             // 
-            // suprElvBtn
-            // 
-            this.suprElvBtn.Location = new System.Drawing.Point(72, 139);
-            this.suprElvBtn.Name = "suprElvBtn";
-            this.suprElvBtn.Size = new System.Drawing.Size(108, 29);
-            this.suprElvBtn.TabIndex = 14;
-            this.suprElvBtn.Text = "Supprimer";
-            this.suprElvBtn.UseVisualStyleBackColor = true;
-            this.suprElvBtn.Click += new System.EventHandler(this.suprElvBtn_Click);
-            // 
             // suprVstBtn
             // 
-            this.suprVstBtn.Location = new System.Drawing.Point(409, 139);
+            this.suprVstBtn.Location = new System.Drawing.Point(545, 171);
+            this.suprVstBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.suprVstBtn.Name = "suprVstBtn";
-            this.suprVstBtn.Size = new System.Drawing.Size(108, 29);
+            this.suprVstBtn.Size = new System.Drawing.Size(144, 36);
             this.suprVstBtn.TabIndex = 19;
             this.suprVstBtn.Text = "Supprimer";
             this.suprVstBtn.UseVisualStyleBackColor = true;
@@ -166,9 +166,10 @@
             // 
             // modifVstBtn
             // 
-            this.modifVstBtn.Location = new System.Drawing.Point(409, 104);
+            this.modifVstBtn.Location = new System.Drawing.Point(545, 128);
+            this.modifVstBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.modifVstBtn.Name = "modifVstBtn";
-            this.modifVstBtn.Size = new System.Drawing.Size(108, 29);
+            this.modifVstBtn.Size = new System.Drawing.Size(144, 36);
             this.modifVstBtn.TabIndex = 18;
             this.modifVstBtn.Text = "Modifier";
             this.modifVstBtn.UseVisualStyleBackColor = true;
@@ -176,9 +177,10 @@
             // 
             // ajoutVstBtn
             // 
-            this.ajoutVstBtn.Location = new System.Drawing.Point(409, 71);
+            this.ajoutVstBtn.Location = new System.Drawing.Point(545, 87);
+            this.ajoutVstBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ajoutVstBtn.Name = "ajoutVstBtn";
-            this.ajoutVstBtn.Size = new System.Drawing.Size(108, 27);
+            this.ajoutVstBtn.Size = new System.Drawing.Size(144, 33);
             this.ajoutVstBtn.TabIndex = 17;
             this.ajoutVstBtn.Text = "Ajouter";
             this.ajoutVstBtn.UseVisualStyleBackColor = true;
@@ -186,9 +188,10 @@
             // 
             // appelMdlLectureGestVst
             // 
-            this.appelMdlLectureGestVst.Location = new System.Drawing.Point(409, 174);
+            this.appelMdlLectureGestVst.Location = new System.Drawing.Point(545, 214);
+            this.appelMdlLectureGestVst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appelMdlLectureGestVst.Name = "appelMdlLectureGestVst";
-            this.appelMdlLectureGestVst.Size = new System.Drawing.Size(108, 27);
+            this.appelMdlLectureGestVst.Size = new System.Drawing.Size(144, 33);
             this.appelMdlLectureGestVst.TabIndex = 16;
             this.appelMdlLectureGestVst.Text = "Module Lecture";
             this.appelMdlLectureGestVst.UseVisualStyleBackColor = true;
@@ -197,23 +200,23 @@
             // gestVst
             // 
             this.gestVst.AutoSize = true;
-            this.gestVst.Location = new System.Drawing.Point(413, 41);
+            this.gestVst.Location = new System.Drawing.Point(551, 50);
+            this.gestVst.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gestVst.Name = "gestVst";
-            this.gestVst.Size = new System.Drawing.Size(95, 13);
+            this.gestVst.Size = new System.Drawing.Size(127, 17);
             this.gestVst.TabIndex = 15;
             this.gestVst.Text = "Gestion des visites";
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 298);
+            this.ClientSize = new System.Drawing.Size(780, 367);
             this.Controls.Add(this.suprVstBtn);
             this.Controls.Add(this.modifVstBtn);
             this.Controls.Add(this.ajoutVstBtn);
             this.Controls.Add(this.appelMdlLectureGestVst);
             this.Controls.Add(this.gestVst);
-            this.Controls.Add(this.suprElvBtn);
             this.Controls.Add(this.modifElvBtn);
             this.Controls.Add(this.suprMdcBtn);
             this.Controls.Add(this.modifMdcBtn);
@@ -224,6 +227,7 @@
             this.Controls.Add(this.gestElv);
             this.Controls.Add(this.fmrButton);
             this.Controls.Add(this.appelMdlLectureGestElv);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Menu";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -243,7 +247,6 @@
         private System.Windows.Forms.Button modifMdcBtn;
         private System.Windows.Forms.Button suprMdcBtn;
         private System.Windows.Forms.Button modifElvBtn;
-        private System.Windows.Forms.Button suprElvBtn;
         private System.Windows.Forms.Button suprVstBtn;
         private System.Windows.Forms.Button modifVstBtn;
         private System.Windows.Forms.Button ajoutVstBtn;

@@ -33,7 +33,7 @@
             this.lblClasse_cmbx = new System.Windows.Forms.ComboBox();
             this.commentSante_text = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.saveBtn = new System.Windows.Forms.Button();
+            this.saveBtnEleve = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.idClasse = new System.Windows.Forms.Label();
             this.commentSante = new System.Windows.Forms.Label();
@@ -53,9 +53,10 @@
             // tiertemp1
             // 
             this.tiertemp1.AutoSize = true;
-            this.tiertemp1.Location = new System.Drawing.Point(348, 242);
+            this.tiertemp1.Location = new System.Drawing.Point(464, 298);
+            this.tiertemp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tiertemp1.Name = "tiertemp1";
-            this.tiertemp1.Size = new System.Drawing.Size(43, 17);
+            this.tiertemp1.Size = new System.Drawing.Size(53, 21);
             this.tiertemp1.TabIndex = 158;
             this.tiertemp1.Text = "non";
             this.tiertemp1.UseVisualStyleBackColor = true;
@@ -64,9 +65,10 @@
             // 
             this.tiertemp.AutoSize = true;
             this.tiertemp.Checked = true;
-            this.tiertemp.Location = new System.Drawing.Point(206, 242);
+            this.tiertemp.Location = new System.Drawing.Point(275, 298);
+            this.tiertemp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tiertemp.Name = "tiertemp";
-            this.tiertemp.Size = new System.Drawing.Size(39, 17);
+            this.tiertemp.Size = new System.Drawing.Size(48, 21);
             this.tiertemp.TabIndex = 157;
             this.tiertemp.TabStop = true;
             this.tiertemp.Text = "oui";
@@ -75,39 +77,45 @@
             // lblClasse_cmbx
             // 
             this.lblClasse_cmbx.FormattingEnabled = true;
-            this.lblClasse_cmbx.Location = new System.Drawing.Point(206, 214);
+            this.lblClasse_cmbx.Location = new System.Drawing.Point(275, 263);
+            this.lblClasse_cmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblClasse_cmbx.Name = "lblClasse_cmbx";
-            this.lblClasse_cmbx.Size = new System.Drawing.Size(227, 21);
+            this.lblClasse_cmbx.Size = new System.Drawing.Size(301, 24);
             this.lblClasse_cmbx.TabIndex = 156;
             // 
             // commentSante_text
             // 
-            this.commentSante_text.Location = new System.Drawing.Point(206, 267);
+            this.commentSante_text.Location = new System.Drawing.Point(275, 329);
+            this.commentSante_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.commentSante_text.Name = "commentSante_text";
-            this.commentSante_text.Size = new System.Drawing.Size(227, 20);
+            this.commentSante_text.Size = new System.Drawing.Size(301, 22);
             this.commentSante_text.TabIndex = 155;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(206, 136);
+            this.dateTimePicker1.Location = new System.Drawing.Point(275, 167);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(301, 22);
             this.dateTimePicker1.TabIndex = 154;
             // 
-            // saveBtn
+            // saveBtnEleve
             // 
-            this.saveBtn.Location = new System.Drawing.Point(206, 313);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(227, 36);
-            this.saveBtn.TabIndex = 153;
-            this.saveBtn.Text = "Enregistrer";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtnEleve.Location = new System.Drawing.Point(275, 385);
+            this.saveBtnEleve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveBtnEleve.Name = "saveBtnEleve";
+            this.saveBtnEleve.Size = new System.Drawing.Size(303, 44);
+            this.saveBtnEleve.TabIndex = 153;
+            this.saveBtnEleve.Text = "Enregistrer";
+            this.saveBtnEleve.UseVisualStyleBackColor = true;
+            this.saveBtnEleve.Click += new System.EventHandler(this.saveBtnEleve_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(32, 313);
+            this.closeButton.Location = new System.Drawing.Point(43, 385);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(119, 36);
+            this.closeButton.Size = new System.Drawing.Size(159, 44);
             this.closeButton.TabIndex = 152;
             this.closeButton.Text = "Fermer";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -116,68 +124,76 @@
             // idClasse
             // 
             this.idClasse.AutoSize = true;
-            this.idClasse.Location = new System.Drawing.Point(34, 217);
+            this.idClasse.Location = new System.Drawing.Point(40, 266);
+            this.idClasse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idClasse.Name = "idClasse";
-            this.idClasse.Size = new System.Drawing.Size(44, 13);
+            this.idClasse.Size = new System.Drawing.Size(58, 17);
             this.idClasse.TabIndex = 151;
             this.idClasse.Text = "Classe :";
             // 
             // commentSante
             // 
             this.commentSante.AutoSize = true;
-            this.commentSante.Location = new System.Drawing.Point(29, 270);
+            this.commentSante.Location = new System.Drawing.Point(39, 332);
+            this.commentSante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.commentSante.Name = "commentSante";
-            this.commentSante.Size = new System.Drawing.Size(103, 13);
+            this.commentSante.Size = new System.Drawing.Size(138, 17);
             this.commentSante.TabIndex = 150;
             this.commentSante.Text = "Commentaire santé :";
             // 
             // tierTemps
             // 
             this.tierTemps.AutoSize = true;
-            this.tierTemps.Location = new System.Drawing.Point(29, 244);
+            this.tierTemps.Location = new System.Drawing.Point(39, 300);
+            this.tierTemps.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tierTemps.Name = "tierTemps";
-            this.tierTemps.Size = new System.Drawing.Size(62, 13);
+            this.tierTemps.Size = new System.Drawing.Size(83, 17);
             this.tierTemps.TabIndex = 149;
             this.tierTemps.Text = "Tier temps :";
             // 
             // telParent_txt
             // 
-            this.telParent_txt.Location = new System.Drawing.Point(206, 188);
+            this.telParent_txt.Location = new System.Drawing.Point(275, 231);
+            this.telParent_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.telParent_txt.Name = "telParent_txt";
-            this.telParent_txt.Size = new System.Drawing.Size(227, 20);
+            this.telParent_txt.Size = new System.Drawing.Size(301, 22);
             this.telParent_txt.TabIndex = 148;
             // 
             // telParent
             // 
             this.telParent.AutoSize = true;
-            this.telParent.Location = new System.Drawing.Point(29, 195);
+            this.telParent.Location = new System.Drawing.Point(39, 240);
+            this.telParent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.telParent.Name = "telParent";
-            this.telParent.Size = new System.Drawing.Size(122, 13);
+            this.telParent.Size = new System.Drawing.Size(163, 17);
             this.telParent.TabIndex = 147;
             this.telParent.Text = "Téléphone des parents :";
             // 
             // telEleve_txt
             // 
-            this.telEleve_txt.Location = new System.Drawing.Point(206, 162);
+            this.telEleve_txt.Location = new System.Drawing.Point(275, 199);
+            this.telEleve_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.telEleve_txt.Name = "telEleve_txt";
-            this.telEleve_txt.Size = new System.Drawing.Size(227, 20);
+            this.telEleve_txt.Size = new System.Drawing.Size(301, 22);
             this.telEleve_txt.TabIndex = 146;
             // 
             // telEleve
             // 
             this.telEleve.AutoSize = true;
-            this.telEleve.Location = new System.Drawing.Point(29, 169);
+            this.telEleve.Location = new System.Drawing.Point(39, 208);
+            this.telEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.telEleve.Name = "telEleve";
-            this.telEleve.Size = new System.Drawing.Size(112, 13);
+            this.telEleve.Size = new System.Drawing.Size(148, 17);
             this.telEleve.TabIndex = 145;
             this.telEleve.Text = "Téléphone de l\'élève :";
             // 
             // AjoutEleve
             // 
             this.AjoutEleve.AutoSize = true;
-            this.AjoutEleve.Location = new System.Drawing.Point(165, 32);
+            this.AjoutEleve.Location = new System.Drawing.Point(220, 39);
+            this.AjoutEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AjoutEleve.Name = "AjoutEleve";
-            this.AjoutEleve.Size = new System.Drawing.Size(79, 13);
+            this.AjoutEleve.Size = new System.Drawing.Size(104, 17);
             this.AjoutEleve.TabIndex = 144;
             this.AjoutEleve.Text = "Ajout de l\'élève";
             this.AjoutEleve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,55 +201,60 @@
             // dateNaissance
             // 
             this.dateNaissance.AutoSize = true;
-            this.dateNaissance.Location = new System.Drawing.Point(29, 142);
+            this.dateNaissance.Location = new System.Drawing.Point(39, 175);
+            this.dateNaissance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateNaissance.Name = "dateNaissance";
-            this.dateNaissance.Size = new System.Drawing.Size(102, 13);
+            this.dateNaissance.Size = new System.Drawing.Size(134, 17);
             this.dateNaissance.TabIndex = 143;
             this.dateNaissance.Text = "Date de naissance :";
             // 
             // nomEleve_txt
             // 
-            this.nomEleve_txt.Location = new System.Drawing.Point(206, 84);
+            this.nomEleve_txt.Location = new System.Drawing.Point(275, 103);
+            this.nomEleve_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nomEleve_txt.Name = "nomEleve_txt";
-            this.nomEleve_txt.Size = new System.Drawing.Size(227, 20);
+            this.nomEleve_txt.Size = new System.Drawing.Size(301, 22);
             this.nomEleve_txt.TabIndex = 142;
             // 
             // prenomEleve_txt
             // 
-            this.prenomEleve_txt.Location = new System.Drawing.Point(206, 110);
+            this.prenomEleve_txt.Location = new System.Drawing.Point(275, 135);
+            this.prenomEleve_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prenomEleve_txt.Name = "prenomEleve_txt";
-            this.prenomEleve_txt.Size = new System.Drawing.Size(227, 20);
+            this.prenomEleve_txt.Size = new System.Drawing.Size(301, 22);
             this.prenomEleve_txt.TabIndex = 141;
             // 
             // prenomEleve
             // 
             this.prenomEleve.AutoSize = true;
-            this.prenomEleve.Location = new System.Drawing.Point(29, 113);
+            this.prenomEleve.Location = new System.Drawing.Point(39, 139);
+            this.prenomEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.prenomEleve.Name = "prenomEleve";
-            this.prenomEleve.Size = new System.Drawing.Size(49, 13);
+            this.prenomEleve.Size = new System.Drawing.Size(65, 17);
             this.prenomEleve.TabIndex = 140;
             this.prenomEleve.Text = "Prénom :";
             // 
             // nomEleve
             // 
             this.nomEleve.AutoSize = true;
-            this.nomEleve.Location = new System.Drawing.Point(29, 87);
+            this.nomEleve.Location = new System.Drawing.Point(39, 107);
+            this.nomEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nomEleve.Name = "nomEleve";
-            this.nomEleve.Size = new System.Drawing.Size(38, 13);
+            this.nomEleve.Size = new System.Drawing.Size(49, 17);
             this.nomEleve.TabIndex = 139;
             this.nomEleve.Text = "Nom  :";
             // 
             // FrmAjoutElv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 380);
+            this.ClientSize = new System.Drawing.Size(617, 468);
             this.Controls.Add(this.tiertemp1);
             this.Controls.Add(this.tiertemp);
             this.Controls.Add(this.lblClasse_cmbx);
             this.Controls.Add(this.commentSante_text);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.saveBtnEleve);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.idClasse);
             this.Controls.Add(this.commentSante);
@@ -248,6 +269,7 @@
             this.Controls.Add(this.prenomEleve_txt);
             this.Controls.Add(this.prenomEleve);
             this.Controls.Add(this.nomEleve);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAjoutElv";
             this.Text = "FrmAjoutElv";
             this.ResumeLayout(false);
@@ -262,7 +284,7 @@
         private System.Windows.Forms.ComboBox lblClasse_cmbx;
         private System.Windows.Forms.TextBox commentSante_text;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button saveBtnEleve;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label idClasse;
         private System.Windows.Forms.Label commentSante;
