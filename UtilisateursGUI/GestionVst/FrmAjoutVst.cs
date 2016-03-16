@@ -130,9 +130,18 @@ namespace UtilisateursGUI.GestionVst
                 DateTime.Parse(dateTimeArv.Text),
                 DateTime.Parse(dateTimeDep.Text),
                 nomElv_cmbx.SelectedIndex + 1
-                );
+            );
 
             GestionVisite.CreerVisite(uneVisite);
+            #endregion
+
+            #region Insertion d'une prescription
+            Prescription unePrescription = new Prescription(
+                lblMdc_list.SelectedIndex + 1,
+                int.Parse(qteNumUpDown.Text)
+            );
+
+            GestionPrescription.CreerPrescription(unePrescription);
             #endregion
         }
         #endregion

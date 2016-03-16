@@ -65,6 +65,12 @@
     <Compile Include="GestionElv\FrmModuleLectureElv.Designer.cs">
       <DependentUpon>FrmModuleLectureElv.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionMdc\FrmModifMdc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMdc\FrmModifMdc.Designer.cs">
+      <DependentUpon>FrmModifMdc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionMdc\FrmModuleLectureMdc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +95,10 @@
     <Compile Include="GestionVst\FrmAjoutVst.Designer.cs">
       <DependentUpon>FrmAjoutVst.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionVst\FrmModifVst.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionVst\FrmModifVst.Designer.cs">
-      <DependentUpon>FrmModifVst.cs</DependentUpon>
+    <Compile Include="GEST_INFIRMERIE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GEST_INFIRMERIE.xsd</DependentUpon>
     </Compile>
     <Compile Include="GEST_INFIRMERIEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,6 +122,9 @@
     <EmbeddedResource Include="GestionElv\FrmModuleLectureElv.resx">
       <DependentUpon>FrmModuleLectureElv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionMdc\FrmModifMdc.resx">
+      <DependentUpon>FrmModifMdc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionMdc\FrmModuleLectureMdc.resx">
       <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionVst\FrmAjoutVst.resx">
       <DependentUpon>FrmAjoutVst.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionVst\FrmModifVst.resx">
-      <DependentUpon>FrmModifVst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -145,6 +150,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="GEST_INFIRMERIE.xsc">
+      <DependentUpon>GEST_INFIRMERIE.xsd</DependentUpon>
+    </None>
+    <None Include="GEST_INFIRMERIE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GEST_INFIRMERIE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GEST_INFIRMERIE.xss">
+      <DependentUpon>GEST_INFIRMERIE.xsd</DependentUpon>
+    </None>
     <None Include="GEST_INFIRMERIEDataSet.xsc">
       <DependentUpon>GEST_INFIRMERIEDataSet.xsd</DependentUpon>
     </None>

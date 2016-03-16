@@ -133,7 +133,7 @@ namespace UtilisateursDAL
             #region Création d'un objet cmd de type SqlCommand permettant d'utiliser la connexion à la BD et de transmettre une requête
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO MEDICAMENT values('" + unMedicament.LblMdc + "', '" + unMedicament.ArchivageMdc + ")";
+            cmd.CommandText = "INSERT INTO MEDICAMENT (libelle_medic,archivage_medic) values('" + unMedicament.LblMdc + "', '" + unMedicament.ArchivageMdc + "')";
             #endregion
 
             // Création de monReader afin de récupérer les données reçues de la BD
@@ -204,7 +204,7 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE MEDICAMENT SET archivage_medic = true WHERE id_medic = " + unMedicament.IdMdc;
+            cmd.CommandText = "UPDATE MEDICAMENT SET archivage_medic = 'true' WHERE id_medic = " + unMedicament.IdMdc;
 
             nbEnr = cmd.ExecuteNonQuery();
 

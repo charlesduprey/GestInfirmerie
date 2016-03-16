@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using UtilisateursBLL;
 using UtilisateursBO;
+using System.Configuration;
 
 namespace UtilisateursGUI.GestionMdc
 {
@@ -16,6 +17,9 @@ namespace UtilisateursGUI.GestionMdc
         public FrmAjoutMdc()
         {
             InitializeComponent();
+
+            // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
+            UtilisateursBLL.GestionMedicament.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
         }
 
         private void enrBtn_Click(object sender, EventArgs e)
