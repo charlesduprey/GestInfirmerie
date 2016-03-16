@@ -36,6 +36,7 @@ namespace UtilisateursGUI.GestionElv
             nomElv_cmbx.ValueMember = "Id_eleves";
 
             numSelectionne = (int)nomElv_cmbx.SelectedIndex;
+            id_eleve = (int)nomElv_cmbx.SelectedValue;
 
             #region Remplissage des cases
             if (listeEleves[numSelectionne].ArchiveEleve == false)
@@ -84,6 +85,7 @@ namespace UtilisateursGUI.GestionElv
         //  private int ind = 0;
         private List<Eleve> listeEleves; // initialisation de la liste
         // private List<string> listeNomClasses;
+        private int id_eleve;
         #endregion
 
         #region Boutons du formulaire
@@ -94,8 +96,6 @@ namespace UtilisateursGUI.GestionElv
             List<Eleve> liste = new List<Eleve>();
             liste = GestionEleve.GetEleves();
             #endregion
-
-            int idElv = nomElv_cmbx.SelectedIndex + 1;
 
             string dateNaissance = dateTimePicker1.Text;
             DateTime laDateNaissance = DateTime.Parse(dateNaissance);
@@ -108,11 +108,12 @@ namespace UtilisateursGUI.GestionElv
 
             int id_classe = lblClasse_cmbx.SelectedIndex + 1;
 
-            Eleve unEleve = new Eleve(idElv, nomElv_cmbx.Text, prenomEleve_txt.Text, laDateNaissance, leTelEleve, leTelParent, bool.Parse(tierTemps_txt.Text), commentSante_text.Text, id_classe, false);
+            //int id_eleve = (int)nomElv_cmbx.SelectedValue;
+            Eleve unEleve = new Eleve(id_eleve, nomElv_cmbx.Text, prenomEleve_txt.Text, laDateNaissance, leTelEleve, leTelParent, bool.Parse(tierTemps_txt.Text), commentSante_text.Text, id_classe, false);
 
             GestionEleve.ModifierEleve(unEleve);
 
-            MessageBox.Show("idElv = " + idElv.ToString() + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
+            MessageBox.Show("idElv = " + (int)nomElv_cmbx.SelectedValue + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
         }
         #endregion
 
@@ -148,7 +149,8 @@ namespace UtilisateursGUI.GestionElv
         #region Actions concernant la liste déroulante des noms des élèves
         private void nomElv_list_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int numSelectionne = (int)nomElv_cmbx.SelectedIndex;
+            numSelectionne = (int)nomElv_cmbx.SelectedIndex;
+            id_eleve = (int)nomElv_cmbx.SelectedValue;
 
             #region Remplissage des cases
             prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;

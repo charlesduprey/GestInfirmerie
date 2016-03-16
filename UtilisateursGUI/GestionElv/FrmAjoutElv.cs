@@ -70,7 +70,9 @@ namespace UtilisateursGUI.GestionElv
 
             int id_classe = lblClasse_cmbx.SelectedIndex + 1;
 
-            Eleve unEleve = new Eleve(nomEleve.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tier_temp, commentSante_text.Text, false, id_classe);
+            Eleve unEleve = new Eleve(nomEleve_txt.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tier_temp, commentSante_text.Text, false, id_classe);
+
+            Console.WriteLine(nomEleve.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tier_temp, commentSante_text.Text, false, id_classe);
 
             GestionEleve.AjoutEleve(unEleve);
         }

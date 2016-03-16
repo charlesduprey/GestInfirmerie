@@ -102,6 +102,7 @@
             this.saveBtn.TabIndex = 153;
             this.saveBtn.Text = "Enregistrer";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // closeButton
             // 

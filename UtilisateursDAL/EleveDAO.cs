@@ -136,7 +136,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Eleve> lesEleves = new List<Eleve>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour selectionner les élèves
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES";
@@ -407,7 +407,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour supprimer un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVES values('" + unEleve.Nom + ", " + unEleve.Prenom + ", " + unEleve.Date_naissance + ", " + unEleve.Tel_eleve + ", " + unEleve.Tel_parent + ", " + unEleve.Tier_temps + ", " + unEleve.Commentaire_sante + ", " + unEleve.Id_classe + "')";
+            cmd.CommandText = "INSERT INTO ELEVES (nom, prenom, date_naissance, tel_eleve, tel_parent, tier_temps, commentaire_sante, archiver, id_classe) values('" + unEleve.Nom + "', '" + unEleve.Prenom + "', '" + unEleve.Date_naissance + "', " + unEleve.Tel_eleve + ", " + unEleve.Tel_parent + ", '" + unEleve.Tier_temps + "', '" + unEleve.Commentaire_sante + "', '" + unEleve.ArchiveEleve + "', " + unEleve.Id_classe + ")";
             #endregion
 
             // Récupération du résultat dans une variable
@@ -433,7 +433,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour supprimer un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "', archive_elv = '" + unEleve.ArchiveEleve + "' WHERE id_eleves = " + unEleve.Id_eleves;
+            cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "', archiver = '" + unEleve.ArchiveEleve + "' WHERE id_eleves = " + unEleve.Id_eleves;
             #endregion
 
             // Récupération du résultat dans une variable
