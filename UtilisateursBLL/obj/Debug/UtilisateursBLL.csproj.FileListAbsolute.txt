@@ -1,9 +1,54 @@
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
-D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
 D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestionInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+D:\Users\Guillaume\Documents\Visual_Studio_2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\ResolveAssemblyReference.cache
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+F:\Documents\Visual studio 2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\ResolveAssemblyReference.cache
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb

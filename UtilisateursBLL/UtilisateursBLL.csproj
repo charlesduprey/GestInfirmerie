@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3FFD21BB-185B-4ED7-9AE0-A4391B677575}</ProjectGuid>
+    <ProjectGuid>{0F001A08-4750-4813-8C14-36EB14FC3429}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UtilisateursBLL</RootNamespace>
@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionClasse.cs" />
     <Compile Include="GestionEleve.cs" />
+    <Compile Include="GestionMedicament.cs" />
+    <Compile Include="GestionPrescription.cs" />
+    <Compile Include="GestionVisite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
