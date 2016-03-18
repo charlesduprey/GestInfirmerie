@@ -180,11 +180,12 @@ namespace UtilisateursDAL
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT COUNT(*) FROM PRESCRIPTION WHERE id_medic = '" + idMdc + "'";
 
-            nbEnr = cmd.ExecuteNonQuery();
+            nbEnr = (int)cmd.ExecuteScalar();
 
             if (nbEnr == 0)
             {
                 cmd.CommandText = "DELETE FROM MEDICAMENT WHERE id_medic = '" + idMdc + "'";
+                cmd.ExecuteNonQuery();
             }
 
             // Fermeture de la connexion
@@ -204,7 +205,7 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE MEDICAMENT SET archivage_medic = true WHERE id_medic = " + unMedicament.IdMdc;
+            cmd.CommandText = "UPDATE MEDICAMENT SET archivage_medic = 1 WHERE id_medic = " + unMedicament.IdMdc;
 
             nbEnr = cmd.ExecuteNonQuery();
 

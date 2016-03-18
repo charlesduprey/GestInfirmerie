@@ -29,7 +29,7 @@ namespace UtilisateursGUI.GestionMdc
             lblMdc_list.DisplayMember = "LblMdc";
             lblMdc_list.ValueMember = "IdMdc";
 
-            numSelectionne = (int)lblMdc_list.SelectedIndex;
+            numSelectionne = (int)lblMdc_list.SelectedValue;
         }
         #endregion
 
@@ -57,13 +57,27 @@ namespace UtilisateursGUI.GestionMdc
         #region Bouton archiver
         private void archBtn_Click(object sender, EventArgs e)
         {
-            // Récupération des données du formulaire
-            string libelle = liste[numSelectionne].LblMdc;
-            bool ach = liste[numSelectionne].ArchivageMdc;
-            Medicament unMedicament = new Medicament(numSelectionne, libelle, ach);
+            Medicament unMedicament = new Medicament((int)lblMdc_list.SelectedValue, lblMdc_list.Text, false);
 
             // Appel de la méthode SupprimerMedicament() de la GestionMedicament
             GestionMedicament.ArchiveMedicament(unMedicament);
+
+            // Initializes the variables to pass to the MessageBox.Show method.
+            DialogResult result;
+
+            // Displays the MessageBox.
+            result = MessageBox.Show(
+                this,
+                "Le médicament a bien été archivé.",
+                "Valider",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.No)
+            {
+                this.Close();
+            }
         }
         #endregion
 
@@ -72,17 +86,35 @@ namespace UtilisateursGUI.GestionMdc
         {
             // Récupération des données du formulaire
             string libelle = liste[numSelectionne].LblMdc;
-            bool ach = liste[numSelectionne].ArchivageMdc;
             
             // Appel de la méthode SupprimerMedicament() de la GestionMedicament
-            int nbEnr = GestionMedicament.SupprimerMedicament(numSelectionne);
+            int nbEnr = GestionMedicament.SupprimerMedicament((int)lblMdc_list.SelectedValue);
 
             #region Message s'il existe des médicaments prescrits
-            if (nbEnr != 0)
+            if (nbEnr > 0)
             {
                 MessageBox.Show("L'élément a été prescrit, il ne peut pas être suprimé mais archivé !",
                     "Message",
                     MessageBoxButtons.OK);
+            }
+            else
+            {
+                // Initializes the variables to pass to the MessageBox.Show method.
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(
+                    this,
+                    "Medicament supprimé. Souhaitez-vous en supprimer: un autre ?",
+                    "Valider",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+
+                if (result == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
             #endregion
         }

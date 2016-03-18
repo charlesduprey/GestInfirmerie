@@ -15,6 +15,7 @@ namespace UtilisateursGUI.GestionMdc
     public partial class FrmModifMdc : Form
     {
         #region Gestion du formulaire
+        #region Initialisation du formulaire
         public FrmModifMdc()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace UtilisateursGUI.GestionMdc
 
             int id = (int)libelleMdcCmbx.SelectedValue;
         }
+        #endregion
 
         #region Attributs de l'application
         private List<Medicament> listeMedicaments;
@@ -76,9 +78,11 @@ namespace UtilisateursGUI.GestionMdc
         #endregion
         #endregion
 
+        #region Action en fonction du combobox
         private void libelleMdcCmbx_SelectionChangeCommitted(object sender, EventArgs e)
         {
             id = (int)libelleMdcCmbx.SelectedValue;
         }
+        #endregion
     }
 }
