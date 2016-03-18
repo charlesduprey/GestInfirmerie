@@ -58,6 +58,11 @@ namespace UtilisateursBO
             this.niveauClasse = niveauClasse;
             this.emploiDuTemps = emploiDuTemps;
         }
+        public Classe(int idClasse, string libelleClasse)
+        {
+            this.idClasse = idClasse;
+            this.libelleClasse = libelleClasse;
+        }
         #endregion
     }
 }

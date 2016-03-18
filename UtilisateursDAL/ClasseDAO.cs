@@ -36,7 +36,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour sélectionner une classe à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM CLASSE WHERE id_classe = '" + id + "'";
@@ -106,7 +106,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Classe> lesClasses = new List<Classe>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir la liste des classes
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM CLASSE";
@@ -158,6 +158,32 @@ namespace UtilisateursDAL
 
             // Résultat retourné
             return lesClasses;
+        }
+        #endregion
+
+        #region Méthode GetNombreClasse le nombre de classe
+        public static int GetNombreClasses()
+        {
+            #region Liste des attributs nécessaires pour récupérer et retourner le résultat attendu
+            int nombreClasse;
+            #endregion
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            #region Création d'une commande SQL pour récupérer le nombre de classes
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT COUNT(*) FROM CLASSE";
+            #endregion
+
+            nombreClasse = (int)cmd.ExecuteScalar();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            // Résultat retourné
+            return nombreClasse;
         }
         #endregion
     }

@@ -63,9 +63,9 @@
             // 
             this.actualiserBtn.Location = new System.Drawing.Point(457, 479);
             this.actualiserBtn.Name = "actualiserBtn";
-            this.actualiserBtn.Size = new System.Drawing.Size(124, 23);
+            this.actualiserBtn.Size = new System.Drawing.Size(131, 23);
             this.actualiserBtn.TabIndex = 9;
-            this.actualiserBtn.Text = "Voir tous les ☺";
+            this.actualiserBtn.Text = "Voir tous les eleves";
             this.actualiserBtn.UseVisualStyleBackColor = true;
             this.actualiserBtn.Click += new System.EventHandler(this.actualiserBtn_Click);
             // 

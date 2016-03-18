@@ -14,8 +14,10 @@ namespace UtilisateursGUI.GestionMdc
 {
     public partial class FrmModifMdc : Form
     {
-        
-
+        int numSelectionne;
+        string libelle;
+        #region Gestion du formulaire
+        #region Initialisation du Formulaire de modification
         public FrmModifMdc()
         {
             InitializeComponent();
@@ -23,44 +25,57 @@ namespace UtilisateursGUI.GestionMdc
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             UtilisateursBLL.GestionMedicament.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
 
-            #region
+            #region Remplissage du combobox des noms de médicaments
             // Création d'un objet List d'Eleves à afficher dans la liste
             listeMdc = GestionMedicament.GetMedicaments();
 
-            libelleMdcLbl.DataSource = listeMdc;
-            libelleMdcLbl.DisplayMember = "LblMdc";
-            libelleMdcLbl.ValueMember = "IdMdc";
+            MdcLbl.DataSource = listeMdc;
+            MdcLbl.DisplayMember = "LblMdc";
+            MdcLbl.ValueMember = "IdMdc";
 
-            numSelectionne = (int)libelleMdcLbl.SelectedIndex;
+            numSelectionne = (int)MdcLbl.SelectedValue;
             #endregion
         }
+        #endregion
 
+        #region Attributs de l'application
         List<Medicament> listeMdc;
-        private int numSelectionne;
+        //private int numSelectionne;
+        #endregion
 
-
+        #region Boutons du formulaire
+        #region Bouton Sauvegarde
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            libelle = MdcLbl.Text;
+            MessageBox.Show("idMedic = " + numSelectionne + ", libelle medic = " + MdcLbl.Text + ".");
+
             #region Création d'un médicament
             Medicament unMedicament = new Medicament(
-                (int)libelleMdcLbl.SelectedValue,
-                libelleMdcLbl.Text
+                (int)MdcLbl.SelectedValue,
+                MdcLbl.Text
             );
             GestionMedicament.ModifierMedicament(unMedicament);
             #endregion
         }
+        #endregion
 
+        #region Bouton Fermer
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        #region Actions concernant la liste déroulante des libellés des médicaments
-        private void libelleMdcLbl_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            int numSelectionne = (int)libelleMdcLbl.SelectedIndex;
-        }
+        #endregion
+        #endregion
         #endregion
 
+        //#region Actions concernant la liste déroulante des libellés des médicaments
+        //private void MdcLbl_SelectionChangeCommitted(object sender, EventArgs e)
+        //{
+        //    numSelectionne = (int)MdcLbl.SelectedValue;
+        //    libelle = MdcLbl.Text;
+        //    MessageBox.Show("idMedic = " + numSelectionne + ", libelle medic = " + libelle + ".");
+        //}
+        //#endregion
     }
 }

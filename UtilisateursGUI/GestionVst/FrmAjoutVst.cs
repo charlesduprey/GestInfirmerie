@@ -67,7 +67,7 @@ namespace UtilisateursGUI.GestionVst
             this.dateTimeDep.ShowUpDown = true;
 
             #region Liste medicaments
-            // Création d'un objet List de médicaments à afficher dans la liste
+            // Création d'un objet List de médicaments à afficher dans la liste    
             liste = GestionMedicament.GetMedicaments();
 
             lblMdc_list.DataSource = liste;

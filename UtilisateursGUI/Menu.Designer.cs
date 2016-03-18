@@ -38,7 +38,6 @@
             this.modifMdcBtn = new System.Windows.Forms.Button();
             this.suprMdcBtn = new System.Windows.Forms.Button();
             this.modifElvBtn = new System.Windows.Forms.Button();
-            this.suprElvBtn = new System.Windows.Forms.Button();
             this.suprVstBtn = new System.Windows.Forms.Button();
             this.modifVstBtn = new System.Windows.Forms.Button();
             this.ajoutVstBtn = new System.Windows.Forms.Button();
@@ -144,16 +143,6 @@
             this.modifElvBtn.UseVisualStyleBackColor = true;
             this.modifElvBtn.Click += new System.EventHandler(this.modifElvBtn_Click);
             // 
-            // suprElvBtn
-            // 
-            this.suprElvBtn.Location = new System.Drawing.Point(72, 139);
-            this.suprElvBtn.Name = "suprElvBtn";
-            this.suprElvBtn.Size = new System.Drawing.Size(108, 29);
-            this.suprElvBtn.TabIndex = 14;
-            this.suprElvBtn.Text = "Supprimer";
-            this.suprElvBtn.UseVisualStyleBackColor = true;
-            this.suprElvBtn.Click += new System.EventHandler(this.suprElvBtn_Click);
-            // 
             // suprVstBtn
             // 
             this.suprVstBtn.Location = new System.Drawing.Point(409, 139);
@@ -213,7 +202,6 @@
             this.Controls.Add(this.ajoutVstBtn);
             this.Controls.Add(this.appelMdlLectureGestVst);
             this.Controls.Add(this.gestVst);
-            this.Controls.Add(this.suprElvBtn);
             this.Controls.Add(this.modifElvBtn);
             this.Controls.Add(this.suprMdcBtn);
             this.Controls.Add(this.modifMdcBtn);
@@ -243,7 +231,6 @@
         private System.Windows.Forms.Button modifMdcBtn;
         private System.Windows.Forms.Button suprMdcBtn;
         private System.Windows.Forms.Button modifElvBtn;
-        private System.Windows.Forms.Button suprElvBtn;
         private System.Windows.Forms.Button suprVstBtn;
         private System.Windows.Forms.Button modifVstBtn;
         private System.Windows.Forms.Button ajoutVstBtn;

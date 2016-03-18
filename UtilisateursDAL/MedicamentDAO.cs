@@ -157,7 +157,7 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE MEDICAMENT SET id_medic = '" + unMedicament.IdMdc + "', libelle_medic = '" + unMedicament.LblMdc + "' WHERE id_medic = " + unMedicament.IdMdc;
+            cmd.CommandText = "UPDATE MEDICAMENT SET libelle_medic = '" + unMedicament.LblMdc + "' WHERE id_medic = " + unMedicament.IdMdc;
 
             nbEnr = cmd.ExecuteNonQuery();
 

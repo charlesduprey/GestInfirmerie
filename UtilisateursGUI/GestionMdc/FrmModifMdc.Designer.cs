@@ -28,42 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.modifLbl = new System.Windows.Forms.Label();
             this.LibelleLbl = new System.Windows.Forms.Label();
-            this.libelleMdcLbl = new System.Windows.Forms.ComboBox();
+            this.MdcLbl = new System.Windows.Forms.ComboBox();
             this.saveBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // modifLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(168, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.modifLbl.AutoSize = true;
+            this.modifLbl.Location = new System.Drawing.Point(73, 26);
+            this.modifLbl.Name = "modifLbl";
+            this.modifLbl.Size = new System.Drawing.Size(147, 13);
+            this.modifLbl.TabIndex = 0;
+            this.modifLbl.Text = "Modification d\'un médicament";
             // 
             // LibelleLbl
             // 
             this.LibelleLbl.AutoSize = true;
-            this.LibelleLbl.Location = new System.Drawing.Point(55, 87);
+            this.LibelleLbl.Location = new System.Drawing.Point(37, 67);
             this.LibelleLbl.Name = "LibelleLbl";
             this.LibelleLbl.Size = new System.Drawing.Size(37, 13);
             this.LibelleLbl.TabIndex = 1;
             this.LibelleLbl.Text = "Libellé";
             // 
-            // libelleMdcLbl
+            // MdcLbl
             // 
-            this.libelleMdcLbl.FormattingEnabled = true;
-            this.libelleMdcLbl.Location = new System.Drawing.Point(127, 84);
-            this.libelleMdcLbl.Name = "libelleMdcLbl";
-            this.libelleMdcLbl.Size = new System.Drawing.Size(176, 21);
-            this.libelleMdcLbl.TabIndex = 3;
+            this.MdcLbl.FormattingEnabled = true;
+            this.MdcLbl.Location = new System.Drawing.Point(109, 64);
+            this.MdcLbl.Name = "MdcLbl";
+            this.MdcLbl.Size = new System.Drawing.Size(176, 21);
+            this.MdcLbl.TabIndex = 3;
+            // this.MdcLbl.SelectionChangeCommitted += new System.EventHandler(this.MdcLbl_SelectionChangeCommitted);
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(83, 190);
+            this.saveBtn.Location = new System.Drawing.Point(76, 111);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(75, 23);
             this.saveBtn.TabIndex = 6;
@@ -73,7 +74,7 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(188, 190);
+            this.closeBtn.Location = new System.Drawing.Point(181, 111);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(75, 23);
             this.closeBtn.TabIndex = 7;
@@ -85,12 +86,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 256);
+            this.ClientSize = new System.Drawing.Size(357, 162);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.libelleMdcLbl);
+            this.Controls.Add(this.MdcLbl);
             this.Controls.Add(this.LibelleLbl);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.modifLbl);
             this.Name = "FrmModifMdc";
             this.Text = "FrmModifMdc";
             this.ResumeLayout(false);
@@ -100,9 +101,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label modifLbl;
         private System.Windows.Forms.Label LibelleLbl;
-        private System.Windows.Forms.ComboBox libelleMdcLbl;
+        private System.Windows.Forms.ComboBox MdcLbl;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button closeBtn;
     }

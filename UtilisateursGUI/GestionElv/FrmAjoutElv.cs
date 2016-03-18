@@ -29,52 +29,88 @@ namespace UtilisateursGUI.GestionElv
             //uneGestionEleve = unEleve.GetEleve();
 
             // Création d'un objet List d'Eleves à afficher dans la liste
-            listeEleves = GestionEleve.GetEleves();
+            listeClasses = GestionClasse.GetClasses();
 
-            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
+            /*// Création d'un objet List de classes à afficher dans la liste
+            int nbClasse = GestionClasse.GetNbClasses();
+            List<string> listeLibelleClasses = new List<string>();
+
+            for (int id = 0; id < nbClasse; id++)
+            {
+                listeLibelleClasses.Add(GestionEleve.GetLeNomDeClasse(id));
+            }*/
+
+
+            for (int id = 0; id < listeClasses.Count; id++)
+            {
+                idDeClasse = listeClasses[id].IdClasse;
+                libelle = listeClasses[id].NiveauClasse + " " + listeClasses[id].LibelleClasse;
+
+                libelleClasse = new Classe(idDeClasse, libelle);
+
+                listeLibelleClasse.Add(libelleClasse);
+            }
+
+            lblClasse_cmbx.DataSource = listeLibelleClasse;
             lblClasse_cmbx.DisplayMember = "LibelleClasse";
-            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+            lblClasse_cmbx.ValueMember = "IdClasse";
         }
         #endregion
 
         #region Attributs de l'application
-
         //  private int nbClasse;
         //  private int ind = 0;
-        private List<Eleve> listeEleves; // initialisation de la liste
-        // private List<string> listeNomClasses;
+        private int idDeClasse;
+        private string libelle;
+        private List<Classe> listeLibelleClasse = new List<Classe>();
+        private List<Classe> listeClasses;
+        private Classe libelleClasse;
+        public int numSelectionne { get; set; }
         #endregion
 
         #region Boutons du formulaire
         #region Bouton Enregistrer
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            string dateNaissance = dateTimePicker1.Text;
-            DateTime laDatedeNaissance = DateTime.Parse(dateNaissance);
+            /*Eleve unEleve = new Eleve(
+                nomEleve_txt.Text,
+                prenomEleve_txt.Text,
+                DateTime.Parse(dateTimePicker1.Text),
+                int.Parse(telEleve_txt.Text),
+                int.Parse(telParent_txt.Text),
+                TierTempsTrue.Checked,
+                commentSante_text.Text,
+                false,
+                id_classe);*/
 
-            string telEleve = telEleve_txt.Text;
-            int leTelEleve = int.Parse(telEleve);
+            GestionEleve.AjoutEleve(
+                new Eleve(
+                    nomEleve_txt.Text,
+                    prenomEleve_txt.Text,
+                    DateTime.Parse(dateTimePicker1.Text),
+                    int.Parse(telEleve_txt.Text),
+                    int.Parse(telParent_txt.Text),
+                    TierTempsTrue.Checked,
+                    commentSante_text.Text,
+                    false,
+                    (int)lblClasse_cmbx.SelectedValue));
 
-            string telParent = telParent_txt.Text;
-            int leTelParent = int.Parse(telParent);
+            // Initializes the variables to pass to the MessageBox.Show method.
+            DialogResult result;
 
-            bool tier_temp = false;
-            if (tiertemp.Checked == true)
+            // Displays the MessageBox.
+            result = MessageBox.Show(
+                this,
+                "Élève enregistré. Souhaitez-vous en saisir un autre ?",
+                "Valider",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.No)
             {
-                tier_temp = true;
+                this.Close();
             }
-            else if (tiertemp1.Checked == true)
-            {
-                tier_temp = false;
-            }
-
-            int id_classe = lblClasse_cmbx.SelectedIndex + 1;
-
-            Eleve unEleve = new Eleve(nomEleve_txt.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tier_temp, commentSante_text.Text, false, id_classe);
-
-            Console.WriteLine(nomEleve.Text, prenomEleve_txt.Text, laDatedeNaissance, leTelEleve, leTelParent, tier_temp, commentSante_text.Text, false, id_classe);
-
-            GestionEleve.AjoutEleve(unEleve);
         }
         #endregion
 
@@ -86,17 +122,5 @@ namespace UtilisateursGUI.GestionElv
         #endregion
         #endregion
         #endregion
-
-        private void lblClasse_cmbx_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tiertemp_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public int numSelectionne { get; set; }
     }
 }

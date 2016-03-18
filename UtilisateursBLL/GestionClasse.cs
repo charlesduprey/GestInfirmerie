@@ -44,5 +44,12 @@ namespace UtilisateursBLL
             return ClasseDAO.GetClasses();
         }
         #endregion
+
+        #region Méthode GetNbClasses
+        public static int GetNbClasses()
+        {
+            return ClasseDAO.GetNombreClasses();
+        }
+        #endregion
     }
 }

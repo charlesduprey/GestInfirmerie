@@ -30,7 +30,20 @@ namespace UtilisateursGUI.GestionElv
 
             // Création d'un objet List d'Eleves à afficher dans la liste
             listeEleves = GestionEleve.GetElevesNonArchives();
-            
+
+            // Création d'un objet List de classes à afficher dans la liste
+            listeClasses = GestionClasse.GetClasses();
+
+            for (int id = 0; id < listeClasses.Count; id++)
+            {
+                idClasse = listeClasses[id].IdClasse;
+                libelle = listeClasses[id].NiveauClasse + " " + listeClasses[id].LibelleClasse;
+
+                libelleClasse = new Classe(idClasse, libelle);
+
+                listeLibelleClasse.Add(libelleClasse);
+            }
+
             nomElv_cmbx.DataSource = listeEleves;
             nomElv_cmbx.DisplayMember = "Nom";
             nomElv_cmbx.ValueMember = "Id_eleves";
@@ -48,9 +61,9 @@ namespace UtilisateursGUI.GestionElv
                 tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps.ToString();
                 commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
 
-                lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
+                lblClasse_cmbx.DataSource = listeLibelleClasse;
                 lblClasse_cmbx.DisplayMember = "LibelleClasse";
-                lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+                lblClasse_cmbx.ValueMember = "IdClasse";
             }
 
             #region Brouillon
@@ -81,11 +94,16 @@ namespace UtilisateursGUI.GestionElv
 
         #region Attributs de l'application
         private int numSelectionne;
+        private int idClasse;
         //  private int nbClasse;
         //  private int ind = 0;
         private List<Eleve> listeEleves; // initialisation de la liste
         // private List<string> listeNomClasses;
         private int id_eleve;
+        private string libelle;
+        private List<Classe> listeLibelleClasse = new List<Classe>();
+        private List<Classe> listeClasses;
+        private Classe libelleClasse;
         #endregion
 
         #region Boutons du formulaire
@@ -121,7 +139,6 @@ namespace UtilisateursGUI.GestionElv
         private void archBtn_Click(object sender, EventArgs e)
         {
             // int num = listeEleves[numSelectionne].Id_eleves;
-
             int num = int.Parse(nomElv_cmbx.SelectedValue.ToString());
 
             MessageBox.Show("Voulez-vous archiver l'élève ? " + num, "Archivage", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -133,7 +150,23 @@ namespace UtilisateursGUI.GestionElv
         #region Bouton Supprimer
         private void suprBtn_Click(object sender, EventArgs e)
         {
-            GestionEleve.SupprimerEleve(int.Parse(nomElv_cmbx.SelectedValue.ToString()));
+            int id = int.Parse(nomElv_cmbx.SelectedValue.ToString());
+            MessageBox.Show("Voulez-vous supprimer l'élève ? " + id, "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            // contrôle de la possibilité de suppression (afilié à aucune visite)
+            bool trouve;
+
+            trouve = GestionEleve.TrouverEleve(id);
+
+            if (trouve == true)
+            {
+                trouve = true;
+                MessageBox.Show("Impossible de supprimer l'élève " + id + " Vous pouvez cependant l'achiver.", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                GestionEleve.SupprimerEleve(id);
+            }
+            // supression si oui 
         }
         #endregion
 

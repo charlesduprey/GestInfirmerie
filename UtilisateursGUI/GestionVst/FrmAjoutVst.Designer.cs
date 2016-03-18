@@ -368,6 +368,7 @@
             // 
             // lblMdc_list
             // 
+            this.lblMdc_list.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lblMdc_list.FormattingEnabled = true;
             this.lblMdc_list.Location = new System.Drawing.Point(198, 392);
             this.lblMdc_list.Name = "lblMdc_list";

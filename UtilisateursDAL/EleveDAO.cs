@@ -43,7 +43,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES WHERE ID = '" + id + "'";
@@ -230,7 +230,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Eleve> lesEleves = new List<Eleve>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir les élèves archivés
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES WHERE archive_elv = '1'";
@@ -324,7 +324,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Eleve> lesEleves = new List<Eleve>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir les élèves non archivés
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES WHERE archiver = '0'";
@@ -404,7 +404,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour ajouter un élève
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "INSERT INTO ELEVES (nom, prenom, date_naissance, tel_eleve, tel_parent, tier_temps, commentaire_sante, archiver, id_classe) values('" + unEleve.Nom + "', '" + unEleve.Prenom + "', '" + unEleve.Date_naissance + "', " + unEleve.Tel_eleve + ", " + unEleve.Tel_parent + ", '" + unEleve.Tier_temps + "', '" + unEleve.Commentaire_sante + "', '" + unEleve.ArchiveEleve + "', " + unEleve.Id_classe + ")";
@@ -430,7 +430,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour modie=fier un élève
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "', archiver = '" + unEleve.ArchiveEleve + "' WHERE id_eleves = " + unEleve.Id_eleves;
@@ -481,7 +481,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour archiver un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "UPDATE ELEVES SET archive_elv = 'true' WHERE id_eleves = " + id;
@@ -495,6 +495,42 @@ namespace UtilisateursDAL
 
             // Résultat retourné
             return nbEnr;
+        }
+        #endregion
+
+        #region Méthode TrouverEleve permettant de savoir si un élève à été reçu au moins une fois en visite à partir de leur id
+        public static bool TrouverEleve(int id)
+        {
+            // Attributs nécessaires pour récupérer et retourner le résultat attendu
+            int nbEnr;
+            bool trouve = false;
+            int valRet;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            #region Création d'une commande SQL pour trouver un élève à partir de son id
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = " SELECT count (*) "
+                            + " FROM ELEVES "
+                            + " WHERE id_eleves = '" + id + "' "
+                            + " AND id_eleves in ( SELECT id_eleves  "
+                            + "FROM VISITE);";
+            #endregion
+
+            // Récupération du résultat dans une variable
+            valRet = (int)cmd.ExecuteScalar();
+
+            nbEnr = valRet;
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            if (nbEnr > 0)
+            {
+                trouve = true;
+            }
+            // Résultat retourné
+            return trouve;
         }
         #endregion
 

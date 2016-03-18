@@ -121,3 +121,6 @@ D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\
 E:\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
 E:\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
 E:\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tiertemp1 = new System.Windows.Forms.RadioButton();
-            this.tiertemp = new System.Windows.Forms.RadioButton();
+            this.TierTempsFalse = new System.Windows.Forms.RadioButton();
+            this.TierTempsTrue = new System.Windows.Forms.RadioButton();
             this.lblClasse_cmbx = new System.Windows.Forms.ComboBox();
             this.commentSante_text = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -44,36 +44,37 @@
             this.telEleve = new System.Windows.Forms.Label();
             this.AjoutEleve = new System.Windows.Forms.Label();
             this.dateNaissance = new System.Windows.Forms.Label();
-            this.nomEleve_txt = new System.Windows.Forms.TextBox();
             this.prenomEleve_txt = new System.Windows.Forms.TextBox();
+            this.nomEleve_txt = new System.Windows.Forms.TextBox();
             this.prenomEleve = new System.Windows.Forms.Label();
             this.nomEleve = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // tiertemp1
+            // TierTempsFalse
             // 
-            this.tiertemp1.AutoSize = true;
-            this.tiertemp1.Location = new System.Drawing.Point(348, 242);
-            this.tiertemp1.Name = "tiertemp1";
-            this.tiertemp1.Size = new System.Drawing.Size(43, 17);
-            this.tiertemp1.TabIndex = 158;
-            this.tiertemp1.Text = "non";
-            this.tiertemp1.UseVisualStyleBackColor = true;
+            this.TierTempsFalse.AutoSize = true;
+            this.TierTempsFalse.Location = new System.Drawing.Point(348, 242);
+            this.TierTempsFalse.Name = "TierTempsFalse";
+            this.TierTempsFalse.Size = new System.Drawing.Size(43, 17);
+            this.TierTempsFalse.TabIndex = 158;
+            this.TierTempsFalse.Text = "non";
+            this.TierTempsFalse.UseVisualStyleBackColor = true;
             // 
-            // tiertemp
+            // TierTempsTrue
             // 
-            this.tiertemp.AutoSize = true;
-            this.tiertemp.Checked = true;
-            this.tiertemp.Location = new System.Drawing.Point(206, 242);
-            this.tiertemp.Name = "tiertemp";
-            this.tiertemp.Size = new System.Drawing.Size(39, 17);
-            this.tiertemp.TabIndex = 157;
-            this.tiertemp.TabStop = true;
-            this.tiertemp.Text = "oui";
-            this.tiertemp.UseVisualStyleBackColor = true;
+            this.TierTempsTrue.AutoSize = true;
+            this.TierTempsTrue.Checked = true;
+            this.TierTempsTrue.Location = new System.Drawing.Point(206, 242);
+            this.TierTempsTrue.Name = "TierTempsTrue";
+            this.TierTempsTrue.Size = new System.Drawing.Size(39, 17);
+            this.TierTempsTrue.TabIndex = 157;
+            this.TierTempsTrue.TabStop = true;
+            this.TierTempsTrue.Text = "oui";
+            this.TierTempsTrue.UseVisualStyleBackColor = true;
             // 
             // lblClasse_cmbx
             // 
+            this.lblClasse_cmbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lblClasse_cmbx.FormattingEnabled = true;
             this.lblClasse_cmbx.Location = new System.Drawing.Point(206, 214);
             this.lblClasse_cmbx.Name = "lblClasse_cmbx";
@@ -192,19 +193,19 @@
             this.dateNaissance.TabIndex = 143;
             this.dateNaissance.Text = "Date de naissance :";
             // 
-            // nomEleve_txt
-            // 
-            this.nomEleve_txt.Location = new System.Drawing.Point(206, 84);
-            this.nomEleve_txt.Name = "nomEleve_txt";
-            this.nomEleve_txt.Size = new System.Drawing.Size(227, 20);
-            this.nomEleve_txt.TabIndex = 142;
-            // 
             // prenomEleve_txt
             // 
             this.prenomEleve_txt.Location = new System.Drawing.Point(206, 110);
             this.prenomEleve_txt.Name = "prenomEleve_txt";
             this.prenomEleve_txt.Size = new System.Drawing.Size(227, 20);
-            this.prenomEleve_txt.TabIndex = 141;
+            this.prenomEleve_txt.TabIndex = 142;
+            // 
+            // nomEleve_txt
+            // 
+            this.nomEleve_txt.Location = new System.Drawing.Point(206, 84);
+            this.nomEleve_txt.Name = "nomEleve_txt";
+            this.nomEleve_txt.Size = new System.Drawing.Size(227, 20);
+            this.nomEleve_txt.TabIndex = 141;
             // 
             // prenomEleve
             // 
@@ -229,8 +230,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 380);
-            this.Controls.Add(this.tiertemp1);
-            this.Controls.Add(this.tiertemp);
+            this.Controls.Add(this.TierTempsFalse);
+            this.Controls.Add(this.TierTempsTrue);
             this.Controls.Add(this.lblClasse_cmbx);
             this.Controls.Add(this.commentSante_text);
             this.Controls.Add(this.dateTimePicker1);
@@ -245,8 +246,8 @@
             this.Controls.Add(this.telEleve);
             this.Controls.Add(this.AjoutEleve);
             this.Controls.Add(this.dateNaissance);
-            this.Controls.Add(this.nomEleve_txt);
             this.Controls.Add(this.prenomEleve_txt);
+            this.Controls.Add(this.nomEleve_txt);
             this.Controls.Add(this.prenomEleve);
             this.Controls.Add(this.nomEleve);
             this.Name = "FrmAjoutElv";
@@ -258,8 +259,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton tiertemp1;
-        private System.Windows.Forms.RadioButton tiertemp;
+        private System.Windows.Forms.RadioButton TierTempsFalse;
+        private System.Windows.Forms.RadioButton TierTempsTrue;
         private System.Windows.Forms.ComboBox lblClasse_cmbx;
         private System.Windows.Forms.TextBox commentSante_text;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -274,8 +275,8 @@
         private System.Windows.Forms.Label telEleve;
         private System.Windows.Forms.Label AjoutEleve;
         private System.Windows.Forms.Label dateNaissance;
-        private System.Windows.Forms.TextBox nomEleve_txt;
         private System.Windows.Forms.TextBox prenomEleve_txt;
+        private System.Windows.Forms.TextBox nomEleve_txt;
         private System.Windows.Forms.Label prenomEleve;
         private System.Windows.Forms.Label nomEleve;
 

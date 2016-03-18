@@ -88,6 +88,13 @@ namespace UtilisateursBLL
         }
         #endregion
 
+        #region Méthode TrouverEleve retrouve si un élève est affecté à au moins une visite TrouverEleve de la DAL
+        public static bool TrouverEleve(int id)
+        {
+            return EleveDAO.TrouverEleve(id);
+        }
+        #endregion
+
         #region Méthode GetLeNomDeClasse renvoyant le nom et la section de la classe avec la méthode GetNomClasse de la DAL
         public static string GetLeNomDeClasse(int idClasse)
         {
