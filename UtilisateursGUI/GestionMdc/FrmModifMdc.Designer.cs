@@ -31,7 +31,6 @@
             this.nommedic = new System.Windows.Forms.ComboBox();
             this.savemodif = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.libellemedic = new System.Windows.Forms.TextBox();
             this.archiveoui = new System.Windows.Forms.RadioButton();
             this.archivenon = new System.Windows.Forms.RadioButton();
             this.archivemedic = new System.Windows.Forms.GroupBox();
@@ -41,7 +40,7 @@
             // nommedic
             // 
             this.nommedic.FormattingEnabled = true;
-            this.nommedic.Location = new System.Drawing.Point(143, 44);
+            this.nommedic.Location = new System.Drawing.Point(143, 69);
             this.nommedic.Name = "nommedic";
             this.nommedic.Size = new System.Drawing.Size(200, 24);
             this.nommedic.TabIndex = 0;
@@ -54,6 +53,7 @@
             this.savemodif.TabIndex = 1;
             this.savemodif.Text = "Modifier";
             this.savemodif.UseVisualStyleBackColor = true;
+            this.savemodif.Click += new System.EventHandler(this.savemodif_Click);
             // 
             // button2
             // 
@@ -63,13 +63,6 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Retour";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // libellemedic
-            // 
-            this.libellemedic.Location = new System.Drawing.Point(143, 111);
-            this.libellemedic.Name = "libellemedic";
-            this.libellemedic.Size = new System.Drawing.Size(200, 22);
-            this.libellemedic.TabIndex = 3;
             // 
             // archiveoui
             // 
@@ -110,7 +103,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 393);
             this.Controls.Add(this.archivemedic);
-            this.Controls.Add(this.libellemedic);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.savemodif);
             this.Controls.Add(this.nommedic);
@@ -119,7 +111,6 @@
             this.archivemedic.ResumeLayout(false);
             this.archivemedic.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -128,7 +119,6 @@
         private System.Windows.Forms.ComboBox nommedic;
         private System.Windows.Forms.Button savemodif;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox libellemedic;
         private System.Windows.Forms.RadioButton archiveoui;
         private System.Windows.Forms.RadioButton archivenon;
         private System.Windows.Forms.GroupBox archivemedic;
