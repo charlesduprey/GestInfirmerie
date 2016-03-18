@@ -74,7 +74,7 @@ namespace UtilisateursGUI.GestionVst
             lblMdc_list.DisplayMember = "LblMdc";
             lblMdc_list.ValueMember = "IdMdc";
 
-            numMedicSelect = (int)lblMdc_list.SelectedIndex;
+            numMedicSelect = (int)lblMdc_list.SelectedValue;
             #endregion
 
             #region Informations élèves non archivés
@@ -135,16 +135,19 @@ namespace UtilisateursGUI.GestionVst
             GestionVisite.CreerVisite(uneVisite);
             #endregion
 
-            int idVisite = GestionVisite.GetIdVstMax();
+            if (int.Parse(qteNumUpDown.Text) > 0)
+            {
+                int idVisite = GestionVisite.GetIdVstMax();
 
-            #region Insertion d'une prescription
-            Prescription unePrescription = new Prescription(
-                idVisite,
-                lblMdc_list.SelectedIndex + 1,
-                int.Parse(qteNumUpDown.Text)
-            );
+                #region Insertion d'une prescription
+                Prescription unePrescription = new Prescription(
+                    idVisite,
+                    (int)lblMdc_list.SelectedValue,
+                    int.Parse(qteNumUpDown.Text)
+                );
 
-            GestionPrescription.CreerPrescription(unePrescription);
+                GestionPrescription.CreerPrescription(unePrescription);
+            }
             #endregion
         }
         #endregion
