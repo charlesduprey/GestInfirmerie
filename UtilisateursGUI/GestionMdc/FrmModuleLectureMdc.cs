@@ -96,7 +96,9 @@ namespace UtilisateursGUI.GestionMdc
         #region Bouton Modifier
         private void modifBtn_Click(object sender, EventArgs e)
         {
-
+            FrmModifMdc frmModif = new FrmModifMdc();
+            frmModif.ShowDialog(); // ouverture du formulaire
+            frmModif.Close(); // fermeture du formulaire
         }
         #endregion
 
