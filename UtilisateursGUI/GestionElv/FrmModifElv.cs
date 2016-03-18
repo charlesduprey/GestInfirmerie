@@ -23,11 +23,6 @@ namespace UtilisateursGUI.GestionElv
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             UtilisateursBLL.GestionEleve.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
 
-            //uneGestionEleve = new List<GestionEleve>();
-
-            //GestionEleve unEleve = new GestionEleve();
-            //uneGestionEleve = unEleve.GetEleve();
-
             // Création d'un objet List d'Eleves à afficher dans la liste
             listeEleves = GestionEleve.GetElevesNonArchives();
 

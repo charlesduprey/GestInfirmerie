@@ -11,6 +11,8 @@ namespace UtilisateursBO
         private int idMdc;
         private string lblMdc;
         private bool archivageMdc;
+        private object p;
+        private string p_2;
         #endregion
 
         #region Encapsulation des attributs de la classe Medicament

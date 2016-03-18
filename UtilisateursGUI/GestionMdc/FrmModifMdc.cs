@@ -14,49 +14,56 @@ namespace UtilisateursGUI.GestionMdc
 {
     public partial class FrmModifMdc : Form
     {
-        int numSelectionne;
-        string libelle;
         #region Gestion du formulaire
-        #region Initialisation du Formulaire de modification
         public FrmModifMdc()
         {
             InitializeComponent();
 
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
-            UtilisateursBLL.GestionMedicament.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
+            UtilisateursBLL.GestionEleve.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
 
-            #region Remplissage du combobox des noms de médicaments
-            // Création d'un objet List d'Eleves à afficher dans la liste
-            listeMdc = GestionMedicament.GetMedicaments();
+            // Création d'un objet List de médicaments à afficher dans la liste
+            listeMedicaments = GestionMedicament.GetMedicaments();
 
-            MdcLbl.DataSource = listeMdc;
-            MdcLbl.DisplayMember = "LblMdc";
-            MdcLbl.ValueMember = "IdMdc";
+            libelleMdcCmbx.DataSource = listeMedicaments;
+            libelleMdcCmbx.DisplayMember = "LblMdc";
+            libelleMdcCmbx.ValueMember = "IdMdc";
 
-            numSelectionne = (int)MdcLbl.SelectedValue;
-            #endregion
+            int id = (int)libelleMdcCmbx.SelectedValue;
         }
-        #endregion
 
         #region Attributs de l'application
-        List<Medicament> listeMdc;
-        //private int numSelectionne;
+        private List<Medicament> listeMedicaments;
+        int id;
         #endregion
 
         #region Boutons du formulaire
-        #region Bouton Sauvegarde
+        #region Bouton sauvegarder
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            libelle = MdcLbl.Text;
-            MessageBox.Show("idMedic = " + numSelectionne + ", libelle medic = " + MdcLbl.Text + ".");
+            //Medicament unMedicament = new Medicament((int)libelleMdcCmbx.SelectedValue, libelleMdcCmbx.Text);
+            MessageBox.Show("id = " + id + ", libelle = " + libelleMdcCmbx.Text + "");
 
-            #region Création d'un médicament
-            Medicament unMedicament = new Medicament(
-                (int)MdcLbl.SelectedValue,
-                MdcLbl.Text
-            );
+            Medicament unMedicament = new Medicament(id, libelleMdcCmbx.Text);
+
             GestionMedicament.ModifierMedicament(unMedicament);
-            #endregion
+
+            // Initializes the variables to pass to the MessageBox.Show method.
+            DialogResult result;
+
+            // Displays the MessageBox.
+            result = MessageBox.Show(
+                this,
+                "Élève enregistré. Souhaitez-vous en saisir un autre ?",
+                "Valider",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.No)
+            {
+                this.Close();
+            }
         }
         #endregion
 
@@ -69,13 +76,9 @@ namespace UtilisateursGUI.GestionMdc
         #endregion
         #endregion
 
-        //#region Actions concernant la liste déroulante des libellés des médicaments
-        //private void MdcLbl_SelectionChangeCommitted(object sender, EventArgs e)
-        //{
-        //    numSelectionne = (int)MdcLbl.SelectedValue;
-        //    libelle = MdcLbl.Text;
-        //    MessageBox.Show("idMedic = " + numSelectionne + ", libelle medic = " + libelle + ".");
-        //}
-        //#endregion
+        private void libelleMdcCmbx_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            id = (int)libelleMdcCmbx.SelectedValue;
+        }
     }
 }
