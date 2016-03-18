@@ -85,7 +85,9 @@ namespace UtilisateursGUI
         #region Bouton pour appeller la modification des médicaments
         private void modifMdcBtn_Click(object sender, EventArgs e)
         {
-
+            FrmModifMdc frmModif = new FrmModifMdc();
+            frmModif.ShowDialog(); // ouverture du formulaire
+            frmModif.Close(); // 
         }
         #endregion
 
