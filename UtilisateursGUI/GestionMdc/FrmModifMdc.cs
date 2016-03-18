@@ -17,29 +17,35 @@ namespace UtilisateursGUI.GestionMdc
     {
         public FrmModifMdc()
         {
+            #region Initialisation de la form
             InitializeComponent();
 
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
-            UtilisateursBLL.GestionMedicament.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Medicament"]);
+            UtilisateursBLL.GestionMedicament.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
 
 
             listeMedicaments = GestionMedicament.GetMedicaments();
 
             nommedic.DataSource = listeMedicaments;
-            nommedic.DisplayMember = "Nom";
-            nommedic.ValueMember = "Id_Medic";
+            nommedic.DisplayMember = "LblMdc";
+            nommedic.ValueMember = "IdMdc";
 
             numSelectionne = (int)nommedic.SelectedIndex;
 
-            if (listeMedicaments[numSelectionne].ArchivageMdc == false)
-            {
-                libellemedic.Text = listeMedicaments[numSelectionne].LblMdc;
-            }
+            //if (listeMedicaments[numSelectionne].ArchivageMdc == false)
+            //{
+            //    libellemedic.Text = listeMedicaments[numSelectionne].LblMdc;
+            //}
+            #endregion
         }
 
+        #region Attributs de l'application
         private int numSelectionne;
         private List<Medicament> listeMedicaments;
+        private int idMdc;
+        #endregion
 
+        #region Bouton pour sauvegarder la modification
         private void savemodif_Click(object sender, EventArgs e)
         {
             #region Création de la liste pour récupérer les élèves
@@ -47,18 +53,24 @@ namespace UtilisateursGUI.GestionMdc
             liste = GestionMedicament.GetMedicaments();
             #endregion
 
+            Medicament unMedicament = new Medicament(idMdc, nommedic.Text, false);
 
-
-            //Medicament unMedicament = new Medicament(libellemedic.Text);
-
-            //GestionMedicament.ModifierMedicament(unMedicament);
-
-            //MessageBox.Show("idElv = " + idElv.ToString() + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
+            #region Création de la liste pour récupérer les medicaments
+            //Medicament unMedicament = new Medicament(
+            //    (int)nommedic.SelectedValue,
+            //    nommedic.Text
+            //);
+            GestionMedicament.ModifierMedicament(unMedicament);
+            MessageBox.Show("idMdc = " + idMdc + ", nom eleve = " + nommedic.Text );
+            #endregion
         }
+        #endregion
+
+        #region Bouton pour fermer l'application
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
-        
+        #endregion
     }
 }
