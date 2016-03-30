@@ -52,3 +52,12 @@ C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\
 C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
 C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
 C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+C:\Users\win7vitual\Desktop\GestInfirmerie-brancheJulien\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
