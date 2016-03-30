@@ -484,7 +484,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour archiver un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVES SET archive_elv = 'true' WHERE id_eleves = " + id;
+            cmd.CommandText = "UPDATE ELEVES SET archivage = 'true' WHERE id_eleves = " + id;
             #endregion
 
             // Récupération du résultat dans une variable

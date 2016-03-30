@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using UtilisateursBO; // Référence la couche BO
-using UtilisateursBLL;
-using System.Configuration; // Référence la couche BLL
+using UtilisateursBLL; // Référence la couche BLL
+using System.Configuration;
 
 namespace UtilisateursGUI.GestionElv
 {

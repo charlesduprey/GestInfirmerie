@@ -134,11 +134,28 @@ namespace UtilisateursGUI.GestionElv
         private void archBtn_Click(object sender, EventArgs e)
         {
             // int num = listeEleves[numSelectionne].Id_eleves;
-            int num = int.Parse(nomElv_cmbx.SelectedValue.ToString());
+            int num = (int)nomElv_cmbx.SelectedValue;
+            
+            // Initializes the variables to pass to the MessageBox.Show method.
+            DialogResult result;
 
-            MessageBox.Show("Voulez-vous archiver l'élève ? " + num, "Archivage", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            // Displays the MessageBox.
+            result = MessageBox.Show(
+                this,
+                "Voulez-vous archiver l'élève num" + num + " ? ",
+                "Archivage",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
 
-            GestionEleve.ArchiveEleve(num);
+            if (result == DialogResult.No)
+            {
+                this.Close();
+            }
+            else
+            {
+                GestionEleve.ArchiveEleve(num);
+            }
         }
         #endregion
 
