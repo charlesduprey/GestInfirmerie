@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAjoutVst));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateNaissance = new System.Windows.Forms.Label();
             this.prenomEleve_txt = new System.Windows.Forms.TextBox();
             this.prenomEleve = new System.Windows.Forms.Label();
             this.nomEleve = new System.Windows.Forms.Label();
             this.nomElv_cmbx = new System.Windows.Forms.ComboBox();
-            this.ModifEleve = new System.Windows.Forms.Label();
+            this.AjoutVst = new System.Windows.Forms.Label();
             this.lblClasse = new System.Windows.Forms.Label();
             this.dateVstPicker = new System.Windows.Forms.DateTimePicker();
             this.dateVstLbl = new System.Windows.Forms.Label();
@@ -121,16 +122,16 @@
             this.nomElv_cmbx.TabIndex = 85;
             this.nomElv_cmbx.SelectionChangeCommitted += new System.EventHandler(this.nomElv_list_SelectionChangeCommitted);
             // 
-            // ModifEleve
+            // AjoutVst
             // 
-            this.ModifEleve.AutoSize = true;
-            this.ModifEleve.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifEleve.Location = new System.Drawing.Point(117, 41);
-            this.ModifEleve.Name = "ModifEleve";
-            this.ModifEleve.Size = new System.Drawing.Size(237, 39);
-            this.ModifEleve.TabIndex = 91;
-            this.ModifEleve.Text = "Ajout d\'une visite";
-            this.ModifEleve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AjoutVst.AutoSize = true;
+            this.AjoutVst.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AjoutVst.Location = new System.Drawing.Point(117, 41);
+            this.AjoutVst.Name = "AjoutVst";
+            this.AjoutVst.Size = new System.Drawing.Size(237, 39);
+            this.AjoutVst.TabIndex = 91;
+            this.AjoutVst.Text = "Ajout d\'une visite";
+            this.AjoutVst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblClasse
             // 
@@ -432,15 +433,17 @@
             this.Controls.Add(this.dateVstPicker);
             this.Controls.Add(this.lblClasse_cmbx);
             this.Controls.Add(this.lblClasse);
-            this.Controls.Add(this.ModifEleve);
+            this.Controls.Add(this.AjoutVst);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dateNaissance);
             this.Controls.Add(this.prenomEleve_txt);
             this.Controls.Add(this.prenomEleve);
             this.Controls.Add(this.nomEleve);
             this.Controls.Add(this.nomElv_cmbx);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAjoutVst";
-            this.Text = "FrmAjoutVst";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Ajout d\'une visite";
             this.backHomeGroup.ResumeLayout(false);
             this.backHomeGroup.PerformLayout();
             this.hospitalGroup.ResumeLayout(false);
@@ -462,7 +465,7 @@
         private System.Windows.Forms.Label prenomEleve;
         private System.Windows.Forms.Label nomEleve;
         private System.Windows.Forms.ComboBox nomElv_cmbx;
-        private System.Windows.Forms.Label ModifEleve;
+        private System.Windows.Forms.Label AjoutVst;
         private System.Windows.Forms.Label lblClasse;
         private System.Windows.Forms.DateTimePicker dateVstPicker;
         private System.Windows.Forms.Label dateVstLbl;

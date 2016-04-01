@@ -10,6 +10,7 @@ using UtilisateursGUI;
 using UtilisateursGUI.GestionMdc;
 using UtilisateursGUI.GestionElv;
 using UtilisateursGUI.GestionVst;
+using CSV_import_export;
 
 namespace UtilisateursGUI
 {
@@ -143,5 +144,15 @@ namespace UtilisateursGUI
         }
         #endregion
         #endregion
+
+        //accès à l'administration
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            {
+                MenuAdmin menuAdm = new MenuAdmin();
+                menuAdm.ShowDialog(); // ouverture du formulaire
+                menuAdm.Close(); // fermeture du formulaire
+            }
+        }
     }
 }

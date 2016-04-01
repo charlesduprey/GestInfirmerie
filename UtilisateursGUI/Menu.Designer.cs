@@ -44,6 +44,7 @@
             this.ajoutVstBtn = new System.Windows.Forms.Button();
             this.appelMdlLectureGestVst = new System.Windows.Forms.Button();
             this.gestVst = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fmrButton
@@ -193,11 +194,22 @@
             this.gestVst.TabIndex = 15;
             this.gestVst.Text = "Gestion des visites";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(282, 254);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Administration";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 298);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.suprVstBtn);
             this.Controls.Add(this.modifVstBtn);
             this.Controls.Add(this.ajoutVstBtn);
@@ -238,6 +250,7 @@
         private System.Windows.Forms.Button ajoutVstBtn;
         private System.Windows.Forms.Button appelMdlLectureGestVst;
         private System.Windows.Forms.Label gestVst;
+        private System.Windows.Forms.Button button1;
     }
 }
 

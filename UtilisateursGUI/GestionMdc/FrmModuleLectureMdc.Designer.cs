@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModuleLectureMdc));
             this.suprBtn = new System.Windows.Forms.Button();
             this.ajoutBtn = new System.Windows.Forms.Button();
             this.modifBtn = new System.Windows.Forms.Button();
             this.fmrButton = new System.Windows.Forms.Button();
             this.actualiserBtn = new System.Windows.Forms.Button();
             this.MedicsView = new System.Windows.Forms.DataGridView();
+            this.elementsAffiches = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MedicsView)).BeginInit();
             this.SuspendLayout();
             // 
             // suprBtn
             // 
-            this.suprBtn.Location = new System.Drawing.Point(255, 309);
+            this.suprBtn.Location = new System.Drawing.Point(272, 383);
             this.suprBtn.Name = "suprBtn";
             this.suprBtn.Size = new System.Drawing.Size(75, 23);
             this.suprBtn.TabIndex = 23;
@@ -49,7 +51,7 @@
             // 
             // ajoutBtn
             // 
-            this.ajoutBtn.Location = new System.Drawing.Point(93, 309);
+            this.ajoutBtn.Location = new System.Drawing.Point(110, 383);
             this.ajoutBtn.Name = "ajoutBtn";
             this.ajoutBtn.Size = new System.Drawing.Size(75, 23);
             this.ajoutBtn.TabIndex = 22;
@@ -59,7 +61,7 @@
             // 
             // modifBtn
             // 
-            this.modifBtn.Location = new System.Drawing.Point(174, 309);
+            this.modifBtn.Location = new System.Drawing.Point(191, 383);
             this.modifBtn.Name = "modifBtn";
             this.modifBtn.Size = new System.Drawing.Size(75, 23);
             this.modifBtn.TabIndex = 21;
@@ -69,7 +71,7 @@
             // 
             // fmrButton
             // 
-            this.fmrButton.Location = new System.Drawing.Point(359, 309);
+            this.fmrButton.Location = new System.Drawing.Point(376, 383);
             this.fmrButton.Name = "fmrButton";
             this.fmrButton.Size = new System.Drawing.Size(75, 23);
             this.fmrButton.TabIndex = 20;
@@ -79,7 +81,7 @@
             // 
             // actualiserBtn
             // 
-            this.actualiserBtn.Location = new System.Drawing.Point(359, 280);
+            this.actualiserBtn.Location = new System.Drawing.Point(376, 354);
             this.actualiserBtn.Name = "actualiserBtn";
             this.actualiserBtn.Size = new System.Drawing.Size(75, 23);
             this.actualiserBtn.TabIndex = 19;
@@ -92,27 +94,40 @@
             this.MedicsView.AllowUserToAddRows = false;
             this.MedicsView.AllowUserToDeleteRows = false;
             this.MedicsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MedicsView.Location = new System.Drawing.Point(12, 12);
+            this.MedicsView.Location = new System.Drawing.Point(29, 86);
             this.MedicsView.Name = "MedicsView";
             this.MedicsView.ReadOnly = true;
             this.MedicsView.Size = new System.Drawing.Size(422, 248);
             this.MedicsView.TabIndex = 18;
             // 
+            // elementsAffiches
+            // 
+            this.elementsAffiches.AutoSize = true;
+            this.elementsAffiches.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elementsAffiches.Location = new System.Drawing.Point(12, 19);
+            this.elementsAffiches.Name = "elementsAffiches";
+            this.elementsAffiches.Size = new System.Drawing.Size(458, 39);
+            this.elementsAffiches.TabIndex = 24;
+            this.elementsAffiches.Text = "Affichage de tous les médicaments";
+            // 
             // FrmModuleLectureMdc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 352);
+            this.ClientSize = new System.Drawing.Size(483, 430);
+            this.Controls.Add(this.elementsAffiches);
             this.Controls.Add(this.suprBtn);
             this.Controls.Add(this.ajoutBtn);
             this.Controls.Add(this.modifBtn);
             this.Controls.Add(this.fmrButton);
             this.Controls.Add(this.actualiserBtn);
             this.Controls.Add(this.MedicsView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmModuleLectureMdc";
-            this.Text = "FrmModuleLectureMdccs";
+            this.Text = "Affichage de tous les médicaments";
             ((System.ComponentModel.ISupportInitialize)(this.MedicsView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +139,6 @@
         private System.Windows.Forms.Button fmrButton;
         private System.Windows.Forms.Button actualiserBtn;
         private System.Windows.Forms.DataGridView MedicsView;
+        private System.Windows.Forms.Label elementsAffiches;
     }
 }

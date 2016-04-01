@@ -54,7 +54,7 @@
             // 
             // suprBtn
             // 
-            this.suprBtn.Location = new System.Drawing.Point(226, 299);
+            this.suprBtn.Location = new System.Drawing.Point(331, 317);
             this.suprBtn.Name = "suprBtn";
             this.suprBtn.Size = new System.Drawing.Size(75, 23);
             this.suprBtn.TabIndex = 87;
@@ -64,7 +64,7 @@
             // 
             // archBtn
             // 
-            this.archBtn.Location = new System.Drawing.Point(145, 299);
+            this.archBtn.Location = new System.Drawing.Point(250, 317);
             this.archBtn.Name = "archBtn";
             this.archBtn.Size = new System.Drawing.Size(75, 23);
             this.archBtn.TabIndex = 86;
@@ -74,21 +74,21 @@
             // 
             // tierTemps_txt
             // 
-            this.tierTemps_txt.Location = new System.Drawing.Point(152, 196);
+            this.tierTemps_txt.Location = new System.Drawing.Point(257, 214);
             this.tierTemps_txt.Name = "tierTemps_txt";
             this.tierTemps_txt.Size = new System.Drawing.Size(191, 20);
             this.tierTemps_txt.TabIndex = 85;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 117);
+            this.dateTimePicker1.Location = new System.Drawing.Point(257, 135);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(191, 20);
             this.dateTimePicker1.TabIndex = 84;
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(64, 299);
+            this.saveBtn.Location = new System.Drawing.Point(169, 317);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(75, 23);
             this.saveBtn.TabIndex = 83;
@@ -99,7 +99,7 @@
             // lblClasse
             // 
             this.lblClasse.AutoSize = true;
-            this.lblClasse.Location = new System.Drawing.Point(17, 250);
+            this.lblClasse.Location = new System.Drawing.Point(122, 268);
             this.lblClasse.Name = "lblClasse";
             this.lblClasse.Size = new System.Drawing.Size(102, 13);
             this.lblClasse.TabIndex = 81;
@@ -107,7 +107,7 @@
             // 
             // commentSante_text
             // 
-            this.commentSante_text.Location = new System.Drawing.Point(152, 222);
+            this.commentSante_text.Location = new System.Drawing.Point(257, 240);
             this.commentSante_text.Name = "commentSante_text";
             this.commentSante_text.Size = new System.Drawing.Size(191, 20);
             this.commentSante_text.TabIndex = 80;
@@ -115,7 +115,7 @@
             // commentSante
             // 
             this.commentSante.AutoSize = true;
-            this.commentSante.Location = new System.Drawing.Point(17, 224);
+            this.commentSante.Location = new System.Drawing.Point(122, 242);
             this.commentSante.Name = "commentSante";
             this.commentSante.Size = new System.Drawing.Size(103, 13);
             this.commentSante.TabIndex = 79;
@@ -124,7 +124,7 @@
             // tierTemps
             // 
             this.tierTemps.AutoSize = true;
-            this.tierTemps.Location = new System.Drawing.Point(17, 198);
+            this.tierTemps.Location = new System.Drawing.Point(122, 216);
             this.tierTemps.Name = "tierTemps";
             this.tierTemps.Size = new System.Drawing.Size(62, 13);
             this.tierTemps.TabIndex = 78;
@@ -132,7 +132,7 @@
             // 
             // telParent_txt
             // 
-            this.telParent_txt.Location = new System.Drawing.Point(152, 169);
+            this.telParent_txt.Location = new System.Drawing.Point(257, 187);
             this.telParent_txt.Name = "telParent_txt";
             this.telParent_txt.Size = new System.Drawing.Size(191, 20);
             this.telParent_txt.TabIndex = 77;
@@ -140,7 +140,7 @@
             // telParent
             // 
             this.telParent.AutoSize = true;
-            this.telParent.Location = new System.Drawing.Point(17, 172);
+            this.telParent.Location = new System.Drawing.Point(122, 190);
             this.telParent.Name = "telParent";
             this.telParent.Size = new System.Drawing.Size(122, 13);
             this.telParent.TabIndex = 76;
@@ -148,7 +148,7 @@
             // 
             // telEleve_txt
             // 
-            this.telEleve_txt.Location = new System.Drawing.Point(152, 143);
+            this.telEleve_txt.Location = new System.Drawing.Point(257, 161);
             this.telEleve_txt.Name = "telEleve_txt";
             this.telEleve_txt.Size = new System.Drawing.Size(191, 20);
             this.telEleve_txt.TabIndex = 75;
@@ -156,7 +156,7 @@
             // telEleve
             // 
             this.telEleve.AutoSize = true;
-            this.telEleve.Location = new System.Drawing.Point(17, 146);
+            this.telEleve.Location = new System.Drawing.Point(122, 164);
             this.telEleve.Name = "telEleve";
             this.telEleve.Size = new System.Drawing.Size(112, 13);
             this.telEleve.TabIndex = 74;
@@ -166,17 +166,17 @@
             // 
             this.ModifEleve.AutoSize = true;
             this.ModifEleve.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifEleve.Location = new System.Drawing.Point(12, 17);
+            this.ModifEleve.Location = new System.Drawing.Point(12, 9);
             this.ModifEleve.Name = "ModifEleve";
-            this.ModifEleve.Size = new System.Drawing.Size(547, 45);
+            this.ModifEleve.Size = new System.Drawing.Size(559, 45);
             this.ModifEleve.TabIndex = 73;
-            this.ModifEleve.Text = "Modification/suppression de l\'élève";
+            this.ModifEleve.Text = "Modification/suppression d\'un élève";
             this.ModifEleve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateNaissance
             // 
             this.dateNaissance.AutoSize = true;
-            this.dateNaissance.Location = new System.Drawing.Point(17, 120);
+            this.dateNaissance.Location = new System.Drawing.Point(122, 138);
             this.dateNaissance.Name = "dateNaissance";
             this.dateNaissance.Size = new System.Drawing.Size(102, 13);
             this.dateNaissance.TabIndex = 72;
@@ -184,7 +184,7 @@
             // 
             // prenomEleve_txt
             // 
-            this.prenomEleve_txt.Location = new System.Drawing.Point(152, 91);
+            this.prenomEleve_txt.Location = new System.Drawing.Point(257, 109);
             this.prenomEleve_txt.Name = "prenomEleve_txt";
             this.prenomEleve_txt.Size = new System.Drawing.Size(191, 20);
             this.prenomEleve_txt.TabIndex = 71;
@@ -192,7 +192,7 @@
             // prenomEleve
             // 
             this.prenomEleve.AutoSize = true;
-            this.prenomEleve.Location = new System.Drawing.Point(17, 94);
+            this.prenomEleve.Location = new System.Drawing.Point(122, 112);
             this.prenomEleve.Name = "prenomEleve";
             this.prenomEleve.Size = new System.Drawing.Size(49, 13);
             this.prenomEleve.TabIndex = 70;
@@ -201,7 +201,7 @@
             // nomEleve
             // 
             this.nomEleve.AutoSize = true;
-            this.nomEleve.Location = new System.Drawing.Point(17, 68);
+            this.nomEleve.Location = new System.Drawing.Point(122, 86);
             this.nomEleve.Name = "nomEleve";
             this.nomEleve.Size = new System.Drawing.Size(35, 13);
             this.nomEleve.TabIndex = 69;
@@ -210,7 +210,7 @@
             // nomElv_cmbx
             // 
             this.nomElv_cmbx.FormattingEnabled = true;
-            this.nomElv_cmbx.Location = new System.Drawing.Point(152, 65);
+            this.nomElv_cmbx.Location = new System.Drawing.Point(257, 83);
             this.nomElv_cmbx.Name = "nomElv_cmbx";
             this.nomElv_cmbx.Size = new System.Drawing.Size(191, 21);
             this.nomElv_cmbx.TabIndex = 68;
@@ -218,7 +218,7 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(268, 347);
+            this.closeBtn.Location = new System.Drawing.Point(373, 365);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(75, 23);
             this.closeBtn.TabIndex = 67;
@@ -229,7 +229,7 @@
             // lblClasse_cmbx
             // 
             this.lblClasse_cmbx.FormattingEnabled = true;
-            this.lblClasse_cmbx.Location = new System.Drawing.Point(152, 247);
+            this.lblClasse_cmbx.Location = new System.Drawing.Point(257, 265);
             this.lblClasse_cmbx.Name = "lblClasse_cmbx";
             this.lblClasse_cmbx.Size = new System.Drawing.Size(191, 21);
             this.lblClasse_cmbx.TabIndex = 88;
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 391);
+            this.ClientSize = new System.Drawing.Size(588, 408);
             this.Controls.Add(this.lblClasse_cmbx);
             this.Controls.Add(this.suprBtn);
             this.Controls.Add(this.archBtn);

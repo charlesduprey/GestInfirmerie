@@ -47,6 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionCsv\frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCsv\frmExport.designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCsv\frmImport.designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCsv\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\Program.cs" />
+    <Compile Include="GestionCsv\prop.cs" />
     <Compile Include="GestionElv\FrmAjoutElv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,8 +132,25 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestionCsv\FrmCsv.resx" />
+    <EmbeddedResource Include="GestionCsv\frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCsv\FrmImpCsv.resx" />
+    <EmbeddedResource Include="GestionCsv\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCsv\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionElv\FrmAjoutElv.resx">
       <DependentUpon>FrmAjoutElv.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,8 +175,14 @@
     <EmbeddedResource Include="GestionVst\FrmAjoutVst.resx">
       <DependentUpon>FrmAjoutVst.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionVst\FrmModifVst.resx">
+      <DependentUpon>FrmModifVst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

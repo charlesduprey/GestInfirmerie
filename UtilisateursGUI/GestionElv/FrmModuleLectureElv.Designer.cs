@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModuleLectureElv));
             this.modifBtn = new System.Windows.Forms.Button();
             this.fmrButton = new System.Windows.Forms.Button();
             this.actualiserBtn = new System.Windows.Forms.Button();
@@ -113,11 +114,12 @@
             // elementsAffiches
             // 
             this.elementsAffiches.AutoSize = true;
-            this.elementsAffiches.Location = new System.Drawing.Point(454, 41);
+            this.elementsAffiches.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elementsAffiches.Location = new System.Drawing.Point(307, 23);
             this.elementsAffiches.Name = "elementsAffiches";
-            this.elementsAffiches.Size = new System.Drawing.Size(134, 13);
+            this.elementsAffiches.Size = new System.Drawing.Size(365, 39);
             this.elementsAffiches.TabIndex = 16;
-            this.elementsAffiches.Text = "Tableau de tous les élèves";
+            this.elementsAffiches.Text = "Affichage de tous les élèves";
             // 
             // FrmModuleLectureElv
             // 
@@ -132,8 +134,9 @@
             this.Controls.Add(this.fmrButton);
             this.Controls.Add(this.actualiserBtn);
             this.Controls.Add(this.StudentsView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmModuleLectureElv";
-            this.Text = "FrmModuleLectureElv";
+            this.Text = "Affichage des élèves";
             ((System.ComponentModel.ISupportInitialize)(this.StudentsView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

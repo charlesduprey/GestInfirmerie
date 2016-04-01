@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAjoutElv));
             this.TierTempsFalse = new System.Windows.Forms.RadioButton();
             this.TierTempsTrue = new System.Windows.Forms.RadioButton();
             this.lblClasse_cmbx = new System.Windows.Forms.ComboBox();
@@ -206,9 +207,9 @@
             this.AjoutEleve.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AjoutEleve.Location = new System.Drawing.Point(123, 29);
             this.AjoutEleve.Name = "AjoutEleve";
-            this.AjoutEleve.Size = new System.Drawing.Size(212, 39);
+            this.AjoutEleve.Size = new System.Drawing.Size(222, 39);
             this.AjoutEleve.TabIndex = 144;
-            this.AjoutEleve.Text = "Ajout de l\'élève";
+            this.AjoutEleve.Text = "Ajout d\'un élève";
             this.AjoutEleve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateNaissance
@@ -311,8 +312,9 @@
             this.Controls.Add(this.nomEleve_txt);
             this.Controls.Add(this.prenomEleve);
             this.Controls.Add(this.nomEleve);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAjoutElv";
-            this.Text = "FrmAjoutElv";
+            this.Text = "Formulaire d\'ajout d\'élèves";
             ((System.ComponentModel.ISupportInitialize)(this.errProNom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProPrenom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProDateNaissance)).EndInit();
