@@ -38,7 +38,7 @@ namespace UtilisateursGUI
             FrmAjoutElv FrmModLect;
             FrmModLect = new FrmAjoutElv();
             FrmModLect.ShowDialog(); // ouverture du formulaire
-            FrmModLect.Close(); // fermeture du formulaire
+            //FrmModLect.Close(); // fermeture du formulaire
         }
         #endregion
 
@@ -123,7 +123,9 @@ namespace UtilisateursGUI
         #region Bouton pour appeller la modification des visites
         private void modifVstBtn_Click(object sender, EventArgs e)
         {
-
+            FrmModifVst frmModif = new FrmModifVst();
+            frmModif.ShowDialog(); // ouverture du formulaire
+            frmModif.Close(); // fermeture du formulaire
         }
         #endregion
 

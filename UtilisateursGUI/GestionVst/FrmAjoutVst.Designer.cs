@@ -35,7 +35,6 @@
             this.nomEleve = new System.Windows.Forms.Label();
             this.nomElv_cmbx = new System.Windows.Forms.ComboBox();
             this.ModifEleve = new System.Windows.Forms.Label();
-            this.lblClasse_cmbx = new System.Windows.Forms.ComboBox();
             this.lblClasse = new System.Windows.Forms.Label();
             this.dateVstPicker = new System.Windows.Forms.DateTimePicker();
             this.dateVstLbl = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.poulsNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.qteNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.qteLbl = new System.Windows.Forms.Label();
+            this.lblClasse_cmbx = new System.Windows.Forms.ComboBox();
             this.backHomeGroup.SuspendLayout();
             this.hospitalGroup.SuspendLayout();
             this.tellPrGroup.SuspendLayout();
@@ -124,20 +124,13 @@
             // ModifEleve
             // 
             this.ModifEleve.AutoSize = true;
-            this.ModifEleve.Location = new System.Drawing.Point(181, 39);
+            this.ModifEleve.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifEleve.Location = new System.Drawing.Point(117, 41);
             this.ModifEleve.Name = "ModifEleve";
-            this.ModifEleve.Size = new System.Drawing.Size(87, 13);
+            this.ModifEleve.Size = new System.Drawing.Size(237, 39);
             this.ModifEleve.TabIndex = 91;
             this.ModifEleve.Text = "Ajout d\'une visite";
             this.ModifEleve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblClasse_cmbx
-            // 
-            this.lblClasse_cmbx.FormattingEnabled = true;
-            this.lblClasse_cmbx.Location = new System.Drawing.Point(198, 194);
-            this.lblClasse_cmbx.Name = "lblClasse_cmbx";
-            this.lblClasse_cmbx.Size = new System.Drawing.Size(191, 21);
-            this.lblClasse_cmbx.TabIndex = 93;
             // 
             // lblClasse
             // 
@@ -403,6 +396,14 @@
             this.qteLbl.TabIndex = 108;
             this.qteLbl.Text = "Quantité :";
             // 
+            // lblClasse_cmbx
+            // 
+            this.lblClasse_cmbx.FormattingEnabled = true;
+            this.lblClasse_cmbx.Location = new System.Drawing.Point(198, 194);
+            this.lblClasse_cmbx.Name = "lblClasse_cmbx";
+            this.lblClasse_cmbx.Size = new System.Drawing.Size(191, 21);
+            this.lblClasse_cmbx.TabIndex = 93;
+            // 
             // FrmAjoutVst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,7 +463,6 @@
         private System.Windows.Forms.Label nomEleve;
         private System.Windows.Forms.ComboBox nomElv_cmbx;
         private System.Windows.Forms.Label ModifEleve;
-        private System.Windows.Forms.ComboBox lblClasse_cmbx;
         private System.Windows.Forms.Label lblClasse;
         private System.Windows.Forms.DateTimePicker dateVstPicker;
         private System.Windows.Forms.Label dateVstLbl;
@@ -491,5 +491,6 @@
         private System.Windows.Forms.NumericUpDown poulsNumUpDown;
         private System.Windows.Forms.NumericUpDown qteNumUpDown;
         private System.Windows.Forms.Label qteLbl;
+        private System.Windows.Forms.ComboBox lblClasse_cmbx;
     }
 }

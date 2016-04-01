@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.fmrButton = new System.Windows.Forms.Button();
             this.appelMdlLectureGestElv = new System.Windows.Forms.Button();
             this.gestElv = new System.Windows.Forms.Label();
@@ -212,8 +213,9 @@
             this.Controls.Add(this.gestElv);
             this.Controls.Add(this.fmrButton);
             this.Controls.Add(this.appelMdlLectureGestElv);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "Menu de l\'application";
             this.ResumeLayout(false);
             this.PerformLayout();
 

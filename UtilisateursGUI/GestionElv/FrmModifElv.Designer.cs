@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModifElv));
             this.suprBtn = new System.Windows.Forms.Button();
             this.archBtn = new System.Windows.Forms.Button();
             this.tierTemps_txt = new System.Windows.Forms.TextBox();
@@ -164,9 +165,10 @@
             // ModifEleve
             // 
             this.ModifEleve.AutoSize = true;
-            this.ModifEleve.Location = new System.Drawing.Point(117, 9);
+            this.ModifEleve.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifEleve.Location = new System.Drawing.Point(12, 17);
             this.ModifEleve.Name = "ModifEleve";
-            this.ModifEleve.Size = new System.Drawing.Size(173, 13);
+            this.ModifEleve.Size = new System.Drawing.Size(547, 45);
             this.ModifEleve.TabIndex = 73;
             this.ModifEleve.Text = "Modification/suppression de l\'élève";
             this.ModifEleve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 392);
+            this.ClientSize = new System.Drawing.Size(574, 391);
             this.Controls.Add(this.lblClasse_cmbx);
             this.Controls.Add(this.suprBtn);
             this.Controls.Add(this.archBtn);
@@ -258,8 +260,9 @@
             this.Controls.Add(this.nomEleve);
             this.Controls.Add(this.nomElv_cmbx);
             this.Controls.Add(this.closeBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmModifElv";
-            this.Text = "FrmModifElv";
+            this.Text = "Formulaire de modification des élèves";
             this.ResumeLayout(false);
             this.PerformLayout();
 

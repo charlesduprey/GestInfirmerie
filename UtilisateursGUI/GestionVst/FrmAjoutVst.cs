@@ -97,7 +97,7 @@ namespace UtilisateursGUI.GestionVst
 
                 lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
                 lblClasse_cmbx.DisplayMember = "LibelleClasse";
-                lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+                lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe;
             }
             #endregion
             #endregion
@@ -148,7 +148,7 @@ namespace UtilisateursGUI.GestionVst
 
                 GestionPrescription.CreerPrescription(unePrescription);
             }
-            #endregion
+                #endregion
         }
         #endregion
 
@@ -172,7 +172,7 @@ namespace UtilisateursGUI.GestionVst
 
             lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
             lblClasse_cmbx.DisplayMember = "NiveauClasse" + "LibelleClasse";
-            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe;
 
             // lblClasse_cmbx.DataSource = GestionEleve.GetLeNomDeClasse(nbClasse); //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
             // lblClasse_cmbx.DisplayMember = "LibelleClasse";

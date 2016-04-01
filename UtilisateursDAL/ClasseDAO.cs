@@ -106,6 +106,9 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Classe> lesClasses = new List<Classe>();
 
+            uneClasse = new Classe(0, "!", "Choisissez une classe", null);
+            lesClasses.Add(uneClasse);
+
             #region Création d'une commande SQL pour obtenir la liste des classes
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;

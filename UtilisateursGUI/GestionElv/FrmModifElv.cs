@@ -205,9 +205,9 @@ namespace UtilisateursGUI.GestionElv
             tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps.ToString();
             commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
 
-            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
-            lblClasse_cmbx.DisplayMember = "NiveauClasse" + "LibelleClasse";
-            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+            lblClasse_cmbx.DataSource = listeLibelleClasse;
+            lblClasse_cmbx.DisplayMember = "LibelleClasse";
+            lblClasse_cmbx.ValueMember = "IdClasse";
 
             // lblClasse_cmbx.DataSource = GestionEleve.GetLeNomDeClasse(nbClasse); //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
             // lblClasse_cmbx.DisplayMember = "LibelleClasse";
