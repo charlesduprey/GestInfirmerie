@@ -177,7 +177,10 @@ namespace UtilisateursGUI.GestionElv
             #region Actions en fonction du message de validation.
             if (result == DialogResult.Yes)
             {
+                // Méthode pour archiver l'élève
                 GestionEleve.ArchiveEleve(numSelectionne);
+
+                #region Affichage du MessageBox.
                 MessageBox.Show(
                     this,
                     "L'élève numéro " + numSelectionne + " a bien été archivé ",
@@ -185,6 +188,7 @@ namespace UtilisateursGUI.GestionElv
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button1);
+                #endregion
             }
             #endregion
         }
@@ -245,7 +249,6 @@ namespace UtilisateursGUI.GestionElv
         {
             this.Close();
         }
-        #endregion
         #endregion
         #endregion
 
@@ -410,5 +413,6 @@ namespace UtilisateursGUI.GestionElv
             return bResult;
         }
         #endregion
+        #endregion   
     }
 }
