@@ -23,37 +23,37 @@ namespace UtilisateursGUI.GestionElv
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             UtilisateursBLL.GestionEleve.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Eleve"]);
 
+            #region Initialisation des listes
             // Création d'un objet List d'Eleves à afficher dans la liste
             listeEleves = GestionEleve.GetElevesNonArchives();
 
             // Création d'un objet List de classes à afficher dans la liste
             listeClasses = GestionClasse.GetClasses();
+            #endregion
+
 
             for (int id = 0; id < listeClasses.Count; id++)
             {
-                idClasse = listeClasses[id].IdClasse;
-                libelle = listeClasses[id].NiveauClasse + " " + listeClasses[id].LibelleClasse;
-
-                libelleClasse = new Classe(idClasse, libelle);
-
-                listeLibelleClasse.Add(libelleClasse);
+                listeLibelleClasse.Add(
+                    new Classe(
+                        listeClasses[id].IdClasse,
+                        listeClasses[id].NiveauClasse + " " + listeClasses[id].LibelleClasse));
             }
 
             nomElv_cmbx.DataSource = listeEleves;
             nomElv_cmbx.DisplayMember = "Nom";
             nomElv_cmbx.ValueMember = "Id_eleves";
 
-            numSelectionne = (int)nomElv_cmbx.SelectedIndex;
-            id_eleve = (int)nomElv_cmbx.SelectedValue;
+            numSelectionne = (int)nomElv_cmbx.SelectedValue;
 
             #region Remplissage des cases
             if (listeEleves[numSelectionne].ArchiveEleve == false)
             {
                 prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
-                dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
+                dateNaissancePicker.Text = listeEleves[numSelectionne].Date_naissance.ToString();
                 telEleve_txt.Text = listeEleves[numSelectionne].Tel_eleve.ToString();
                 telParent_txt.Text = listeEleves[numSelectionne].Tel_parent.ToString();
-                tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps.ToString();
+                TierTempsTrue.Checked = listeEleves[numSelectionne].Tier_temps;
                 commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
 
                 lblClasse_cmbx.DataSource = listeLibelleClasse;
@@ -89,12 +89,7 @@ namespace UtilisateursGUI.GestionElv
 
         #region Attributs de l'application
         private int numSelectionne;
-        private int idClasse;
-        //  private int nbClasse;
-        //  private int ind = 0;
         private List<Eleve> listeEleves; // initialisation de la liste
-        // private List<string> listeNomClasses;
-        private int id_eleve;
         private string libelle;
         private List<Classe> listeLibelleClasse = new List<Classe>();
         private List<Classe> listeClasses;
@@ -105,80 +100,143 @@ namespace UtilisateursGUI.GestionElv
         #region Bouton Enregistrer
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            #region Création de la liste pour récupérer les élèves
-            List<Eleve> liste = new List<Eleve>();
-            liste = GestionEleve.GetEleves();
-            #endregion
+            if (string.IsNullOrEmpty(nomElv_cmbx.Text) || string.IsNullOrEmpty(prenomEleve_txt.Text) || (int)lblClasse_cmbx.SelectedValue == 0 || string.IsNullOrEmpty(commentSante_text.Text))
+            {
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Le formulaire est vide ! Remplissez-le si nécessaire",
+                    "Valider",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
+            else
+            {
+                #region Affichage du MessageBox.
+                DialogResult result = MessageBox.Show(
+                this,
+                "Voulez-vous archiver l'élève numéro " + numSelectionne + " ? ",
+                "Archivage",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
+                #endregion
 
-            string dateNaissance = dateTimePicker1.Text;
-            DateTime laDateNaissance = DateTime.Parse(dateNaissance);
+                #region Actions en fonction du message de validation.
+                if (result == DialogResult.Yes)
+                {
+                    #region Rassemblement et modification des infos de l'élève
+                    // Rassemblement des infos de l'élève
+                    // int id_eleve = (int)nomElv_cmbx.SelectedValue;
+                    Eleve unEleve = new Eleve(
+                        numSelectionne,
+                        nomElv_cmbx.Text,
+                        prenomEleve_txt.Text,
+                        DateTime.Parse(dateNaissancePicker.Text),
+                        int.Parse(telEleve_txt.Text),
+                        int.Parse(telParent_txt.Text),
+                        TierTempsTrue.Checked,
+                        commentSante_text.Text,
+                        (int)lblClasse_cmbx.SelectedValue,
+                        false);
 
-            string telEleve = telEleve_txt.Text;
-            int leTelEleve = int.Parse(telEleve);
+                    // Modification de l'élève
+                    GestionEleve.ModifierEleve(unEleve);
+                    #endregion
 
-            string telParent = telParent_txt.Text;
-            int leTelParent = int.Parse(telParent);
-
-            int id_classe = lblClasse_cmbx.SelectedIndex + 1;
-
-            //int id_eleve = (int)nomElv_cmbx.SelectedValue;
-            Eleve unEleve = new Eleve(id_eleve, nomElv_cmbx.Text, prenomEleve_txt.Text, laDateNaissance, leTelEleve, leTelParent, bool.Parse(tierTemps_txt.Text), commentSante_text.Text, id_classe, false);
-
-            GestionEleve.ModifierEleve(unEleve);
-
-            MessageBox.Show("idElv = " + id_eleve + ", nom eleve = " + nomElv_cmbx.Text + ", prenom = " + prenomEleve_txt.Text + ", date naissance : " + laDateNaissance + ", tel eleve =" + leTelEleve + ", tel Parent " + leTelParent + ", Tiers temps = " + tierTemps_txt.Text + ", Commentaire santé = " + commentSante_text.Text + ", index Classe =  " + lblClasse_cmbx.SelectedIndex.ToString() + "");
+                    #region Affichage du MessageBox.
+                    MessageBox.Show(
+                        this,
+                        "L'élève numéro " + numSelectionne + " a bien été archivé ",
+                        "Archivage",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button1);
+                    #endregion
+                }
+                #endregion
+            }
         }
         #endregion
 
         #region Bouton Archiver
         private void archBtn_Click(object sender, EventArgs e)
         {
-            // int num = listeEleves[numSelectionne].Id_eleves;
-            int num = (int)nomElv_cmbx.SelectedValue;
-            
-            // Initializes the variables to pass to the MessageBox.Show method.
-            DialogResult result;
-
-            // Displays the MessageBox.
-            result = MessageBox.Show(
+            #region Affichage du MessageBox.
+            DialogResult result = MessageBox.Show(
                 this,
-                "Voulez-vous archiver l'élève num" + num + " ? ",
+                "Voulez-vous archiver l'élève numéro " + numSelectionne + " ? ",
                 "Archivage",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button1);
+            #endregion
 
-            if (result == DialogResult.No)
+            #region Actions en fonction du message de validation.
+            if (result == DialogResult.Yes)
             {
-                this.Close();
+                GestionEleve.ArchiveEleve(numSelectionne);
+                MessageBox.Show(
+                    this,
+                    "L'élève numéro " + numSelectionne + " a bien été archivé ",
+                    "Archivage",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
             }
-            else
-            {
-                GestionEleve.ArchiveEleve(num);
-            }
+            #endregion
         }
         #endregion
 
         #region Bouton Supprimer
         private void suprBtn_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(nomElv_cmbx.SelectedValue.ToString());
-            MessageBox.Show("Voulez-vous supprimer l'élève ? " + id, "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            // contrôle de la possibilité de suppression (afilié à aucune visite)
-            bool trouve;
-
-            trouve = GestionEleve.TrouverEleve(id);
-
-            if (trouve == true)
+            if (string.IsNullOrEmpty(nomElv_cmbx.Text) || string.IsNullOrEmpty(prenomEleve_txt.Text) || (int)lblClasse_cmbx.SelectedValue == 0 || string.IsNullOrEmpty(commentSante_text.Text))
             {
-                trouve = true;
-                MessageBox.Show("Impossible de supprimer l'élève " + id + " Vous pouvez cependant l'achiver.", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Certains champs du formulaire sont vides ! Remplissez-les pour continuer.",
+                    "Valider",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
             }
             else
             {
-                GestionEleve.SupprimerEleve(id);
+                int id = int.Parse(nomElv_cmbx.SelectedValue.ToString());
+                
+                #region Affichage du MessageBox.
+                DialogResult result = MessageBox.Show(
+                    this,
+                    "Voulez-vous supprimer l'élève " + id + " ?",
+                    "Suppression",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+
+                // Contrôle de la possibilité de suppression (afilié à aucune visite)
+                bool trouve = GestionEleve.TrouverEleve(id);
+
+                if (trouve == true)
+                {
+                    trouve = true;
+                    MessageBox.Show(
+                        "Impossible de supprimer l'élève " + id + " Vous pouvez cependant l'achiver.",
+                        "Suppression",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    GestionEleve.SupprimerEleve(id);
+                }
+                // supression si oui
             }
-            // supression si oui 
         }
         #endregion
 
@@ -194,24 +252,162 @@ namespace UtilisateursGUI.GestionElv
         #region Actions concernant la liste déroulante des noms des élèves
         private void nomElv_list_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            numSelectionne = (int)nomElv_cmbx.SelectedIndex;
-            id_eleve = (int)nomElv_cmbx.SelectedValue;
+            numSelectionne = (int)nomElv_cmbx.SelectedValue;
 
             #region Remplissage des cases
             prenomEleve_txt.Text = listeEleves[numSelectionne].Prenom;
-            dateTimePicker1.Text = listeEleves[numSelectionne].Date_naissance.ToString();
+            dateNaissancePicker.Text = listeEleves[numSelectionne].Date_naissance.ToString();
             telEleve_txt.Text = listeEleves[numSelectionne].Tel_eleve.ToString();
             telParent_txt.Text = listeEleves[numSelectionne].Tel_parent.ToString();
-            tierTemps_txt.Text = listeEleves[numSelectionne].Tier_temps.ToString();
+            TierTempsTrue.Checked = listeEleves[numSelectionne].Tier_temps;
             commentSante_text.Text = listeEleves[numSelectionne].Commentaire_sante;
 
             lblClasse_cmbx.DataSource = listeLibelleClasse;
             lblClasse_cmbx.DisplayMember = "LibelleClasse";
             lblClasse_cmbx.ValueMember = "IdClasse";
-
-            // lblClasse_cmbx.DataSource = GestionEleve.GetLeNomDeClasse(nbClasse); //GestionEleve.GetLeNomDeClasse(listeEleves[numSelectionne].Id_classe);
-            // lblClasse_cmbx.DisplayMember = "LibelleClasse";
             #endregion
+        }
+        #endregion
+
+        #region Contrôles de saisies
+        #region Contrôle de saisie sur le nom de l'élève
+        private void nomElv_cmbx_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(nomElv_cmbx.Text))
+            {
+                // Set the error if the name is not valid.
+                errProNom.SetError(this.nomElv_cmbx, "Le nom est requis et ne dois pas être vide !");
+            }
+            else if (isLetter(nomEleve.Text) == false)
+            {
+                // Set the error if the name is not valid.
+                errProNom.SetError(this.nomElv_cmbx, "Le nom ne doit pas contenir de chiffres !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProNom.SetError(this.nomElv_cmbx, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le prénom de l'élève
+        private void prenomEleve_txt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(prenomEleve_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProNom.SetError(this.prenomEleve_txt, "Le prénom est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProNom.SetError(this.prenomEleve_txt, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur la date de naissance de l'élève
+        private void dateNaissancePicker_Validating(object sender, CancelEventArgs e)
+        {
+            DateTime date;
+            if (DateTime.Parse(dateNaissancePicker.Text) == DateTime.Now)
+            {
+                // Set the error if the name is not valid.
+                errProDateNaissance.SetError(this.dateNaissancePicker, "L'élève ne peut être né aujourd'hui !");
+            }
+            else if (!DateTime.TryParse(dateNaissancePicker.Text, out date))
+            {
+                // Set the error if the name is not valid.
+                errProDateNaissance.SetError(this.dateNaissancePicker, "La date est incorrecte !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProDateNaissance.SetError(this.dateNaissancePicker, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le téléphone de l'élève
+        private void telEleve_txt_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(telEleve_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProTelPar.SetError(this.telParent_txt, "Le numéro de téléphone de l'élève est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProTelEleve.SetError(this.telEleve_txt, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le téléphone des parents
+        private void telParent_txt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(telParent_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProTelPar.SetError(this.telParent_txt, "Le numéro de téléphone des parents est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProTelPar.SetError(this.telParent_txt, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le libellé de la classe
+        private void lblClasse_cmbx_Validating(object sender, CancelEventArgs e)
+        {
+            if ((int)lblClasse_cmbx.SelectedValue == 0)
+            {
+                // Set the error if the name is not valid.
+                errProClasse.SetError(this.lblClasse_cmbx, "Veuillez sélectionner une classe !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProClasse.SetError(this.lblClasse_cmbx, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le commentaire
+        private void commentSante_text_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(commentSante_text.Text))
+            {
+                // Set the error if the name is not valid.
+                errProCommentaire.SetError(this.commentSante_text, "Le commentaire est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProCommentaire.SetError(this.commentSante_text, String.Empty);
+            }
+        }
+        #endregion
+        #endregion
+
+        #region Méthode vérifiant le contenu des champs textes
+        public bool isLetter(string sReceive)
+        {
+            bool bResult;
+            bResult = true;
+            foreach (char cWork in sReceive)
+            {
+                if (char.IsLetter(cWork) == false)
+                {
+                    bResult = false;
+                }
+            }
+
+            return bResult;
         }
         #endregion
     }

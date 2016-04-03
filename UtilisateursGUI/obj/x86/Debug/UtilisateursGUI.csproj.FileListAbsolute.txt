@@ -125,9 +125,7 @@ E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\
 E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
 E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmModifVst.resources
-D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.FrmCsv.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmExport.resources
-D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.FrmImpCsv.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmImport.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmMain.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmCsv.resources
@@ -163,3 +161,4 @@ D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources

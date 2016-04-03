@@ -57,7 +57,6 @@
             this.errProTelPar = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProClasse = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProCommentaire = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errProSave = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errProNom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProPrenom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProDateNaissance)).BeginInit();
@@ -65,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errProTelPar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProClasse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProCommentaire)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errProSave)).BeginInit();
             this.SuspendLayout();
             // 
             // TierTempsFalse
@@ -105,7 +103,7 @@
             // 
             // commentSante_text
             // 
-            this.commentSante_text.Location = new System.Drawing.Point(209, 269);
+            this.commentSante_text.Location = new System.Drawing.Point(209, 264);
             this.commentSante_text.Name = "commentSante_text";
             this.commentSante_text.Size = new System.Drawing.Size(227, 20);
             this.commentSante_text.TabIndex = 155;
@@ -128,7 +126,6 @@
             this.saveBtn.Text = "Enregistrer";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            this.saveBtn.Validating += new System.ComponentModel.CancelEventHandler(this.saveBtn_Validating);
             // 
             // closeButton
             // 
@@ -152,7 +149,7 @@
             // commentSante
             // 
             this.commentSante.AutoSize = true;
-            this.commentSante.Location = new System.Drawing.Point(32, 272);
+            this.commentSante.Location = new System.Drawing.Point(32, 267);
             this.commentSante.Name = "commentSante";
             this.commentSante.Size = new System.Drawing.Size(103, 13);
             this.commentSante.TabIndex = 150;
@@ -283,10 +280,6 @@
             // 
             this.errProCommentaire.ContainerControl = this;
             // 
-            // errProSave
-            // 
-            this.errProSave.ContainerControl = this;
-            // 
             // FrmAjoutElv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,7 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errProTelPar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProClasse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProCommentaire)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errProSave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +349,6 @@
         private System.Windows.Forms.ErrorProvider errProTelPar;
         private System.Windows.Forms.ErrorProvider errProClasse;
         private System.Windows.Forms.ErrorProvider errProCommentaire;
-        private System.Windows.Forms.ErrorProvider errProSave;
 
     }
 }

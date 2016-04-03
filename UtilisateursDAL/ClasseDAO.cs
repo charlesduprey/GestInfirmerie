@@ -30,7 +30,6 @@ namespace UtilisateursDAL
             string libelleClasse;
             string niveauClasse;
             string emploiDuTemps;
-            Classe uneClasse;
             #endregion
 
             // Connexion à la BD
@@ -45,47 +44,57 @@ namespace UtilisateursDAL
             // Récupération du résultat dans une variable
             SqlDataReader monReader = cmd.ExecuteReader();
 
+            int ind = 0;
+
             #region Remplissage de la liste à partir du reader
-            do
+            while (monReader.Read())
             {
-                idClasse = int.Parse(monReader["id_classe"].ToString());
+                if (int.Parse(monReader["id_classe"].ToString()) == id)
+                {
+                    idClasse = int.Parse(monReader["id_classe"].ToString());
 
-                if (monReader["libelle_classe"] == DBNull.Value)
-                {
-                    libelleClasse = default(string);
-                }
-                else
-                {
-                    libelleClasse = monReader["libelle_classe"].ToString();
-                }
+                    if (monReader["libelle_classe"] == DBNull.Value)
+                    {
+                        libelleClasse = default(string);
+                    }
+                    else
+                    {
+                        libelleClasse = monReader["libelle_classe"].ToString();
+                    }
 
-                if (monReader["niveau_classe"] == DBNull.Value)
-                {
-                    niveauClasse = default(string);
-                }
-                else
-                {
-                    niveauClasse = monReader["niveau_classe"].ToString();
-                }
+                    if (monReader["niveau_classe"] == DBNull.Value)
+                    {
+                        niveauClasse = default(string);
+                    }
+                    else
+                    {
+                        niveauClasse = monReader["niveau_classe"].ToString();
+                    }
 
-                if (monReader["emploi_du_temps"] == DBNull.Value)
-                {
-                    emploiDuTemps = default(string);
-                }
-                else
-                {
-                    emploiDuTemps = monReader["emploi_du_temps"].ToString();
-                }
+                    if (monReader["emploi_du_temps"] == DBNull.Value)
+                    {
+                        emploiDuTemps = default(string);
+                    }
+                    else
+                    {
+                        emploiDuTemps = monReader["emploi_du_temps"].ToString();
+                    }
 
-                uneClasse = new Classe(idClasse, libelleClasse, niveauClasse, emploiDuTemps);
-            } while (int.Parse(monReader["id_classe"].ToString()) == idClasse);
+                    // Fermeture de la connexion
+                    maConnexion.Close();
+
+                    // Résultat retourné
+                    return new Classe(idClasse, libelleClasse, niveauClasse, emploiDuTemps);
+                }
+                ind++;
+            }
             #endregion
 
             // Fermeture de la connexion
             maConnexion.Close();
 
             // Résultat retourné
-            return uneClasse;
+            return new Classe(null);
         }
         #endregion
 

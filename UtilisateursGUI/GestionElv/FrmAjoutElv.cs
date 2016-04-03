@@ -72,49 +72,59 @@ namespace UtilisateursGUI.GestionElv
         #region Bouton Enregistrer
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            /*Eleve unEleve = new Eleve(
-                nomEleve_txt.Text,
-                prenomEleve_txt.Text,
-                DateTime.Parse(dateTimePicker1.Text),
-                int.Parse(telEleve_txt.Text),
-                int.Parse(telParent_txt.Text),
-                TierTempsTrue.Checked,
-                commentSante_text.Text,
-                false,
-                id_classe);*/
-
-            GestionEleve.AjoutEleve(
-                new Eleve(
-                    nomEleve_txt.Text,
-                    prenomEleve_txt.Text,
-                    DateTime.Parse(dateNaissancePicker.Text),
-                    int.Parse(telEleve_txt.Text),
-                    int.Parse(telParent_txt.Text),
-                    TierTempsTrue.Checked,
-                    commentSante_text.Text,
-                    false,
-                    (int)lblClasse_cmbx.SelectedValue));
-
-            // Initializes the variables to pass to the MessageBox.Show method.
-            DialogResult result;
-
-            // Displays the MessageBox.
-            result = MessageBox.Show(
-                this,
-                "Élève enregistré. Souhaitez-vous en saisir un autre ?" + DateTime.Now,
-                "Valider",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1);
-
-            if (result == DialogResult.No)
+            if (string.IsNullOrEmpty(nomEleve_txt.Text) || string.IsNullOrEmpty(prenomEleve_txt.Text) || (int)lblClasse_cmbx.SelectedValue == 0 || string.IsNullOrEmpty(commentSante_text.Text))
             {
-                nomEleve_txt.Text = String.Empty;
-                prenomEleve_txt.Text = String.Empty;
-                telEleve_txt.Text = String.Empty;
-                telParent_txt.Text = String.Empty;
-                commentSante_text.Text = String.Empty;
-                this.Close();
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Certains champs du formulaire sont vides ! Remplissez-les pour continuer.",
+                    "Valider",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
+            else
+            {
+                #region Ajouter un élève
+                GestionEleve.AjoutEleve(
+                    new Eleve(
+                        nomEleve_txt.Text,
+                        prenomEleve_txt.Text,
+                        DateTime.Parse(dateNaissancePicker.Text),
+                        int.Parse(telEleve_txt.Text),
+                        int.Parse(telParent_txt.Text),
+                        TierTempsTrue.Checked,
+                        commentSante_text.Text,
+                        false,
+                        (int)lblClasse_cmbx.SelectedValue));
+                #endregion
+
+                #region Affichage du MessageBox.
+                DialogResult result = MessageBox.Show(
+                    this,
+                    "Élève enregistré. Souhaitez-vous en saisir un autre ?",
+                    "Valider",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+
+                #region Actions en fonction du message de validation
+                if (result == DialogResult.Yes)
+                {
+                    nomEleve_txt.Text = String.Empty;
+                    prenomEleve_txt.Text = String.Empty;
+                    telEleve_txt.Text = String.Empty;
+                    telParent_txt.Text = String.Empty;
+                    commentSante_text.Text = String.Empty;
+                    this.Close();
+                }
+                else
+                {
+                    this.Close();
+                }
+                #endregion
             }
         }
         #endregion
@@ -139,7 +149,7 @@ namespace UtilisateursGUI.GestionElv
             else if (isLetter(nomEleve.Text) == false)
             {
                 // Set the error if the name is not valid.
-                errProNom.SetError(this.nomEleve_txt, "Le nom est requis et ne dois pas être vide !");
+                errProNom.SetError(this.nomEleve_txt, "Le nom ne doit pas contenir de chiffres !");
             }
             else
             {
@@ -250,25 +260,10 @@ namespace UtilisateursGUI.GestionElv
             }
         }
         #endregion
-
-        #region Contrôle de saisie sur le bouton sauvegarder
-        private void saveBtn_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(nomEleve_txt.Text) || string.IsNullOrEmpty(prenomEleve_txt.Text) || (int)lblClasse_cmbx.SelectedValue == 0 || string.IsNullOrEmpty(commentSante_text.Text))
-            {
-                // Set the error if the name is not valid.
-                errProSave.SetError(this.saveBtn, "Tous les champs ou certains champs du formulaire ne sont pas corrects ou sont vides !");
-            }
-            else
-            {
-                // Clear the error, if any, in the error provider.
-                errProSave.SetError(this.saveBtn, String.Empty);
-            }
-        }
-        #endregion
         #endregion
         #endregion
 
+        #region Méthode vérifiant le contenu des champs textes
         public bool isLetter(string sReceive)
         {
             bool bResult;
@@ -283,5 +278,6 @@ namespace UtilisateursGUI.GestionElv
 
             return bResult;
         }
+        #endregion
     }
 }

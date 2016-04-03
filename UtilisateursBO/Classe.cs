@@ -44,6 +44,11 @@ namespace UtilisateursBO
         public Classe()
         { }
 
+        public Classe(string libelleClasse)
+        {
+            this.libelleClasse = (string)libelleClasse;
+        }
+
         public Classe(int idClasse, string libelleClasse, string niveauClasse, string emploiDuTemps)
         {
             this.idClasse = idClasse;
