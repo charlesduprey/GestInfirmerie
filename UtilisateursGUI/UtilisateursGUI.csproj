@@ -97,12 +97,6 @@
     <Compile Include="GestionMdc\FrmModuleLectureMdc.Designer.cs">
       <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionMdc\FrmSuprMdc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionMdc\FrmSuprMdc.Designer.cs">
-      <DependentUpon>FrmSuprMdc.cs</DependentUpon>
-    </Compile>
     <Compile Include="GestionMdc\FrmAjoutMdc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionMdc\FrmModuleLectureMdc.resx">
       <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionMdc\FrmSuprMdc.resx">
-      <DependentUpon>FrmSuprMdc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionMdc\FrmAjoutMdc.resx">
       <DependentUpon>FrmAjoutMdc.cs</DependentUpon>
