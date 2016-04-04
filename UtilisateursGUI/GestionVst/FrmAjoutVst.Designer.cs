@@ -73,6 +73,9 @@
             this.errProQteMdc = new System.Windows.Forms.ErrorProvider(this.components);
             this.elvGroup = new System.Windows.Forms.GroupBox();
             this.visiteGroup = new System.Windows.Forms.GroupBox();
+            this.errProBackHome = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProHospital = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProBtnSave = new System.Windows.Forms.ErrorProvider(this.components);
             this.backHomeGroup.SuspendLayout();
             this.hospitalGroup.SuspendLayout();
             this.tellPrGroup.SuspendLayout();
@@ -85,6 +88,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errProQteMdc)).BeginInit();
             this.elvGroup.SuspendLayout();
             this.visiteGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errProBackHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProHospital)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProBtnSave)).BeginInit();
             this.SuspendLayout();
             // 
             // dateNaissance
@@ -253,6 +259,7 @@
             this.saveBtn.Text = "Enregistrer";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.Validating += new System.ComponentModel.CancelEventHandler(this.saveBtn_Validating);
             // 
             // cancelBtn
             // 
@@ -341,6 +348,7 @@
             this.backHomeGroup.TabIndex = 124;
             this.backHomeGroup.TabStop = false;
             this.backHomeGroup.Text = "Retour au domicile";
+            this.backHomeGroup.Validating += new System.ComponentModel.CancelEventHandler(this.backHomeGroup_Validating);
             // 
             // hospitalGroup
             // 
@@ -352,6 +360,7 @@
             this.hospitalGroup.TabIndex = 125;
             this.hospitalGroup.TabStop = false;
             this.hospitalGroup.Text = "Hôpital";
+            this.hospitalGroup.Validating += new System.ComponentModel.CancelEventHandler(this.hospitalGroup_Validating);
             // 
             // tellPrGroup
             // 
@@ -496,6 +505,18 @@
             this.visiteGroup.TabStop = false;
             this.visiteGroup.Text = "groupBox1";
             // 
+            // errProBackHome
+            // 
+            this.errProBackHome.ContainerControl = this;
+            // 
+            // errProHospital
+            // 
+            this.errProHospital.ContainerControl = this;
+            // 
+            // errProBtnSave
+            // 
+            this.errProBtnSave.ContainerControl = this;
+            // 
             // FrmAjoutVst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,6 +550,9 @@
             this.elvGroup.PerformLayout();
             this.visiteGroup.ResumeLayout(false);
             this.visiteGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errProBackHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProHospital)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProBtnSave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,5 +603,8 @@
         private System.Windows.Forms.ErrorProvider errProQteMdc;
         private System.Windows.Forms.GroupBox elvGroup;
         private System.Windows.Forms.GroupBox visiteGroup;
+        private System.Windows.Forms.ErrorProvider errProBackHome;
+        private System.Windows.Forms.ErrorProvider errProHospital;
+        private System.Windows.Forms.ErrorProvider errProBtnSave;
     }
 }

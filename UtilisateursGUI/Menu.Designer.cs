@@ -37,9 +37,7 @@
             this.ajoutElvBtn = new System.Windows.Forms.Button();
             this.ajoutMdcBtn = new System.Windows.Forms.Button();
             this.modifMdcBtn = new System.Windows.Forms.Button();
-            this.suprMdcBtn = new System.Windows.Forms.Button();
             this.modifElvBtn = new System.Windows.Forms.Button();
-            this.suprVstBtn = new System.Windows.Forms.Button();
             this.modifVstBtn = new System.Windows.Forms.Button();
             this.ajoutVstBtn = new System.Windows.Forms.Button();
             this.appelMdlLectureGestVst = new System.Windows.Forms.Button();
@@ -121,19 +119,9 @@
             this.modifMdcBtn.Name = "modifMdcBtn";
             this.modifMdcBtn.Size = new System.Drawing.Size(108, 29);
             this.modifMdcBtn.TabIndex = 11;
-            this.modifMdcBtn.Text = "Modifier";
+            this.modifMdcBtn.Text = "Modifier/supprimer";
             this.modifMdcBtn.UseVisualStyleBackColor = true;
             this.modifMdcBtn.Click += new System.EventHandler(this.modifMdcBtn_Click);
-            // 
-            // suprMdcBtn
-            // 
-            this.suprMdcBtn.Location = new System.Drawing.Point(242, 139);
-            this.suprMdcBtn.Name = "suprMdcBtn";
-            this.suprMdcBtn.Size = new System.Drawing.Size(108, 29);
-            this.suprMdcBtn.TabIndex = 12;
-            this.suprMdcBtn.Text = "Supprimer";
-            this.suprMdcBtn.UseVisualStyleBackColor = true;
-            this.suprMdcBtn.Click += new System.EventHandler(this.suprMdcBtn_Click);
             // 
             // modifElvBtn
             // 
@@ -141,19 +129,9 @@
             this.modifElvBtn.Name = "modifElvBtn";
             this.modifElvBtn.Size = new System.Drawing.Size(108, 29);
             this.modifElvBtn.TabIndex = 13;
-            this.modifElvBtn.Text = "Modifier";
+            this.modifElvBtn.Text = "Modifier/supprimer";
             this.modifElvBtn.UseVisualStyleBackColor = true;
             this.modifElvBtn.Click += new System.EventHandler(this.modifElvBtn_Click);
-            // 
-            // suprVstBtn
-            // 
-            this.suprVstBtn.Location = new System.Drawing.Point(409, 139);
-            this.suprVstBtn.Name = "suprVstBtn";
-            this.suprVstBtn.Size = new System.Drawing.Size(108, 29);
-            this.suprVstBtn.TabIndex = 19;
-            this.suprVstBtn.Text = "Supprimer";
-            this.suprVstBtn.UseVisualStyleBackColor = true;
-            this.suprVstBtn.Click += new System.EventHandler(this.suprVstBtn_Click);
             // 
             // modifVstBtn
             // 
@@ -210,13 +188,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 298);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.suprVstBtn);
             this.Controls.Add(this.modifVstBtn);
             this.Controls.Add(this.ajoutVstBtn);
             this.Controls.Add(this.appelMdlLectureGestVst);
             this.Controls.Add(this.gestVst);
             this.Controls.Add(this.modifElvBtn);
-            this.Controls.Add(this.suprMdcBtn);
             this.Controls.Add(this.modifMdcBtn);
             this.Controls.Add(this.ajoutMdcBtn);
             this.Controls.Add(this.ajoutElvBtn);
@@ -243,9 +219,7 @@
         private System.Windows.Forms.Button ajoutElvBtn;
         private System.Windows.Forms.Button ajoutMdcBtn;
         private System.Windows.Forms.Button modifMdcBtn;
-        private System.Windows.Forms.Button suprMdcBtn;
         private System.Windows.Forms.Button modifElvBtn;
-        private System.Windows.Forms.Button suprVstBtn;
         private System.Windows.Forms.Button modifVstBtn;
         private System.Windows.Forms.Button ajoutVstBtn;
         private System.Windows.Forms.Button appelMdlLectureGestVst;

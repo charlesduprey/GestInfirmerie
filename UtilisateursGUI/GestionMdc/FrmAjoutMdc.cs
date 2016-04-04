@@ -24,13 +24,38 @@ namespace UtilisateursGUI.GestionMdc
 
         private void enrBtn_Click(object sender, EventArgs e)
         {
-            string nomMedic = (nomMdc_txt.Text);
-            bool achivMedic = false;
+            if (string.IsNullOrEmpty(nomMdc_txt.Text))
+            {
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Le libellé du médicament est vide ou est incorrect ! Remplissez-le pour continuer.",
+                    "Erreur",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
+            else
+            {
+                string nomMedic = (nomMdc_txt.Text);
+                bool achivMedic = false;
 
-            Medicament mdc;
-            mdc = new Medicament(nomMedic, achivMedic);
+                Medicament mdc;
+                mdc = new Medicament(nomMedic, achivMedic);
 
-            GestionMedicament.CreerMedicament(mdc);
+                GestionMedicament.CreerMedicament(mdc);
+
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Le médicament a bien été enregistré !",
+                    "Erreur",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
         }
 
         private void nomMdc_txt_Validating(object sender, CancelEventArgs e)

@@ -92,15 +92,6 @@ namespace UtilisateursGUI
         }
         #endregion
 
-        #region Bouton pour appeller la suppression des médicaments
-        private void suprMdcBtn_Click(object sender, EventArgs e)
-        {
-            FrmSuprMdc FrmSupr = new FrmSuprMdc();
-            FrmSupr.ShowDialog(); // ouverture du formulaire
-            FrmSupr.Close(); // fermeture du formulaire
-        }
-        #endregion
-
         #region Bouton pour appeler la vue sur les médicaments
         private void appelMdlLectureGestMdc_Click(object sender, EventArgs e)
         {

@@ -127,37 +127,107 @@ namespace UtilisateursGUI.GestionVst
         #region Boutons Sauvegarder
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            #region Création d'une visite
-            Visite uneVisite = new Visite(
-                motifTxtbx.Text,
-                commentTxtbx.Text,
-                int.Parse(poulsNumUpDown.Text),
-                tellPrYes.Checked,
-                backHomeYes.Checked,
-                hospitalYes.Checked,
-                DateTime.Parse(dateVstPicker.Text),
-                DateTime.Parse(dateTimeArv.Text),
-                DateTime.Parse(dateTimeDep.Text),
-                //nomElv_cmbx.SelectedIndex + 1
-                (int)nomElv_cmbx.SelectedValue
-            );
-            GestionVisite.CreerVisite(uneVisite);
-            #endregion
-
-            if (int.Parse(qteNumUpDown.Text) > 0)
+            #region Si les champs de la visite sont vides
+            if (string.IsNullOrEmpty(motifTxtbx.Text) ||
+                string.IsNullOrEmpty(commentTxtbx.Text) ||
+                int.Parse(poulsNumUpDown.Text) < 0 ||
+                int.Parse(poulsNumUpDown.Text) == null)
             {
-                int idVisite = GestionVisite.GetIdVstMax();
-
-                #region Insertion d'une prescription
-                Prescription unePrescription = new Prescription(
-                    idVisite,
-                    (int)lblMdc_list.SelectedValue,
-                    int.Parse(qteNumUpDown.Text)
-                );
-
-                GestionPrescription.CreerPrescription(unePrescription);
-            }
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Certains champs du formulaire sont vides ou incorrects ! Remplissez-les pour continuer.",
+                    "Erreur",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
                 #endregion
+            }
+            #endregion
+            #region Condition impossible car l'élève ne peut pas rentrer chez lui et aller à l'hôpital
+            else if (backHomeYes.Checked == true &&
+                        hospitalYes.Checked == true)
+            {
+                #region Affichage du MessageBox
+                MessageBox.Show(
+                    this,
+                    "Attention, l'élève ne peut pas aller à l'hôpital et chez lui en même temps !",
+                    "Prescription",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
+            #endregion
+            #region Si tout va bien
+            else
+            {
+                #region Si un médicament a été prescrit
+                if (int.Parse(qteNumUpDown.Text) > 0)
+                {
+                    createVst();
+                    createPrcpt();
+
+                    #region Affichage du MessageBox
+                    DialogResult result = MessageBox.Show(
+                        this,
+                        "La visite et la prescription ont bien été enregistrés !",
+                        "Valider",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Asterisk,
+                        MessageBoxDefaultButton.Button1);
+                    #endregion
+                }
+                #endregion
+                #region Si la quantité des médicaments == 0, on propose la prescription
+                else if (int.Parse(qteNumUpDown.Text) == 0)
+                {
+                    #region Affichage du MessageBox et récupération du résultat
+                    DialogResult result = MessageBox.Show(
+                        this,
+                        "Souhaitez-vous prescrire un médicament ?",
+                        "Prescription",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button1);
+                    #endregion
+
+                    #region Actions en fonction du message de validation
+                    if (result == DialogResult.No)
+                    {
+                        createVst();
+                        #region Affichage du MessageBox et récupération du résultat
+                        result = MessageBox.Show(
+                            this,
+                            "Souhaitez-vous prescrire un médicament ?",
+                            "Prescription",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question,
+                            MessageBoxDefaultButton.Button1);
+                        #endregion
+
+                        // Fermeture du formulaire si l'utilisateur ne souhaite pas saisir d'autres visites
+                        if (result == DialogResult.No)
+                        {
+                            this.Close();
+                        }
+                        // Vidage des champs si l'utilisateur souhaite saisir d'autre(s) visite(s)
+                        else
+                        {
+                            motifTxtbx.Text = string.Empty;
+                            commentTxtbx.Text = string.Empty;
+                            poulsNumUpDown.Text = "0";
+                            tellPrNo.Checked = true;
+                            backHomeNo.Checked = true;
+                            hospitalNo.Checked = true;
+                            qteNumUpDown.Text = string.Empty;
+                        }
+                    }
+                    #endregion
+                }
+                #endregion
+            }
+            #endregion
         }
         #endregion
 
@@ -227,8 +297,48 @@ namespace UtilisateursGUI.GestionVst
             }
         }
         #endregion
+
+        #region Contrôle de saisie sur le retour à domicile
+        private void backHomeGroup_Validating(object sender, CancelEventArgs e)
+        {
+            if (hospitalYes.Checked == true && backHomeYes.Checked == true)
+            {
+                // Set the error if the name is not valid.
+                errProBackHome.SetError(this.backHomeYes, "L'élève ne peut pas rentrer chez lui et aller à l'hopital !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProBackHome.SetError(this.backHomeYes, String.Empty);
+            }
+        }
         #endregion
 
+        #region Contrôle de saisie sur l'hôpital
+        private void hospitalGroup_Validating(object sender, CancelEventArgs e)
+        {
+            if (hospitalYes.Checked == true && backHomeYes.Checked == true)
+            {
+                // Set the error if the name is not valid.
+                errProBackHome.SetError(this.hospitalYes, "L'élève ne peut pas rentrer chez lui et aller à l'hôpital !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProBackHome.SetError(this.hospitalYes, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur l'enregistrement de la visite.
+        private void saveBtn_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+        #endregion
+        #endregion
+
+        #region Méthodes pour faciliter le traitement
         #region Méthode vérifiant le contenu des champs textes
         public bool isLetter(string sReceive)
         {
@@ -244,6 +354,40 @@ namespace UtilisateursGUI.GestionVst
 
             return bResult;
         }
+        #endregion
+
+        #region Création d'une visite
+        private void createVst()
+        {
+            GestionVisite.CreerVisite(
+                new Visite(
+                    motifTxtbx.Text,
+                    commentTxtbx.Text,
+                    int.Parse(poulsNumUpDown.Text),
+                    tellPrYes.Checked,
+                    backHomeYes.Checked,
+                    hospitalYes.Checked,
+                    DateTime.Parse(dateVstPicker.Text),
+                    DateTime.Parse(dateTimeArv.Text),
+                    DateTime.Parse(dateTimeDep.Text),
+                    (int)nomElv_cmbx.SelectedValue));
+        }
+        #endregion
+
+        #region Création d'une prescription
+        private void createPrcpt()
+        {
+            int idVisite = GestionVisite.GetIdVstMax();
+
+            Prescription unePrescription = new Prescription(
+                        idVisite,
+                        (int)lblMdc_list.SelectedValue,
+                        int.Parse(qteNumUpDown.Text)
+            );
+
+            GestionPrescription.CreerPrescription(unePrescription);
+        }
+        #endregion
         #endregion
         #endregion
     }

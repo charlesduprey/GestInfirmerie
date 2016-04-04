@@ -43,29 +43,96 @@ namespace UtilisateursGUI.GestionMdc
         #region Bouton sauvegarder
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            //Medicament unMedicament = new Medicament((int)libelleMdcCmbx.SelectedValue, libelleMdcCmbx.Text);
-            MessageBox.Show("id = " + id + ", libelle = " + libelleMdcCmbx.Text + "");
+            #region Si les champs de la visite sont vides
+            if (string.IsNullOrEmpty(libelleMdcCmbx.Text))
+            {
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Certains champs du formulaire sont vides ou incorrects ! Remplissez-les pour continuer.",
+                    "Erreur",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
+            #endregion
+            #region Si tout va bien
+            else
+            {
+                GestionMedicament.ModifierMedicament(new Medicament(id, libelleMdcCmbx.Text));
 
-            Medicament unMedicament = new Medicament(id, libelleMdcCmbx.Text);
+                #region Affichage du MessageBox.
+                DialogResult result = MessageBox.Show(
+                   this,
+                   "Médicament modifié. Souhaitez-vous en modifier un autre ?",
+                   "Modifier un médicament",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Question,
+                   MessageBoxDefaultButton.Button1);
+                #endregion
 
-            GestionMedicament.ModifierMedicament(unMedicament);
+                #region Actions en fonction du message de validation
+                if (result == DialogResult.No)
+                {
+                    this.Close();
+                }
+                #endregion
+            }
+            #endregion
+        }
+        #endregion
 
-            // Initializes the variables to pass to the MessageBox.Show method.
-            DialogResult result;
+        #region Bouton archiver
+        private void archBtn_Click(object sender, EventArgs e)
+        {
+            // Appel de la méthode SupprimerMedicament() de la GestionMedicament
+            GestionMedicament.ArchiveMedicament(new Medicament((int)libelleMdcCmbx.SelectedValue, libelleMdcCmbx.Text, false));
 
-            // Displays the MessageBox.
-            result = MessageBox.Show(
+            // Afficher le MessageBox.
+            MessageBox.Show(
                 this,
-                "Élève enregistré. Souhaitez-vous en saisir un autre ?",
+                "Le médicament a bien été archivé.",
                 "Valider",
-                MessageBoxButtons.YesNo,
+                MessageBoxButtons.OK,
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button1);
+        }
+        #endregion
 
-            if (result == DialogResult.No)
+        #region Bouton supprimer
+        private void suprBtn_Click(object sender, EventArgs e)
+        {
+            // Appel de la méthode SupprimerMedicament() de la GestionMedicament
+            int nbEnr = GestionMedicament.SupprimerMedicament((int)libelleMdcCmbx.SelectedValue);
+
+            #region Message s'il existe des médicaments prescrits
+            if (nbEnr > 0)
             {
-                this.Close();
+                MessageBox.Show("L'élément a été prescrit, il ne peut pas être suprimé mais archivé !",
+                    "Message",
+                    MessageBoxButtons.OK);
             }
+            else
+            {
+                // Initializes the variables to pass to the MessageBox.Show method.
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(
+                    this,
+                    "Medicament supprimé. Souhaitez-vous en supprimer: un autre ?",
+                    "Valider",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+
+                if (result == DialogResult.No)
+                {
+                    this.Close();
+                }
+            }
+            #endregion
         }
         #endregion
 
@@ -84,5 +151,39 @@ namespace UtilisateursGUI.GestionMdc
             id = (int)libelleMdcCmbx.SelectedValue;
         }
         #endregion
+
+        #region Contrôles de saisies
+        #region Contrôle de saisie sur le libellé du médicament
+        private void libelleMdcCmbx_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(libelleMdcCmbx.Text))
+            {
+                // Set the error if the name is not valid.
+                errProMdcTxt.SetError(this.libelleMdcCmbx, "Le libellé du médicament est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProMdcTxt.SetError(this.libelleMdcCmbx, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur l'enregistrement du médicament
+        private void saveBtn_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(libelleMdcCmbx.Text))
+            {
+                // Set the error if the name is not valid.
+                errProMdcTxt.SetError(this.libelleMdcCmbx, "Le libellé du médicament est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProMdcTxt.SetError(this.libelleMdcCmbx, String.Empty);
+            }
+        }
+        #endregion
+        #endregion   
     }
 }

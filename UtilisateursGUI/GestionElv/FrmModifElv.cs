@@ -90,10 +90,8 @@ namespace UtilisateursGUI.GestionElv
         #region Attributs de l'application
         private int numSelectionne;
         private List<Eleve> listeEleves; // initialisation de la liste
-        private string libelle;
         private List<Classe> listeLibelleClasse = new List<Classe>();
         private List<Classe> listeClasses;
-        private Classe libelleClasse;
         #endregion
 
         #region Boutons du formulaire
