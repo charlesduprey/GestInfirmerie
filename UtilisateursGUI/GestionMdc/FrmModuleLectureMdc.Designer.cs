@@ -47,7 +47,7 @@
             this.suprBtn.TabIndex = 23;
             this.suprBtn.Text = "Supprimer";
             this.suprBtn.UseVisualStyleBackColor = true;
-            this.suprBtn.Click += new System.EventHandler(this.suprBtn_Click);
+            //this.suprBtn.Click += new System.EventHandler(this.suprBtn_Click);
             // 
             // ajoutBtn
             // 

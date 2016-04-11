@@ -111,7 +111,6 @@ D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
-D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmSuprMdc.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
 D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
