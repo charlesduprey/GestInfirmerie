@@ -292,7 +292,7 @@ namespace CSV_import_export
 					//this.dataGridView_preView.DataSource = dt;
 
 					// Creates a new and empty table in the sql database
-					CreateTableInDatabase(dt, this.txtOwner.Text, this.txtTableName.Text, prop.sqlConnString);
+					//CreateTableInDatabase(dt, this.txtOwner.Text, this.txtTableName.Text, prop.sqlConnString);
 
 					// Copies all rows to the database from the dataset.
 					using (SqlBulkCopy bc = new SqlBulkCopy(prop.sqlConnString))
@@ -387,10 +387,10 @@ namespace CSV_import_export
 					//this.dataGridView_preView.DataSource = dt;
 
 					// Creates a new and empty table in the sql database
-					CreateTableInDatabase(dt, this.txtOwner.Text, this.txtTableName.Text, prop.sqlConnString);
+					CreateTableInDatabase(dataReader, this.txtOwner.Text, this.txtTableName.Text, prop.sqlConnString);
 
 					// Copies all rows to the database from the data reader.
-					using (SqlBulkCopy bc = new SqlBulkCopy("server=(local);database=Test_CSV_impex;Trusted_Connection=True"))
+					/*using (SqlBulkCopy bc = new SqlBulkCopy(prop.sqlConnString))
 					{
 						// Destination table with owner - this example doesn't
 						// check the owner and table names!
@@ -406,6 +406,8 @@ namespace CSV_import_export
 						// Closes the SqlBulkCopy instance
 						bc.Close();
 					}
+                    */
+                    
 
 					// Writes the number of imported rows to the form
 					this.lblProgress.Text = "Imported: " + this.rowCount.ToString() + "/" + this.rowCount.ToString() + " row(s)";
@@ -427,7 +429,7 @@ namespace CSV_import_export
 		 * runs it in the sql database.
 		 */
 
-		private bool CreateTableInDatabase(DataTable dtSchemaTable, string tableOwner, string tableName, string connectionString)
+		private bool CreateTableInDatabase(OdbcDataReader dtSchemaTable, string tableOwner, string tableName, string connectionString)
 		{
 			try
 			{
@@ -435,33 +437,40 @@ namespace CSV_import_export
 				// Generates the create table command.
 				// The first column of schema table contains the column names.
 				// The data type is nvarcher(4000) in all columns.
+                string ctStr = "INSERT INTO [" + tableOwner + "].[" + tableName + "] (nom,prenom,date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,id_classe,archive_elv) VALUES ('";
 
-				string ctStr = "CREATE TABLE [" + tableOwner + "].[" + tableName + "](\r\n";
-				for (int i = 0; i < dtSchemaTable.Rows.Count; i++)
-				{
-					ctStr += "  [" + dtSchemaTable.Rows[i][0].ToString() + "] [nvarchar](4000) NULL";
-					if (i < dtSchemaTable.Rows.Count)
-					{
-						ctStr += ",";
-					}
-					ctStr += "\r\n";
-				}
-				ctStr += ")";
+                while (dtSchemaTable.Read())
+                {
+                    for (int i = 0; i < 9; i++)
+                    {
+                        ctStr += dtSchemaTable.GetValue(i).ToString();
+                        if (i < 8)
+                        {
+                            ctStr += "', '";
+                        }
+                        else
+                        {
+                            ctStr += "');";
+                        }
+                    }
+                    
 
-				// You can check the sql statement if you want:
-				//MessageBox.Show(ctStr);
+                    // You can check the sql statement if you want:
+                    //MessageBox.Show(ctStr);
 
 
-				// Runs the sql command to make the destination table.
-				
-				SqlConnection conn = new SqlConnection(connectionString);
-				SqlCommand command = conn.CreateCommand();
-				command.CommandText = ctStr;
-				conn.Open();
-				command.ExecuteNonQuery();
-				conn.Close();
+                    // Runs the sql command to make the destination table.
 
-				return true;
+                    SqlConnection conn = new SqlConnection(connectionString);
+                    SqlCommand command = conn.CreateCommand();
+                    command.CommandText = ctStr;
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                    ctStr = "INSERT INTO [" + tableOwner + "].[" + tableName + "] (nom,prenom,date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,id_classe,archive_elv) VALUES ('";
+                    
+                }
+                return true;
 
 			}
 			catch (Exception e)
