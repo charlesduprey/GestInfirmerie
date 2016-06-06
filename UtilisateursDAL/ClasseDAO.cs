@@ -257,9 +257,8 @@ namespace UtilisateursDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "DELETE FROM CLASSE WHERE id_classe = '" + idClasse + "'";
-            cmd.ExecuteNonQuery();
-
-            nbEnr = (int)cmd.ExecuteScalar();
+            
+            nbEnr = cmd.ExecuteNonQuery();
 
             // Fermeture de la connexion
             maConnexion.Close();

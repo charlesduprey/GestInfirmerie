@@ -79,3 +79,12 @@ D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\Util
 D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
 D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
 D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBLL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBO.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursDAL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursBO.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\bin\Debug\UtilisateursDAL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.csprojResolveAssemblyReference.cache
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie\UtilisateursBLL\obj\Debug\UtilisateursBLL.pdb

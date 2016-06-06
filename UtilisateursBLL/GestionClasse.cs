@@ -67,7 +67,7 @@ namespace UtilisateursBLL
         }
         #endregion
 
-        #region Méthode TrouverEleve retrouve si un élève est affecté à au moins une visite TrouverEleve de la DAL
+        #region Méthode TrouverClasse retrouve si un élève est affecté à au moins une visite TrouverEleve de la DAL
         public static bool TrouverClasse(int id)
         {
             return ClasseDAO.TrouverClasse(id);

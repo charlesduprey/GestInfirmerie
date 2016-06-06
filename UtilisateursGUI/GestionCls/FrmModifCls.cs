@@ -117,16 +117,34 @@ namespace UtilisateursGUI.GestionCls
 
                 if (trouve == true)
                 {
-                    trouve = true;
-                    MessageBox.Show(
-                        "Impossible de supprimer l'élève " + id + " Vous pouvez cependant l'achiver.",
+                    
+
+                    int nbr = GestionClasse.SupprimerClasse(id);
+
+                    if (nbr == 0)
+                    {
+                        MessageBox.Show(
+                        "Impossible de trouver la classe",
                         "Suppression",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
-                }
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                        "La classe a été supprimée",
+                        "Suppression",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                    }
                 else
                 {
                     GestionClasse.SupprimerClasse(id);
+                    MessageBox.Show(
+                        "Impossible de trouver la classe",
+                        "Suppression",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
                 }
                 // supression si oui
             }
