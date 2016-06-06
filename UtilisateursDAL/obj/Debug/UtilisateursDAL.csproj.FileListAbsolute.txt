@@ -26,17 +26,38 @@ G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\
 G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\ResolveAssemblyReference.cache
 G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
 G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.csprojResolveAssemblyReference.cache
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\obj\Debug\UtilisateursDAL.csprojResolveAssemblyReference.cache
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.csprojResolveAssemblyReference.cache
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursDAL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\bin\Debug\UtilisateursBO.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.csprojResolveAssemblyReference.cache
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursDAL\obj\Debug\UtilisateursDAL.pdb

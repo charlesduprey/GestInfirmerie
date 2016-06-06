@@ -34,6 +34,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -47,6 +63,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AffichageInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffichageInfos.Designer.cs">
+      <DependentUpon>AffichageInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCls\FrmAjoutCls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCls\FrmAjoutCls.Designer.cs">
+      <DependentUpon>FrmAjoutCls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCls\FrmModifCls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCls\FrmModifCls.Designer.cs">
+      <DependentUpon>FrmModifCls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCsv\frmExport.designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCsv\frmImport.designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCsv\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCsv\Program.cs" />
+    <Compile Include="GestionCsv\prop.cs" />
     <Compile Include="GestionElv\FrmAjoutElv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +131,6 @@
     <Compile Include="GestionMdc\FrmModuleLectureMdc.Designer.cs">
       <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionMdc\FrmSuprMdc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionMdc\FrmSuprMdc.Designer.cs">
-      <DependentUpon>FrmSuprMdc.cs</DependentUpon>
-    </Compile>
     <Compile Include="GestionMdc\FrmAjoutMdc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,10 +143,11 @@
     <Compile Include="GestionVst\FrmAjoutVst.Designer.cs">
       <DependentUpon>FrmAjoutVst.cs</DependentUpon>
     </Compile>
-    <Compile Include="GEST_INFIRMERIE.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GEST_INFIRMERIE.xsd</DependentUpon>
+    <Compile Include="GestionVst\FrmModifVst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionVst\FrmModifVst.Designer.cs">
+      <DependentUpon>FrmModifVst.cs</DependentUpon>
     </Compile>
     <Compile Include="GEST_INFIRMERIEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -111,8 +160,34 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AffichageInfos.resx">
+      <DependentUpon>AffichageInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCls\FrmAjoutCls.resx">
+      <DependentUpon>FrmAjoutCls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCls\FrmModifCls.resx">
+      <DependentUpon>FrmModifCls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCsv\FrmCsv.resx" />
+    <EmbeddedResource Include="GestionCsv\frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCsv\FrmImpCsv.resx" />
+    <EmbeddedResource Include="GestionCsv\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCsv\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionElv\FrmAjoutElv.resx">
       <DependentUpon>FrmAjoutElv.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,17 +203,20 @@
     <EmbeddedResource Include="GestionMdc\FrmModuleLectureMdc.resx">
       <DependentUpon>FrmModuleLectureMdc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionMdc\FrmSuprMdc.resx">
-      <DependentUpon>FrmSuprMdc.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GestionMdc\FrmAjoutMdc.resx">
       <DependentUpon>FrmAjoutMdc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionVst\FrmAjoutVst.resx">
       <DependentUpon>FrmAjoutVst.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionVst\FrmModifVst.resx">
+      <DependentUpon>FrmModifVst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,17 +228,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="GEST_INFIRMERIE.xsc">
-      <DependentUpon>GEST_INFIRMERIE.xsd</DependentUpon>
-    </None>
-    <None Include="GEST_INFIRMERIE.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GEST_INFIRMERIE.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GEST_INFIRMERIE.xss">
-      <DependentUpon>GEST_INFIRMERIE.xsd</DependentUpon>
-    </None>
     <None Include="GEST_INFIRMERIEDataSet.xsc">
       <DependentUpon>GEST_INFIRMERIEDataSet.xsd</DependentUpon>
     </None>

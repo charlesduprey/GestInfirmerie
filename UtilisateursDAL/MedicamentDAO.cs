@@ -133,7 +133,7 @@ namespace UtilisateursDAL
             #region Création d'un objet cmd de type SqlCommand permettant d'utiliser la connexion à la BD et de transmettre une requête
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO MEDICAMENT (libelle_medic,archivage_medic) values('" + unMedicament.LblMdc + "', '" + unMedicament.ArchivageMdc + "')";
+            cmd.CommandText = "INSERT INTO MEDICAMENT (libelle_medic, archivage_medic) values('" + unMedicament.LblMdc + "', '" + unMedicament.ArchivageMdc + "')";
             #endregion
 
             // Création de monReader afin de récupérer les données reçues de la BD
@@ -157,7 +157,7 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE MEDICAMENT (libelle_medic) SET libelle_medic = '" + unMedicament.LblMdc + "' WHERE id_medic = '" + unMedicament.IdMdc;
+            cmd.CommandText = "UPDATE MEDICAMENT SET libelle_medic = '" + unMedicament.LblMdc + "' WHERE id_medic = " + unMedicament.IdMdc;
 
             nbEnr = cmd.ExecuteNonQuery();
 
@@ -180,11 +180,12 @@ namespace UtilisateursDAL
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT COUNT(*) FROM PRESCRIPTION WHERE id_medic = '" + idMdc + "'";
 
-            nbEnr = cmd.ExecuteNonQuery();
+            nbEnr = (int)cmd.ExecuteScalar();
 
             if (nbEnr == 0)
             {
                 cmd.CommandText = "DELETE FROM MEDICAMENT WHERE id_medic = '" + idMdc + "'";
+                cmd.ExecuteNonQuery();
             }
 
             // Fermeture de la connexion
@@ -204,9 +205,67 @@ namespace UtilisateursDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE MEDICAMENT SET archivage_medic = 'true' WHERE id_medic = " + unMedicament.IdMdc;
+            cmd.CommandText = "UPDATE MEDICAMENT SET archivage_medic = 1 WHERE id_medic = " + unMedicament.IdMdc;
 
             nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return nbEnr;
+        }
+        #endregion
+
+        #region Méthode qui renvoit le nombre de Medicaments donnés sur l'année scolaire
+        public static int GetNbMedicamentsAnnees(DateTime dateDebut, DateTime datefin)
+        {
+            int nbEnr = 0;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT SUM(PRESCRIPTION.nb_prescri) FROM PRESCRIPTION, VISITE WHERE PRESCRIPTION.id_visite = VISITE.id_visite AND VISITE.date_visite BETWEEN '" + dateDebut + "' AND '" + datefin + "'";
+
+            try
+            {
+                nbEnr = (int)cmd.ExecuteScalar();
+            }
+            catch
+            {
+                nbEnr = 0;
+            }
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return nbEnr;
+        }
+        #endregion
+
+        #region Méthode qui renvoit le nombre de Medicaments donnés sur l'année scolaire
+        public static float GetMoyMedicamentsAnnees()
+        {
+            float nbEnr = 0;
+            double nbmedic;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT AVG(CAST(PRESCRIPTION.nb_prescri as float)) FROM PRESCRIPTION";
+
+            Object result = cmd.ExecuteScalar();
+            try
+            {
+                nbmedic = (double)result;
+                nbEnr = (float)Math.Round(nbmedic, 2);
+            }
+            catch
+            {
+                nbEnr = 0;
+            }
 
             // Fermeture de la connexion
             maConnexion.Close();

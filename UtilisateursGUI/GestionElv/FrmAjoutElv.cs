@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using UtilisateursBO; // Référence la couche BO
-using UtilisateursBLL;
-using System.Configuration; // Référence la couche BLL
+using UtilisateursBLL; // Référence la couche BLL
+using System.Configuration;
 
 namespace UtilisateursGUI.GestionElv
 {
@@ -29,45 +29,103 @@ namespace UtilisateursGUI.GestionElv
             //uneGestionEleve = unEleve.GetEleve();
 
             // Création d'un objet List d'Eleves à afficher dans la liste
-            listeEleves = GestionEleve.GetEleves();
+            listeClasses = GestionClasse.GetClasses();
 
-            lblClasse_cmbx.DataSource = GestionClasse.GetClasses();
+            /*// Création d'un objet List de classes à afficher dans la liste
+            int nbClasse = GestionClasse.GetNbClasses();
+            List<string> listeLibelleClasses = new List<string>();
+
+            for (int id = 0; id < nbClasse; id++)
+            {
+                listeLibelleClasses.Add(GestionEleve.GetLeNomDeClasse(id));
+            }*/
+
+
+            for (int id = 0; id < listeClasses.Count; id++)
+            {
+                idDeClasse = listeClasses[id].IdClasse;
+                libelle = listeClasses[id].NiveauClasse + " " + listeClasses[id].LibelleClasse;
+
+                libelleClasse = new Classe(idDeClasse, libelle);
+
+                listeLibelleClasse.Add(libelleClasse);
+            }
+
+            lblClasse_cmbx.DataSource = listeLibelleClasse;
             lblClasse_cmbx.DisplayMember = "LibelleClasse";
-            lblClasse_cmbx.SelectedIndex = listeEleves[numSelectionne].Id_classe - 1;
+            lblClasse_cmbx.ValueMember = "IdClasse";
         }
         #endregion
 
         #region Attributs de l'application
-
         //  private int nbClasse;
         //  private int ind = 0;
-        private List<Eleve> listeEleves; // initialisation de la liste
-        // private List<string> listeNomClasses;
+        private int idDeClasse;
+        private string libelle;
+        private List<Classe> listeLibelleClasse = new List<Classe>();
+        private List<Classe> listeClasses;
+        private Classe libelleClasse;
+        public int numSelectionne { get; set; }
         #endregion
 
         #region Boutons du formulaire
         #region Bouton Enregistrer
-        private void saveBtnEleve_Click(object sender, EventArgs e)
+        private void saveBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(nomEleve_txt.Text) || string.IsNullOrEmpty(prenomEleve_txt.Text) || (int)lblClasse_cmbx.SelectedValue == 0 || string.IsNullOrEmpty(commentSante_text.Text))
+            {
+                #region Affichage du MessageBox.
+                MessageBox.Show(
+                    this,
+                    "Certains champs du formulaire sont vides ! Remplissez-les pour continuer.",
+                    "Valider",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
+            }
+            else
+            {
+                #region Ajouter un élève
+                GestionEleve.AjoutEleve(
+                    new Eleve(
+                        nomEleve_txt.Text,
+                        prenomEleve_txt.Text,
+                        DateTime.Parse(dateNaissancePicker.Text),
+                        int.Parse(telEleve_txt.Text),
+                        int.Parse(telParent_txt.Text),
+                        TierTempsTrue.Checked,
+                        commentSante_text.Text,
+                        false,
+                        (int)lblClasse_cmbx.SelectedValue));
+                #endregion
 
-            //GestionEleve.AjoutEleve(unEleve);
-            bool archiveEleve = false;
-            #region Création d'un eleve
-            Eleve unEleve = new Eleve(
-                nomEleve_txt.Text,
-                prenomEleve_txt.Text,
-                DateTime.Parse(dateTimePicker1.Text),
-                int.Parse(telEleve_txt.Text),
-                int.Parse(telParent_txt.Text),
-                tiertemp.Checked,               
-                commentSante_text.Text,
-                archiveEleve,
-                lblClasse_cmbx.SelectedIndex + 1
-                
-            );
+                #region Affichage du MessageBox.
+                DialogResult result = MessageBox.Show(
+                    this,
+                    "Élève enregistré. Souhaitez-vous en saisir un autre ?",
+                    "Valider",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1);
+                #endregion
 
-            GestionEleve.AjoutEleve(unEleve);
-            #endregion
+                #region Actions en fonction du message de validation
+                if (result == DialogResult.Yes)
+                {
+                    nomEleve_txt.Text = String.Empty;
+                    prenomEleve_txt.Text = String.Empty;
+                    telEleve_txt.Text = String.Empty;
+                    telParent_txt.Text = String.Empty;
+                    commentSante_text.Text = String.Empty;
+                    this.Close();
+                }
+                else
+                {
+                    this.Close();
+                }
+                #endregion
+            }
         }
         #endregion
 
@@ -78,18 +136,148 @@ namespace UtilisateursGUI.GestionElv
         }
         #endregion
         #endregion
+
+        #region Contrôles de saisies
+        #region Contrôle de saisie sur le nom de l'élève
+        private void nomEleve_txt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(nomEleve_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProNom.SetError(this.nomEleve_txt, "Le nom est requis et ne dois pas être vide !");
+            }
+            else if (isLetter(nomEleve.Text) == false)
+            {
+                // Set the error if the name is not valid.
+                errProNom.SetError(this.nomEleve_txt, "Le nom ne doit pas contenir de chiffres !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProNom.SetError(this.nomEleve_txt, String.Empty);
+            }
+        }
         #endregion
 
-        private void lblClasse_cmbx_SelectedIndexChanged(object sender, EventArgs e)
+        #region Contrôle de saisie sur le nom de l'élève
+        private void prenomEleve_txt_Validating(object sender, CancelEventArgs e)
         {
-
+            if (string.IsNullOrEmpty(prenomEleve_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProNom.SetError(this.prenomEleve_txt, "Le prénom est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProNom.SetError(this.prenomEleve_txt, String.Empty);
+            }
         }
+        #endregion
 
-        private void tiertemp_CheckedChanged(object sender, EventArgs e)
+        #region Contrôle de saisie sur la date de naissance
+        private void dateNaissancePicker_Validating(object sender, CancelEventArgs e)
         {
-
+            DateTime date;
+            if (DateTime.Parse(dateNaissancePicker.Text) == DateTime.Now)
+            {
+                // Set the error if the name is not valid.
+                errProDateNaissance.SetError(this.dateNaissancePicker, "L'élève ne peut être né aujourd'hui !");
+            }
+            else if (!DateTime.TryParse(dateNaissancePicker.Text, out date))
+            {
+                // Set the error if the name is not valid.
+                errProDateNaissance.SetError(this.dateNaissancePicker, "La date est incorrecte !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProDateNaissance.SetError(this.dateNaissancePicker, String.Empty);
+            }
         }
+        #endregion
 
-        public int numSelectionne { get; set; }
+        #region Contrôle de saisie sur le téléphone de l'élève
+        private void telEleve_txt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(telEleve_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProTelPar.SetError(this.telParent_txt, "Le numéro de téléphone de l'élève est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProTelEleve.SetError(this.telEleve_txt, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le téléphone des parents
+        private void telParent_txt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(telParent_txt.Text))
+            {
+                // Set the error if the name is not valid.
+                errProTelPar.SetError(this.telParent_txt, "Le numéro de téléphone des parents est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProTelPar.SetError(this.telParent_txt, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le libellé de la classe
+        private void lblClasse_cmbx_Validating(object sender, CancelEventArgs e)
+        {
+            if ((int)lblClasse_cmbx.SelectedValue == 0)
+            {
+                // Set the error if the name is not valid.
+                errProClasse.SetError(this.lblClasse_cmbx, "Veuillez sélectionner une classe !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProClasse.SetError(this.lblClasse_cmbx, String.Empty);
+            }
+        }
+        #endregion
+
+        #region Contrôle de saisie sur le commentaire
+        private void commentSante_text_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(commentSante_text.Text))
+            {
+                // Set the error if the name is not valid.
+                errProCommentaire.SetError(this.commentSante_text, "Le commentaire est requis et ne dois pas être vide !");
+            }
+            else
+            {
+                // Clear the error, if any, in the error provider.
+                errProCommentaire.SetError(this.commentSante_text, String.Empty);
+            }
+        }
+        #endregion
+        #endregion
+        #endregion
+
+        #region Méthode vérifiant le contenu des champs textes
+        public bool isLetter(string sReceive)
+        {
+            bool bResult;
+            bResult = true;
+            foreach (char cWork in sReceive)
+            {
+                if (char.IsLetter(cWork) == false)
+                {
+                    bResult = false;
+                }
+            }
+
+            return bResult;
+        }
+        #endregion
     }
 }

@@ -44,5 +44,41 @@ namespace UtilisateursBLL
             return ClasseDAO.GetClasses();
         }
         #endregion
+
+        #region Méthode qui créer un nouvel objet Medicament à partir de son id et de son nom et qui le renvoi en l'ajoutant
+        // à la BD avec la méthode AjoutEleve de la DAL
+        public static int CreerClasse(Classe cls)
+        {
+            return ClasseDAO.AjoutClasse(cls);
+        }
+        #endregion
+
+        #region Méthode qui modifie un Medicament avec la méthode UpdateMedicament de la DAL
+        public static int ModifierClasse(Classe cls)
+        {
+            return ClasseDAO.UpdateClasse(cls);
+        }
+        #endregion
+
+        #region Méthode qui supprime un Medicament avec la méthode SupprimerMedicament de la DAL
+        public static int SupprimerClasse(int idClasse)
+        {
+            return ClasseDAO.DeleteClasse(idClasse);
+        }
+        #endregion
+
+        #region Méthode TrouverEleve retrouve si un élève est affecté à au moins une visite TrouverEleve de la DAL
+        public static bool TrouverClasse(int id)
+        {
+            return ClasseDAO.TrouverClasse(id);
+        }
+        #endregion
+
+        #region Méthode GetNbClasses
+        public static int GetNbClasses()
+        {
+            return ClasseDAO.GetNombreClasses();
+        }
+        #endregion
     }
 }

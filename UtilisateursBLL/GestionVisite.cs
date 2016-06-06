@@ -31,6 +31,11 @@ namespace UtilisateursBLL
         }
         #endregion
 
+        public static int GetIdVstMax()
+        {
+            return VisiteDAO.GetIdVstMax();
+        }
+
         #region Méthode CreerVisite qui créer un nouvel objet Visite à partir de son id et de son nom et qui le renvoi en l'ajoutant
         // à la BD avec la méthode AjoutEleve de la DAL
         public static int CreerVisite(Visite vst)
@@ -38,5 +43,13 @@ namespace UtilisateursBLL
             return VisiteDAO.AjoutVisite(vst);
         }
         #endregion
+
+        #region Méthode ModifierVisite modifiant une Visite avec la méthode UpdateVisite de la DAL
+        public static int ModifierVisite(Visite vst)
+        {
+            return VisiteDAO.UpdateVisite(vst);
+        }
+        #endregion
+
     }
 }

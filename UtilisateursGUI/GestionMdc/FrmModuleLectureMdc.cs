@@ -96,17 +96,11 @@ namespace UtilisateursGUI.GestionMdc
         #region Bouton Modifier
         private void modifBtn_Click(object sender, EventArgs e)
         {
-
+            FrmModifMdc frmModif = new FrmModifMdc();
+            frmModif.ShowDialog(); // ouverture du formulaire
+            frmModif.Close(); // fermeture du formulaire
         }
         #endregion
-
-        #region Bouton Supprimer
-        private void suprBtn_Click(object sender, EventArgs e)
-        {
-            FrmSuprMdc FrmSupr = new FrmSuprMdc();
-            FrmSupr.ShowDialog(); // ouverture du formulaire
-            FrmSupr.Close(); // fermeture du formulaire
-        }
         #endregion
 
         #region Bouton Actualiser
@@ -135,7 +129,6 @@ namespace UtilisateursGUI.GestionMdc
              *  #endregion
              */
         }
-        #endregion
         #endregion
     }
 }

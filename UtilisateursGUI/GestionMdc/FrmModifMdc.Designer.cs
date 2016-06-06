@@ -28,99 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nommedic = new System.Windows.Forms.ComboBox();
-            this.savemodif = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.archiveoui = new System.Windows.Forms.RadioButton();
-            this.archivenon = new System.Windows.Forms.RadioButton();
-            this.archivemedic = new System.Windows.Forms.GroupBox();
-            this.archivemedic.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModifMdc));
+            this.frmModifLbl = new System.Windows.Forms.Label();
+            this.libelleMdcCmbx = new System.Windows.Forms.ComboBox();
+            this.libelleMdcLbl = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.errProSave = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProMdcTxt = new System.Windows.Forms.ErrorProvider(this.components);
+            this.archBtn = new System.Windows.Forms.Button();
+            this.suprBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.errProSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProMdcTxt)).BeginInit();
             this.SuspendLayout();
             // 
-            // nommedic
+            // frmModifLbl
             // 
-            this.nommedic.FormattingEnabled = true;
-            this.nommedic.Location = new System.Drawing.Point(143, 69);
-            this.nommedic.Name = "nommedic";
-            this.nommedic.Size = new System.Drawing.Size(200, 24);
-            this.nommedic.TabIndex = 0;
+            this.frmModifLbl.AutoSize = true;
+            this.frmModifLbl.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frmModifLbl.Location = new System.Drawing.Point(15, 9);
+            this.frmModifLbl.Name = "frmModifLbl";
+            this.frmModifLbl.Size = new System.Drawing.Size(331, 39);
+            this.frmModifLbl.TabIndex = 0;
+            this.frmModifLbl.Text = "Modifier un médicament";
             // 
-            // savemodif
+            // libelleMdcCmbx
             // 
-            this.savemodif.Location = new System.Drawing.Point(143, 276);
-            this.savemodif.Name = "savemodif";
-            this.savemodif.Size = new System.Drawing.Size(98, 31);
-            this.savemodif.TabIndex = 1;
-            this.savemodif.Text = "Modifier";
-            this.savemodif.UseVisualStyleBackColor = true;
-            this.savemodif.Click += new System.EventHandler(this.savemodif_Click);
+            this.libelleMdcCmbx.FormattingEnabled = true;
+            this.libelleMdcCmbx.Location = new System.Drawing.Point(155, 61);
+            this.libelleMdcCmbx.Name = "libelleMdcCmbx";
+            this.libelleMdcCmbx.Size = new System.Drawing.Size(121, 21);
+            this.libelleMdcCmbx.TabIndex = 1;
+            this.libelleMdcCmbx.SelectionChangeCommitted += new System.EventHandler(this.libelleMdcCmbx_SelectionChangeCommitted);
+            this.libelleMdcCmbx.Validating += new System.ComponentModel.CancelEventHandler(this.libelleMdcCmbx_Validating);
             // 
-            // button2
+            // libelleMdcLbl
             // 
-            this.button2.Location = new System.Drawing.Point(247, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Retour";
-            this.button2.UseVisualStyleBackColor = true;
+            this.libelleMdcLbl.AutoSize = true;
+            this.libelleMdcLbl.Location = new System.Drawing.Point(73, 64);
+            this.libelleMdcLbl.Name = "libelleMdcLbl";
+            this.libelleMdcLbl.Size = new System.Drawing.Size(76, 13);
+            this.libelleMdcLbl.TabIndex = 2;
+            this.libelleMdcLbl.Text = "Médicaments :";
             // 
-            // archiveoui
+            // saveBtn
             // 
-            this.archiveoui.AutoSize = true;
-            this.archiveoui.Location = new System.Drawing.Point(27, 45);
-            this.archiveoui.Name = "archiveoui";
-            this.archiveoui.Size = new System.Drawing.Size(48, 21);
-            this.archiveoui.TabIndex = 4;
-            this.archiveoui.TabStop = true;
-            this.archiveoui.Text = "oui";
-            this.archiveoui.UseVisualStyleBackColor = true;
+            this.saveBtn.Location = new System.Drawing.Point(184, 99);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(75, 23);
+            this.saveBtn.TabIndex = 3;
+            this.saveBtn.Text = "Sauvegarder";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.Validating += new System.ComponentModel.CancelEventHandler(this.saveBtn_Validating);
             // 
-            // archivenon
+            // closeBtn
             // 
-            this.archivenon.AutoSize = true;
-            this.archivenon.Location = new System.Drawing.Point(132, 45);
-            this.archivenon.Name = "archivenon";
-            this.archivenon.Size = new System.Drawing.Size(55, 21);
-            this.archivenon.TabIndex = 5;
-            this.archivenon.TabStop = true;
-            this.archivenon.Text = "Non";
-            this.archivenon.UseVisualStyleBackColor = true;
+            this.closeBtn.Location = new System.Drawing.Point(271, 99);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(75, 23);
+            this.closeBtn.TabIndex = 4;
+            this.closeBtn.Text = "Fermer";
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
-            // archivemedic
+            // errProSave
             // 
-            this.archivemedic.Controls.Add(this.archivenon);
-            this.archivemedic.Controls.Add(this.archiveoui);
-            this.archivemedic.Location = new System.Drawing.Point(143, 157);
-            this.archivemedic.Name = "archivemedic";
-            this.archivemedic.Size = new System.Drawing.Size(200, 100);
-            this.archivemedic.TabIndex = 6;
-            this.archivemedic.TabStop = false;
-            this.archivemedic.Text = "Archive";
+            this.errProSave.ContainerControl = this;
+            // 
+            // errProMdcTxt
+            // 
+            this.errProMdcTxt.ContainerControl = this;
+            // 
+            // archBtn
+            // 
+            this.archBtn.Location = new System.Drawing.Point(22, 99);
+            this.archBtn.Name = "archBtn";
+            this.archBtn.Size = new System.Drawing.Size(75, 23);
+            this.archBtn.TabIndex = 84;
+            this.archBtn.Text = "Archiver";
+            this.archBtn.UseVisualStyleBackColor = true;
+            this.archBtn.Click += new System.EventHandler(this.archBtn_Click);
+            // 
+            // suprBtn
+            // 
+            this.suprBtn.Location = new System.Drawing.Point(103, 99);
+            this.suprBtn.Name = "suprBtn";
+            this.suprBtn.Size = new System.Drawing.Size(75, 23);
+            this.suprBtn.TabIndex = 83;
+            this.suprBtn.Text = "Supprimer";
+            this.suprBtn.UseVisualStyleBackColor = true;
+            this.suprBtn.Click += new System.EventHandler(this.suprBtn_Click);
             // 
             // FrmModifMdc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 393);
-            this.Controls.Add(this.archivemedic);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.savemodif);
-            this.Controls.Add(this.nommedic);
+            this.ClientSize = new System.Drawing.Size(372, 133);
+            this.Controls.Add(this.archBtn);
+            this.Controls.Add(this.suprBtn);
+            this.Controls.Add(this.closeBtn);
+            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.libelleMdcLbl);
+            this.Controls.Add(this.libelleMdcCmbx);
+            this.Controls.Add(this.frmModifLbl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmModifMdc";
-            this.Text = "Form1";
-            this.archivemedic.ResumeLayout(false);
-            this.archivemedic.PerformLayout();
+            this.Text = "FrmModifMdc";
+            ((System.ComponentModel.ISupportInitialize)(this.errProSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProMdcTxt)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox nommedic;
-        private System.Windows.Forms.Button savemodif;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton archiveoui;
-        private System.Windows.Forms.RadioButton archivenon;
-        private System.Windows.Forms.GroupBox archivemedic;
+        private System.Windows.Forms.Label frmModifLbl;
+        private System.Windows.Forms.ComboBox libelleMdcCmbx;
+        private System.Windows.Forms.Label libelleMdcLbl;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.ErrorProvider errProSave;
+        private System.Windows.Forms.ErrorProvider errProMdcTxt;
+        private System.Windows.Forms.Button archBtn;
+        private System.Windows.Forms.Button suprBtn;
     }
 }

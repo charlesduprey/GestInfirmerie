@@ -93,49 +93,178 @@ G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\
 G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
 G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\GenerateResource.read.1.tlog
 G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csprojResolveAssemblyReference.cache
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmSuprMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csproj.GenerateResource.Cache
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csprojResolveAssemblyReference.cache
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmSuprMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csproj.GenerateResource.Cache
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
-C:\Users\julie\Documents\Visual Studio 2010\Projects\GestInfirmerie-Goodversion\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
+G:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+E:\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+E:\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+E:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmModifVst.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmExport.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmImport.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmMain.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmCsv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmImpCsv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmExport.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmImport.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmMain.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmCsv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmImpCsv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmSuprMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmModifVst.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume2\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources
+D:\Documents\Visual_studio_2010\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.AffichageInfos.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.AffichageInfos.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmCsv.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmExport.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmImpCsv.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmImport.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmMain.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmModifVst.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
+C:\Users\win7vitual\Desktop\gestinfi\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csprojResolveAssemblyReference.cache
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.AffichageInfos.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCls.FrmAjoutCls.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmCsv.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmExport.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmImpCsv.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmImport.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmMain.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmModifVst.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csproj.GenerateResource.Cache
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
+E:\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCls.FrmModifCls.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe.config
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.exe
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.exe
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursGUI.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.Smo.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.Dmf.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBLL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursBO.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\UtilisateursDAL.pdb
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\fr\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\fr\Microsoft.SqlServer.Dmf.resources.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\bin\Debug\fr\Microsoft.SqlServer.RegSvrEnum.resources.dll
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csprojResolveAssemblyReference.cache
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.AffichageInfos.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCls.FrmAjoutCls.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCls.FrmModifCls.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmCsv.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmExport.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionCsv.FrmImpCsv.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmImport.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\CSV_import_export.frmMain.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmAjoutElv.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModifElv.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionElv.FrmModuleLectureElv.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModifMdc.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmModuleLectureMdc.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionMdc.FrmAjoutMdc.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmAjoutVst.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.GestionVst.FrmModifVst.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Menu.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.MenuAdmin.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.Properties.Resources.resources
+D:\Utilisateurs\Guillaume\Téléchargements\GestInfirmerie-brancheGuillaume\UtilisateursGUI\obj\x86\Debug\UtilisateursGUI.csproj.GenerateResource.Cache

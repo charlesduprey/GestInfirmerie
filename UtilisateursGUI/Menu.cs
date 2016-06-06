@@ -10,6 +10,8 @@ using UtilisateursGUI;
 using UtilisateursGUI.GestionMdc;
 using UtilisateursGUI.GestionElv;
 using UtilisateursGUI.GestionVst;
+using CSV_import_export;
+using UtilisateursGUI.GestionCls;
 
 namespace UtilisateursGUI
 {
@@ -38,7 +40,7 @@ namespace UtilisateursGUI
             FrmAjoutElv FrmModLect;
             FrmModLect = new FrmAjoutElv();
             FrmModLect.ShowDialog(); // ouverture du formulaire
-            FrmModLect.Close(); // fermeture du formulaire
+            //FrmModLect.Close(); // fermeture du formulaire
         }
         #endregion
 
@@ -87,16 +89,7 @@ namespace UtilisateursGUI
         {
             FrmModifMdc frmModif = new FrmModifMdc();
             frmModif.ShowDialog(); // ouverture du formulaire
-            frmModif.Close(); // 
-        }
-        #endregion
-
-        #region Bouton pour appeller la suppression des médicaments
-        private void suprMdcBtn_Click(object sender, EventArgs e)
-        {
-            FrmSuprMdc FrmSupr = new FrmSuprMdc();
-            FrmSupr.ShowDialog(); // ouverture du formulaire
-            FrmSupr.Close(); // fermeture du formulaire
+            frmModif.Close(); // fermeture du formulaire
         }
         #endregion
 
@@ -123,7 +116,9 @@ namespace UtilisateursGUI
         #region Bouton pour appeller la modification des visites
         private void modifVstBtn_Click(object sender, EventArgs e)
         {
-
+            FrmModifVst frmModif = new FrmModifVst();
+            frmModif.ShowDialog(); // ouverture du formulaire
+            frmModif.Close(); // fermeture du formulaire
         }
         #endregion
 
@@ -141,5 +136,36 @@ namespace UtilisateursGUI
         }
         #endregion
         #endregion
+
+        //accès à l'administration
+        private void adminBtn_Click(object sender, EventArgs e)
+        {
+            {
+                MenuAdmin menuAdm = new MenuAdmin();
+                menuAdm.ShowDialog(); // ouverture du formulaire
+            }
+        }
+
+        private void ficheMedicBtn_Click(object sender, EventArgs e)
+        {
+            AffichageInfos affichageMedic = new AffichageInfos();
+            affichageMedic.ShowDialog(); // ouverture du formulaire
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmAjoutCls FrmModLect;
+            FrmModLect = new FrmAjoutCls();
+            FrmModLect.ShowDialog(); // ouverture du formulaire
+            //FrmModLect.Close(); // fermeture du formulaire
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmModifCls FrmModLect;
+            FrmModLect = new FrmModifCls();
+            FrmModLect.ShowDialog(); // ouverture du formulaire
+            //FrmModLect.Close(); // fermeture du formulaire
+        }
     }
 }

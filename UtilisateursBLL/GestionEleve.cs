@@ -101,5 +101,12 @@ namespace UtilisateursBLL
             return EleveDAO.GetNomClasse(idClasse);
         }
         #endregion
+
+        #region Méthode qui renvoit le nombre d'élèves donnés sur la période en paramètre
+        public static int GetNbrEleves()
+        {
+            return EleveDAO.GetNbrEleves();
+        }
+        #endregion
     }
 }
