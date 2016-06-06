@@ -30,13 +30,12 @@ namespace UtilisateursDAL
             string libelleClasse;
             string niveauClasse;
             string emploiDuTemps;
-            Classe uneClasse;
             #endregion
 
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour sélectionner une classe à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM CLASSE WHERE id_classe = '" + id + "'";
@@ -45,47 +44,57 @@ namespace UtilisateursDAL
             // Récupération du résultat dans une variable
             SqlDataReader monReader = cmd.ExecuteReader();
 
+            int ind = 0;
+
             #region Remplissage de la liste à partir du reader
-            do
+            while (monReader.Read())
             {
-                idClasse = int.Parse(monReader["id_classe"].ToString());
+                if (int.Parse(monReader["id_classe"].ToString()) == id)
+                {
+                    idClasse = int.Parse(monReader["id_classe"].ToString());
 
-                if (monReader["libelle_classe"] == DBNull.Value)
-                {
-                    libelleClasse = default(string);
-                }
-                else
-                {
-                    libelleClasse = monReader["libelle_classe"].ToString();
-                }
+                    if (monReader["libelle_classe"] == DBNull.Value)
+                    {
+                        libelleClasse = default(string);
+                    }
+                    else
+                    {
+                        libelleClasse = monReader["libelle_classe"].ToString();
+                    }
 
-                if (monReader["niveau_classe"] == DBNull.Value)
-                {
-                    niveauClasse = default(string);
-                }
-                else
-                {
-                    niveauClasse = monReader["niveau_classe"].ToString();
-                }
+                    if (monReader["niveau_classe"] == DBNull.Value)
+                    {
+                        niveauClasse = default(string);
+                    }
+                    else
+                    {
+                        niveauClasse = monReader["niveau_classe"].ToString();
+                    }
 
-                if (monReader["emploi_du_temps"] == DBNull.Value)
-                {
-                    emploiDuTemps = default(string);
-                }
-                else
-                {
-                    emploiDuTemps = monReader["emploi_du_temps"].ToString();
-                }
+                    if (monReader["emploi_du_temps"] == DBNull.Value)
+                    {
+                        emploiDuTemps = default(string);
+                    }
+                    else
+                    {
+                        emploiDuTemps = monReader["emploi_du_temps"].ToString();
+                    }
 
-                uneClasse = new Classe(idClasse, libelleClasse, niveauClasse, emploiDuTemps);
-            } while (int.Parse(monReader["id_classe"].ToString()) == idClasse);
+                    // Fermeture de la connexion
+                    maConnexion.Close();
+
+                    // Résultat retourné
+                    return new Classe(idClasse, libelleClasse, niveauClasse, emploiDuTemps);
+                }
+                ind++;
+            }
             #endregion
 
             // Fermeture de la connexion
             maConnexion.Close();
 
             // Résultat retourné
-            return uneClasse;
+            return new Classe(null);
         }
         #endregion
 
@@ -106,7 +115,10 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Classe> lesClasses = new List<Classe>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            uneClasse = new Classe(0, "!", "Choisissez une classe", null);
+            lesClasses.Add(uneClasse);
+
+            #region Création d'une commande SQL pour obtenir la liste des classes
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM CLASSE";
@@ -158,6 +170,32 @@ namespace UtilisateursDAL
 
             // Résultat retourné
             return lesClasses;
+        }
+        #endregion
+
+        #region Méthode GetNombreClasse le nombre de classe
+        public static int GetNombreClasses()
+        {
+            #region Liste des attributs nécessaires pour récupérer et retourner le résultat attendu
+            int nombreClasse;
+            #endregion
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            #region Création d'une commande SQL pour récupérer le nombre de classes
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT COUNT(*) FROM CLASSE";
+            #endregion
+
+            nombreClasse = (int)cmd.ExecuteScalar();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            // Résultat retourné
+            return nombreClasse;
         }
         #endregion
     }

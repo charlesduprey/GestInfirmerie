@@ -46,6 +46,7 @@ namespace UtilisateursBO
             this.lblMdc = lblMdc;
             this.archivageMdc = archivageMdc;
         }
+
         public Medicament(int idMdc, string lblMdc)
         {
             this.idMdc = idMdc;

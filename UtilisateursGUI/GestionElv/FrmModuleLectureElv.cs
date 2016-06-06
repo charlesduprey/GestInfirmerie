@@ -15,6 +15,7 @@ namespace UtilisateursGUI.GestionElv
 {
     public partial class FrmModuleLectureElv : Form
     {
+        #region Gestion du formulaire
         #region Initialisation du formulaire
         public FrmModuleLectureElv()
         {
@@ -93,22 +94,23 @@ namespace UtilisateursGUI.GestionElv
             StudentsView.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
             #endregion
 
-            // Création d'un objet List d'Utilisateur à afficher dans le datagridview
+            #region Création d'un objet List d'Utilisateur à afficher dans le datagridview
             List<Eleve> liste = new List<Eleve>();
             liste = GestionEleve.GetEleves();
+            #endregion
 
+            #region Remplissage des données des élèves dans le datagridview 
             /*  // Rattachement de la List à la source de données du datagridview
              *  StudentsView.DataSource = liste;
              */
-
-            #region Code alternatif de remplissage du datagridview utilisé plus pratique mais moins "propre" que celui du dessus
+            
             // Effacement de toutes les lignes
             StudentsView.Rows.Clear();
 
             // On définit le nombre de lignes nécessaires en comptant le nombre d'éléments dans la liste
             StudentsView.Rows.Add(GestionEleve.GetEleves().Count);
 
-            // Remplissage des lignes du datagridview
+            #region Remplissage des lignes du datagridview
             for (int i = 0; i < GestionEleve.GetEleves().Count; i++)
             {
                 StudentsView[0, i].Value = liste[i].Id_eleves;
@@ -122,6 +124,7 @@ namespace UtilisateursGUI.GestionElv
                 StudentsView[7, i].Value = liste[i].Commentaire_sante;
                 StudentsView[8, i].Value = GestionEleve.GetLeNomDeClasse(liste[i].Id_classe);
             }
+            #endregion
             #endregion
         }
         #endregion
@@ -280,6 +283,7 @@ namespace UtilisateursGUI.GestionElv
         {
             this.Close();
         }
+        #endregion
         #endregion
         #endregion
     }

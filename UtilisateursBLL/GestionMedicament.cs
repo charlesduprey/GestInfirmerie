@@ -53,7 +53,7 @@ namespace UtilisateursBLL
         }
         #endregion
 
-        #region Méthode qui modifie un nouveau Medicament avec la méthode UpdateMedicament de la DAL
+        #region Méthode qui modifie un Medicament avec la méthode UpdateMedicament de la DAL
         public static int ModifierMedicament(Medicament mdc)
         {
             return MedicamentDAO.UpdateMedicament(mdc);
@@ -71,6 +71,20 @@ namespace UtilisateursBLL
         public static int ArchiveMedicament(Medicament unMedicament)
         {
             return MedicamentDAO.ArchiverMedicament(unMedicament);
+        }
+        #endregion
+
+        #region Méthode qui renvoit le nombre de Médicaments donnés sur la période en paramètre
+        public static int GetNbMedicamentsAnnees(DateTime dateDebut, DateTime datefin)
+        {
+            return MedicamentDAO.GetNbMedicamentsAnnees(dateDebut, datefin);
+        }
+        #endregion
+
+        #region Méthode qui renvoit le nombre de Medicaments moyen donnés sur la période en paramètre
+        public static float GetMoyMedicamentsAnnees()
+        {
+            return MedicamentDAO.GetMoyMedicamentsAnnees();
         }
         #endregion
     }

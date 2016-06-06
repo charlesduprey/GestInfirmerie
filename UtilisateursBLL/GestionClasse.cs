@@ -44,5 +44,33 @@ namespace UtilisateursBLL
             return ClasseDAO.GetClasses();
         }
         #endregion
+
+        #region Méthode GetNbClasses
+        public static int GetNbClasses()
+        {
+            return ClasseDAO.GetNombreClasses();
+        }
+        #endregion
+		
+		#region GetNbVstMoy est un accesseur en lecture du nombre MOYEN de visite par période
+        public static string GetNbVstMoy(string dateDeb, string datefin)
+        {
+            return VisiteDAO.GetNbVstMoy(dateDeb, datefin);
+        }
+        #endregion
+
+        #region GetTpsMoyVst permet d'obtenir la moyenne du temps des visites selon la période passée en paramètre
+        public static float GetTpsMoyVst(DateTime dateDeb, DateTime datefin)
+        {
+            return VisiteDAO.GetTpsMoyVst(dateDeb, datefin);
+        }
+        #endregion
+		
+		#region GetNbVstMaxP est l'accesseur en lecture du nombre de visite par periode
+        public static int GetNbVstMaxP(string dateDeb, string datefin)
+        {
+            return VisiteDAO.GetNbVstMaxP(dateDeb, datefin);
+        }
+        #endregion
     }
 }

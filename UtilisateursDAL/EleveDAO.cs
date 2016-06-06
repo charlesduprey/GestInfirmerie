@@ -43,7 +43,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES WHERE ID = '" + id + "'";
@@ -136,7 +136,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Eleve> lesEleves = new List<Eleve>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour selectionner les élèves
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES";
@@ -230,7 +230,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Eleve> lesEleves = new List<Eleve>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir les élèves archivés
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES WHERE archive_elv = '1'";
@@ -324,7 +324,7 @@ namespace UtilisateursDAL
             // Création d'une liste vide d'objets Eleve
             List<Eleve> lesEleves = new List<Eleve>();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour obtenir les élèves non archivés
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "SELECT * FROM ELEVES WHERE archiver = '0'";
@@ -407,7 +407,7 @@ namespace UtilisateursDAL
             #region Création d'une commande SQL pour ajouter un élève
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVES (nom, prenom, date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,archiver,id_classe) values('" + unEleve.Nom + "', '" + unEleve.Prenom + "', '" + unEleve.Date_naissance + "', '" + unEleve.Tel_eleve + "', '" + unEleve.Tel_parent + "', '" + unEleve.Tier_temps + "', '" + unEleve.Commentaire_sante + "', '0', '" + unEleve.Id_classe + "')";
+            cmd.CommandText = "INSERT INTO ELEVES (nom, prenom, date_naissance, tel_eleve, tel_parent, tier_temps, commentaire_sante, archiver, id_classe) values('" + unEleve.Nom + "', '" + unEleve.Prenom + "', '" + unEleve.Date_naissance + "', " + unEleve.Tel_eleve + ", " + unEleve.Tel_parent + ", '" + unEleve.Tier_temps + "', '" + unEleve.Commentaire_sante + "', '" + unEleve.ArchiveEleve + "', " + unEleve.Id_classe + ")";
             #endregion
 
             // Récupération du résultat dans une variable
@@ -430,7 +430,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour modie=fier un élève
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "UPDATE ELEVES SET nom = '" + unEleve.Nom + "', prenom = '" + unEleve.Prenom + "', date_naissance = '" + unEleve.Date_naissance + "', tel_eleve = '" + unEleve.Tel_eleve + "', tel_parent = '" + unEleve.Tel_parent + "', tier_temps = '" + unEleve.Tier_temps + "', commentaire_sante = '" + unEleve.Commentaire_sante + "', id_classe = '" + unEleve.Id_classe + "', archiver = '" + unEleve.ArchiveEleve + "' WHERE id_eleves = " + unEleve.Id_eleves;
@@ -472,6 +472,32 @@ namespace UtilisateursDAL
         }
         #endregion
 
+        #region Méthode ArchiverEleve permettant d'archiver les élèves à partir de leur id
+        public static int ArchiverEleve(int id)
+        {
+            // Attribut nécessaire pour récupérer et retourner le résultat attendu
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            #region Création d'une commande SQL pour archiver un élève à partir de son id
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "UPDATE ELEVES SET archivage = 'true' WHERE id_eleves = " + id;
+            #endregion
+
+            // Récupération du résultat dans une variable
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            // Résultat retourné
+            return nbEnr;
+        }
+        #endregion
+
         #region Méthode TrouverEleve permettant de savoir si un élève à été reçu au moins une fois en visite à partir de leur id
         public static bool TrouverEleve(int id)
         {
@@ -482,7 +508,7 @@ namespace UtilisateursDAL
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
+            #region Création d'une commande SQL pour trouver un élève à partir de son id
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = " SELECT count (*) "
@@ -494,7 +520,7 @@ namespace UtilisateursDAL
 
             // Récupération du résultat dans une variable
             valRet = (int)cmd.ExecuteScalar();
-            
+
             nbEnr = valRet;
 
             // Fermeture de la connexion
@@ -505,35 +531,6 @@ namespace UtilisateursDAL
             }
             // Résultat retourné
             return trouve;
-
-
-
-        }
-        #endregion
-
-        #region Méthode ArchiverEleve permettant d'archiver les élèves à partir de leur id
-        public static int ArchiverEleve(int id)
-        {
-            // Attribut nécessaire pour récupérer et retourner le résultat attendu
-            int nbEnr;
-
-            // Connexion à la BD
-            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
-
-            #region Création d'une commande SQL pour supprimer un élève à partir de son id
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVES SET archiver = 'true' WHERE id_eleves = " + id;
-            #endregion
-
-            // Récupération du résultat dans une variable
-            nbEnr = cmd.ExecuteNonQuery();
-
-            // Fermeture de la connexion
-            maConnexion.Close();
-
-            // Résultat retourné
-            return nbEnr;
         }
         #endregion
 
@@ -571,6 +568,34 @@ namespace UtilisateursDAL
 
             // Résultat retourné
             return niveauClasse + " " + sectionClasse;
+        }
+        #endregion
+
+        #region Méthode qui renvoit le nombre d'élèves donnés sur l'année scolaire
+        public static int GetNbrEleves()
+        {
+            int nbEnr = 0;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT COUNT(*) FROM ELEVES WHERE archiver ='0' ";
+
+            try
+            {
+                nbEnr = (int)cmd.ExecuteScalar();
+            }
+            catch
+            {
+                nbEnr = 0;
+            }
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return nbEnr;
         }
         #endregion
     }
